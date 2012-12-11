@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the ehl_site feature.
+ */
+
+include_once 'ehl_site.features.inc';
