@@ -26,9 +26,21 @@ function ehl_site_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
+        'system-main-menu' => array(
+          'module' => 'system',
+          'delta' => 'main-menu',
+          'region' => 'header',
+          'weight' => '-12',
+        ),
         'search-form' => array(
           'module' => 'search',
           'delta' => 'form',
+          'region' => 'header',
+          'weight' => '-11',
+        ),
+        'system-user-menu' => array(
+          'module' => 'system',
+          'delta' => 'user-menu',
           'region' => 'header',
           'weight' => '-10',
         ),
