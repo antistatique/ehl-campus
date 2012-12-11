@@ -15,6 +15,7 @@ function ehl_site_user_default_permissions() {
     'name' => 'access administration menu',
     'roles' => array(
       0 => 'administrator',
+      1 => 'moderator',
     ),
     'module' => 'admin_menu',
   );
@@ -24,6 +25,7 @@ function ehl_site_user_default_permissions() {
     'name' => 'access administration pages',
     'roles' => array(
       0 => 'administrator',
+      1 => 'moderator',
     ),
     'module' => 'system',
   );
@@ -80,6 +82,7 @@ function ehl_site_user_default_permissions() {
     'name' => 'access dashboard',
     'roles' => array(
       0 => 'administrator',
+      1 => 'moderator',
     ),
     'module' => 'dashboard',
   );
@@ -98,6 +101,7 @@ function ehl_site_user_default_permissions() {
     'name' => 'access site in maintenance mode',
     'roles' => array(
       0 => 'administrator',
+      1 => 'moderator',
     ),
     'module' => 'system',
   );
@@ -107,6 +111,7 @@ function ehl_site_user_default_permissions() {
     'name' => 'access site reports',
     'roles' => array(
       0 => 'administrator',
+      1 => 'moderator',
     ),
     'module' => 'system',
   );
@@ -116,6 +121,9 @@ function ehl_site_user_default_permissions() {
     'name' => 'access user profiles',
     'roles' => array(
       0 => 'administrator',
+      1 => 'moderator',
+      2 => 'professor',
+      3 => 'student',
     ),
     'module' => 'user',
   );
@@ -143,6 +151,7 @@ function ehl_site_user_default_permissions() {
     'name' => 'administer comments',
     'roles' => array(
       0 => 'administrator',
+      1 => 'moderator',
     ),
     'module' => 'comment',
   );
@@ -296,6 +305,7 @@ function ehl_site_user_default_permissions() {
     'name' => 'administer users',
     'roles' => array(
       0 => 'administrator',
+      1 => 'moderator',
     ),
     'module' => 'user',
   );
@@ -341,6 +351,9 @@ function ehl_site_user_default_permissions() {
     'name' => 'change own username',
     'roles' => array(
       0 => 'administrator',
+      1 => 'moderator',
+      2 => 'professor',
+      3 => 'student',
     ),
     'module' => 'user',
   );
@@ -386,6 +399,8 @@ function ehl_site_user_default_permissions() {
     'name' => 'edit own comments',
     'roles' => array(
       0 => 'administrator',
+      1 => 'moderator',
+      2 => 'student',
     ),
     'module' => 'comment',
   );
@@ -533,6 +548,7 @@ function ehl_site_user_default_permissions() {
     'name' => 'view advanced help index',
     'roles' => array(
       0 => 'administrator',
+      1 => 'moderator',
     ),
     'module' => 'advanced_help',
   );
@@ -542,6 +558,7 @@ function ehl_site_user_default_permissions() {
     'name' => 'view advanced help popup',
     'roles' => array(
       0 => 'administrator',
+      1 => 'moderator',
     ),
     'module' => 'advanced_help',
   );
@@ -551,6 +568,7 @@ function ehl_site_user_default_permissions() {
     'name' => 'view advanced help topic',
     'roles' => array(
       0 => 'administrator',
+      1 => 'moderator',
     ),
     'module' => 'advanced_help',
   );
@@ -578,6 +596,7 @@ function ehl_site_user_default_permissions() {
     'name' => 'view the administration theme',
     'roles' => array(
       0 => 'administrator',
+      1 => 'moderator',
     ),
     'module' => 'system',
   );

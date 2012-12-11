@@ -15,6 +15,7 @@ function ehl_news_user_default_permissions() {
     'name' => 'create article content',
     'roles' => array(
       0 => 'administrator',
+      1 => 'moderator',
     ),
     'module' => 'node',
   );
@@ -24,6 +25,7 @@ function ehl_news_user_default_permissions() {
     'name' => 'delete any article content',
     'roles' => array(
       0 => 'administrator',
+      1 => 'moderator',
     ),
     'module' => 'node',
   );
@@ -33,6 +35,7 @@ function ehl_news_user_default_permissions() {
     'name' => 'delete own article content',
     'roles' => array(
       0 => 'administrator',
+      1 => 'moderator',
     ),
     'module' => 'node',
   );
@@ -42,6 +45,7 @@ function ehl_news_user_default_permissions() {
     'name' => 'edit any article content',
     'roles' => array(
       0 => 'administrator',
+      1 => 'moderator',
     ),
     'module' => 'node',
   );
@@ -51,6 +55,7 @@ function ehl_news_user_default_permissions() {
     'name' => 'edit own article content',
     'roles' => array(
       0 => 'administrator',
+      1 => 'moderator',
     ),
     'module' => 'node',
   );
