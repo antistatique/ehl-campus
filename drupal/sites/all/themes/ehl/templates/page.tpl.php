@@ -27,12 +27,6 @@
         </div>
       <?php endif; ?>
 
-        <?php if($section_slogan): ?>
-          <div id="slogan">
-            <?php print $section_slogan; ?>
-          </div>
-        <?php endif; ?>
-
     </header>
   </div>
 </div>
