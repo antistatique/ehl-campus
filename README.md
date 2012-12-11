@@ -32,7 +32,7 @@ EHL Campus Developement Forum - Drupal
 
 ## Generate make file
     $ cd drupal
-    $ drush generate-makefile ../aists.make
+    $ drush generate-makefile ../ehl-dev-camp.make
 
 
 # Deploy with capistrano
