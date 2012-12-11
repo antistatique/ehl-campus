@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the ehl_news feature.
+ */
+
+include_once 'ehl_news.features.inc';

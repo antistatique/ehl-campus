@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the ehl_social feature.
+ */
+
+include_once 'ehl_social.features.inc';
