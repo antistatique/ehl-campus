@@ -129,6 +129,7 @@ features[variable][] = node_options_page
 features[variable][] = node_submitted_page
 features[variable][] = pathauto_punctuation_hyphen
 features[variable][] = theme_default
+features[variable][] = theme_ehl_settings
 features[variable][] = user_picture_dimensions
 features[variable][] = user_picture_file_size
 features[variable][] = user_picture_style
