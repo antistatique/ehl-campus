@@ -1,0 +1,89 @@
+
+// Gradients //////////////////////////////////////////////////////////////////////////////////////////////////
+
+#gradient {
+  .horizontalStop(@startColor: #555, @startPosition: 50%, @endColor: #333, @endPosition: 80%) {
+    background-color: @endColor;
+    background-image: -moz-linear-gradient(left, @startColor @startPosition, @endColor @endPosition); // FF 3.6+
+    background-image: -webkit-linear-gradient(left,  @startColor @startPosition, @endColor @endPosition); // Safari 5.1+, Chrome 10+
+    background-image: -o-linear-gradient(left,  @startColor @startPosition, @endColor @endPosition); // Opera 11.10
+    background-image: linear-gradient(to right,  @startColor @startPosition, @endColor @endPosition); // Standard, IE10
+    background-repeat: repeat-x;
+    filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=1)",argb(@startColor),argb(@endColor))); // IE9 and down
+  }
+  .vertical(@startColor, @endColor) {
+    background: @startColor; /* Old browsers */
+    background: -moz-linear-gradient(top,  @startColor 0%, @endColor 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@startColor), color-stop(100%,@endColor)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  @startColor 0%,@endColor 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  @startColor 0%,@endColor 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  @startColor 0%,@endColor 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  @startColor 0%,@endColor 100%); /* W3C */
+  }
+  .radial(@left, @top, @startColor, @endColor) {
+    background: -webkit-gradient(radial, @left @top, 0, @left @top, 100, from(@startColor), to(@endColor));
+    background: -webkit-radial-gradient(@left @top, circle closest-corner, @startColor, @endColor);
+    background: -moz-radial-gradient(@left @top, circle closest-corner, @startColor, @endColor);
+    background: -ms-radial-gradient(@left @top, circle closest-corner, @startColor, @endColor);
+  }
+  .radialHR(@left, @top, @startColor, @endColor) {
+    background: -webkit-gradient(radial, @left @top, 0, @left @top, 100, from(@startColor), to(@endColor));
+    background: -webkit-radial-gradient(@left @top, contain, @startColor, @endColor);
+    background: -moz-radial-gradient(@left @top, contain, @startColor, @endColor);
+    background: -ms-radial-gradient(@left @top, contain, @startColor, @endColor);
+  }
+}
+
+
+
+// Typo //////////////////////////////////////////////////////////////////////////////////////////////////////
+
+.font-size(@sizeValue) {
+  @remValue: (@sizeValue/10);
+  @pxValue: (@sizeValue);
+  font-size: ~"@{pxValue}px"; 
+  font-size: ~"@{remValue}rem";
+}
+
+
+// Animation /////////////////////////////////////////////////////////////////////////////////////////////////
+
+.transition(@duration) {
+  -webkit-transition: all @duration ease-in;
+     -moz-transition: all @duration ease-in;
+      -ms-transition: all @duration ease-in;
+       -o-transition: all @duration ease-in;
+          transition: all @duration ease-in;
+}
+
+
+// Block ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+.border-radius(@radius) {
+  -webkit-border-radius: @radius;
+     -moz-border-radius: @radius;
+       -o-border-radius: @radius;
+          border-radius: @radius;
+}
+
+.box-shadow(@left, @top, @blur, @spread, @color) {
+  -webkit-box-shadow: @left @top @blur @spread @color;
+     -moz-box-shadow: @left @top @blur @spread @color;
+       -o-box-shadow: @left @top @blur @spread @color;
+          box-shadow: @left @top @blur @spread @color;
+}
+
+.inset-shadow (@left, @top, @blur, @spread, @color) {
+    -webkit-box-shadow: inset @left @top @blur @spread @color;
+       -moz-box-shadow: inset @left @top @blur @spread @color;
+         -o-box-shadow: inset @left @top @blur @spread @color;
+            box-shadow: inset @left @top @blur @spread @color;
+  }
+
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+  width: auto;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
