@@ -12,7 +12,7 @@ set :repository, "git@github.com:antistatique/ehl-campus.git"
 set :branch, "master"
 set :port, 22
 set :domain,      "ehl-campusdev.alwaysdata.net"
-set :deploy_to, "/home/aists/www/#{application}"
+set :deploy_to, "/home/ehl-campusdev/www/#{application}"
 set :user, "ehl-campusdev"
 set :group, "ehl-campusdev"
 set :runner_group, "ehl-campusdev"
