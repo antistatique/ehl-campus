@@ -37,7 +37,8 @@ regions[sidebar_second] = Sidebar Second
 regions[help] = Help
 regions[highlighted] = Highlighted
 
-
+;-- Custom Region
+regions[nav_bar] = Nav bar
 
 ;-------------- C S S -------------
 stylesheets[all][] = css/style.css

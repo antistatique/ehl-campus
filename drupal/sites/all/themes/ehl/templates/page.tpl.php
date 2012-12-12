@@ -9,6 +9,15 @@
 <?php } ?>
 
 <?php print $mothership_poorthemers_helper; ?>
+
+<div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+        <?php print render($page['nav_bar']); ?>
+    </div>
+  </div>
+</div>
+
 <div class="header-wrapper">
   <div class="container">
     <header role="banner" class="row">
