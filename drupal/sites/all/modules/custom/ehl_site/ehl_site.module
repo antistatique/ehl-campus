@@ -5,3 +5,37 @@
  */
 
 include_once 'ehl_site.features.inc';
+
+
+function ehl_site_block_info() {
+  // This example comes from node.module.
+  $blocks['ehl_site_user_menu'] = array(
+    'info' => t('EHL User menu'), 
+    'cache' => DRUPAL_NO_CACHE,
+  );
+  return $blocks;
+}
+
+
+function ehl_site_block_view($delta = '') {
+  // This example is adapted from node.module.
+  $block = array();
+
+  switch ($delta) {
+    case 'ehl_site_user_menu':
+      $block['subject'] = FALSE;
+      $block['content'] = ehl_site_user_menu_content();
+      break;
+  }
+  return $block;
+}
+
+function ehl_site_user_menu_content(){
+	global $user;
+	$content = '';
+	$content .= '<ul class="nav">';
+	$content .= '<li>' . l('My account','user/' . $user->uid .'/posts') . '</li>';
+	$content .= '<li>' . l('Logout','/user/logout') . '</li>';
+	$content .= '</ul>';
+	return array( '#markup'=> $content);
+}

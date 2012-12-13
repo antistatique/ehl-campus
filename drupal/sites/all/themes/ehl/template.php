@@ -28,6 +28,8 @@ function ehl_preprocess_block(&$variables) {
     $variables['classes_array'][] = 'pull-right';
   } else if ($variables['block_html_id'] === 'block-system-user-menu') {
     $variables['classes_array'][] = 'pull-right';
+  } else if ($variables['block_html_id'] === 'block-ehl-site-ehl-site-user-menu') {
+    $variables['classes_array'][] = 'pull-right';
   }
 }
 
