@@ -30,3 +30,12 @@ function ehl_preprocess_block(&$variables) {
     $variables['classes_array'][] = 'pull-right';
   }
 }
+
+/**
+ * hook_form_FORM_ID_alter
+ */
+
+function ehl_form_search_block_form_alter(&$form, &$form_state, $form_id) {
+	$form['#attributes']['class'] = 'navbar-search';
+    $form['search_block_form']['#attributes']['class'][] = 'search-query';
+} 
