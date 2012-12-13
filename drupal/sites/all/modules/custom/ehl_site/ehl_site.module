@@ -41,5 +41,6 @@ function ehl_site_user_menu_content(){
 		$content .= '<li>' . l('Login','user') . '</li>';
 	}
 	$content .= '</ul>';
-	return array( '#markup'=> $content);
+
+	return array('#markup' => $content);
 }
