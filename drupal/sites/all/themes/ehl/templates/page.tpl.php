@@ -18,27 +18,18 @@
   </div>
 </div>
 
-<div class="header-wrapper">
-  <div class="container">
-    <header role="banner" class="row">
-      <div class="siteinfo span4">
-        <?php if ($logo): ?>
-          <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home">
-            <img id="logo" src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
-            <div id="logo-shape"></div>
-          </a>
-        <?php endif; ?>
-
-      </div>
-      <?php if($page['header']): ?>
-        <div class="header-region span20">
-          <?php print render($page['header']); ?>
-        </div>
-      <?php endif; ?>
-
-    </header>
+<?php if($page['header']): ?>
+  <div class="header-wrapper">
+    <div class="container">
+      <header role="banner" class="row">
+          <div class="header-region span20">
+            <?php print render($page['header']); ?>
+          </div>
+      </header>
+    </div>
   </div>
-</div>
+<?php endif; ?>
+
 <div class="container">
   <div class="page row">
 
