@@ -30,7 +30,7 @@
   <div class="header-wrapper">
     <div class="container">
       <header role="banner" class="row">
-          <div class="header-region span20">
+          <div class="header-region">
             <?php print render($page['header']); ?>
           </div>
       </header>
@@ -41,7 +41,8 @@
 <div class="container">
   <div class="page row">
 
-  <div role="main" id="main-content" class="span20">
+  <div role="main" id="main-content" class="span12">
+
     <?php print render($page['content_pre']); ?>
     <?php print render($title_prefix); ?>
     <?php if ($title): ?>
