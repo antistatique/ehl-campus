@@ -42,36 +42,39 @@
 <div class="container">
   <div class="page row">
 
-  <div class="sidebar-first sidebar span4">
-    <?php print render($page['sidebar_first']); ?>
-  </div>
-
   <div role="main" id="main-content" class="span20">
     <?php print render($page['content_pre']); ?>
     <?php print render($title_prefix); ?>
     <?php if ($title): ?>
-    <div class="row" id="main-title-wrapper"><div class="span20"><h1><?php print $title; ?></h1></div></div>
-  <?php endif; ?>
-  <?php print render($title_suffix); ?>
+      <div class="marketing" id="main-title-wrapper">
+        <h1><?php print $title; ?></h1>
+        <p class="marketing-byline">Lorem ipsum.</p>
+        <hr>
+      </div>
+    <?php endif; ?>
+    <?php print render($title_suffix); ?>
 
-  <?php if ($action_links): ?>
-    <ul class="action-links"><?php print render($action_links); ?></ul>
-  <?php endif; ?>
+    <?php if ($action_links): ?>
+      <ul class="action-links"><?php print render($action_links); ?></ul>
+    <?php endif; ?>
 
-  <?php if (isset($tabs['#primary'][0]) || isset($tabs['#secondary'][0])): ?>
-    <nav class="tabs"><?php print render($tabs); ?></nav>
-  <?php endif; ?>
+    <?php if (isset($tabs['#primary'][0]) || isset($tabs['#secondary'][0])): ?>
+      <div class="row-fluid">
+        <nav class="tabs"><?php print render($tabs); ?></nav>
+      </div>
+    <?php endif; ?>
 
-  <?php if($page['highlighted'] OR $messages){ ?>
-  <div class="drupal-messages">
-    <?php print render($page['highlighted']); ?>
-    <?php print $messages; ?>
-  </div>
-  <?php } ?>
+    <?php if($page['highlighted'] OR $messages){ ?>
+    <div class="drupal-messages">
+      <?php print render($page['highlighted']); ?>
+      <?php print $messages; ?>
+    </div>
+    <?php } ?>
+    <div class="row-fluid">
+      <?php print render($page['content']); ?>
+    </div>
 
-  <?php print render($page['content']); ?>
-
-  <?php print render($page['content_post']); ?>
+    <?php print render($page['content_post']); ?>
 
   </div><!--/main-->
 
