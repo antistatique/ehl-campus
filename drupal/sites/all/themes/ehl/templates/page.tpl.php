@@ -47,7 +47,6 @@
   </div>
 
   <div role="main" id="main-content" class="span20">
-    <?php print $breadcrumb; ?>
     <?php print render($page['content_pre']); ?>
     <?php print render($title_prefix); ?>
     <?php if ($title): ?>
