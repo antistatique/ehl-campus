@@ -18,6 +18,14 @@
   </div>
 </div>
 
+<div class="jumbotron masthead">
+  <div class="container">
+    <div class="logo"></div>
+    <h1>Campus Development Forum</h1>
+    <p>International students workshop</p>
+  </div>
+</div>
+
 <?php if($page['header']): ?>
   <div class="header-wrapper">
     <div class="container">
