@@ -7,7 +7,19 @@
  * hook_preprocess_page
  */
 function ehl_preprocess_page(&$vars,$hook) {
-  
+  $args = arg();
+  if($args[0] === 'user' && is_numeric($args[1])) {
+    // load the user of the current user page (not the current user)
+    $page_user = user_load($args[1]);
+    // Get the user cover image
+    if(!empty($page_user->field_cover_image)) {
+      // hide the field
+      hide($vars['page']['content']['system_main']['field_cover_image']);
+      // Load the cover image url in the page
+      $field_cover_image = field_view_field('user', $page_user, 'field_cover_image','default');
+      $vars['page_user']['field_cover_image_url'] = image_style_url('large', $field_cover_image['#items'][0]['uri']);
+    }
+  }
 }
 
 /**

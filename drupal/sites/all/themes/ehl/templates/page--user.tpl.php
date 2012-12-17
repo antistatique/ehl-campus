@@ -19,7 +19,7 @@
 </div>
 
 <div class="marketing">
-    <div style="background-image:url('assets/img/montain.jpg');" id="user-cover">
+    <div style="background-image:url('<?php print $page_user['field_cover_image_url']; ?>');" id="user-cover">
       <div class="container">
         <div class="row-fluid">
           <div id="user-cover-infos">
