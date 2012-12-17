@@ -23,7 +23,7 @@
 <?php print $selectivizr; ?>
 
 </head>
-<body class="default <?php print $classes; ?>" <?php print $attributes;?>
+<body class="default <?php print $classes; ?>" <?php print $attributes;?>>
 <div><div id="texture-wrapper"><div id="color-wrapper"><div id="object-wrapper">
 <a href="#main-content" class="element-invisible element-focusable"><?php print t('Skip to main content'); ?></a>
 <?php print $page_top; //stuff from modules always render first ?>
