@@ -48,7 +48,6 @@
     <?php if ($title): ?>
       <div class="marketing" id="main-title-wrapper">
         <h1><?php print $title; ?></h1>
-        <p class="marketing-byline">Lorem ipsum.</p>
         <hr>
       </div>
     <?php endif; ?>
