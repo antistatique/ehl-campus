@@ -36,7 +36,7 @@ function ehl_site_user_menu_content(){
 	$content .= '<ul class="nav">';
 	if($user->uid) {
 		$content .= '<li>' . l('My account','user/' . $user->uid .'/posts') . '</li>';
-		$content .= '<li>' . l('Logout','/user/logout') . '</li>';
+		$content .= '<li>' . l('Logout','user/logout') . '</li>';
 	} else {
 		$content .= '<li>' . l('Login','user') . '</li>';
 	}
