@@ -26,6 +26,12 @@ function ehl_site_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
+        'views-school_list-block' => array(
+          'module' => 'views',
+          'delta' => 'school_list-block',
+          'region' => 'footer',
+          'weight' => '0',
+        ),
         'system-main-menu' => array(
           'module' => 'system',
           'delta' => 'main-menu',

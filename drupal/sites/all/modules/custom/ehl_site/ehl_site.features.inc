@@ -19,6 +19,13 @@ function ehl_site_ctools_plugin_api() {
 }
 
 /**
+ * Implements hook_views_api().
+ */
+function ehl_site_views_api() {
+  return array("version" => "3.0");
+}
+
+/**
  * Implements hook_node_info().
  */
 function ehl_site_node_info() {
