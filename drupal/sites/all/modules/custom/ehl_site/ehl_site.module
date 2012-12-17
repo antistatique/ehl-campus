@@ -44,3 +44,27 @@ function ehl_site_user_menu_content(){
 
 	return array('#markup' => $content);
 }
+
+/**
+ * hook_url_outbound_alter
+ **/
+// Try to find a better solution for performance reason...
+/*
+function ehl_site_url_outbound_alter( &$path, &$options, $original_path ) {
+  $current_path = explode("/", $original_path );
+  if ($current_path[0] == "node" && is_numeric($current_path[1]) == "node" && empty($current_path[2])) {
+    dpm($original_path);
+    $node = node_load($current_path[1]);
+    if($node->type == 'project'){
+      $path = 'user/' . $node->uid . '/project';
+    }
+  }
+}
+*/
+
+function ehl_site_preprocess_node(&$vars){
+  if($vars['node']->type == 'project'){
+   $vars['node_url'] = url('user/' . $vars['node']->uid . '/project');
+  }
+}
+
