@@ -27,7 +27,6 @@ features[field][] = node-project-field_project_description
 features[field][] = node-project-field_video
 features[field][] = node-school-body
 features[field][] = node-school-field_address
-features[field][] = node-school-field_color
 features[field][] = node-school-field_country
 features[field][] = node-school-field_slug
 features[node][] = post
