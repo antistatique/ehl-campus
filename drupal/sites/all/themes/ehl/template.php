@@ -17,7 +17,7 @@ function ehl_preprocess_page(&$vars,$hook) {
       hide($vars['page']['content']['system_main']['field_cover_image']);
       // Load the cover image url in the page
       $field_cover_image = field_view_field('user', $page_user, 'field_cover_image','default');
-      $vars['page_user']['field_cover_image_url'] = image_style_url('large', $field_cover_image['#items'][0]['uri']);
+      $vars['page_user']['field_cover_image_url'] = image_style_url('banner', $field_cover_image['#items'][0]['uri']);
     }
   }
 }
