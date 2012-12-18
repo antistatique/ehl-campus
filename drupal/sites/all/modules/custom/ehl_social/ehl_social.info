@@ -29,6 +29,7 @@ features[field][] = node-school-body
 features[field][] = node-school-field_address
 features[field][] = node-school-field_color
 features[field][] = node-school-field_country
+features[field][] = node-school-field_slug
 features[node][] = post
 features[node][] = project
 features[node][] = school
