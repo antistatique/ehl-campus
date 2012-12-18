@@ -148,7 +148,7 @@ function ehl_social_field_default_fields() {
         'active' => 1,
         'module' => 'image',
         'settings' => array(
-          'preview_image_style' => 'medium',
+          'preview_image_style' => 'standard',
           'progress_indicator' => 'throbber',
         ),
         'type' => 'image_image',
@@ -368,7 +368,7 @@ function ehl_social_field_default_fields() {
         'active' => 1,
         'module' => 'image',
         'settings' => array(
-          'preview_image_style' => 'medium',
+          'preview_image_style' => 'standard',
           'progress_indicator' => 'throbber',
         ),
         'type' => 'image_image',
