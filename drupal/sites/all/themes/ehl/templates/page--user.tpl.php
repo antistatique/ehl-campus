@@ -3,6 +3,11 @@
 //kpr($theme_hook_suggestions);
 //template naming
 //page--[CONTENT TYPE].tpl.php
+
+$cover_style = '';
+if(isset($page_user['field_cover_image_url'])){
+  $cover_style .= 'background-image:url(' . $page_user['field_cover_image_url'] . '); ';
+}
 ?>
 <?php if( theme_get_setting('mothership_poorthemers_helper') ){ ?>
 <!--page.tpl.php-->
@@ -19,7 +24,7 @@
 </div>
 
 <div class="marketing">
-    <div style="background-image:url('<?php print $page_user['field_cover_image_url']; ?>');" id="user-cover">
+    <div style="<?php print $cover_style; ?>" id="user-cover">
       <div class="container">
         <div class="row-fluid">
           <div id="user-cover-infos">
