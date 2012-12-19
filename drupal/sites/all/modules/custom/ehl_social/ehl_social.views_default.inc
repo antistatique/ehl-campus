@@ -348,11 +348,13 @@ function ehl_social_views_default_views() {
   $handler->display->display_options['filters']['nid']['table'] = 'node';
   $handler->display->display_options['filters']['nid']['field'] = 'nid';
   $handler->display->display_options['filters']['nid']['relationship'] = 'field_school_target_id';
+  $handler->display->display_options['filters']['nid']['value']['min'] = 'A';
+  $handler->display->display_options['filters']['nid']['value']['max'] = 'A';
   $handler->display->display_options['filters']['nid']['exposed'] = TRUE;
   $handler->display->display_options['filters']['nid']['expose']['operator_id'] = 'nid_op';
   $handler->display->display_options['filters']['nid']['expose']['label'] = 'University';
   $handler->display->display_options['filters']['nid']['expose']['operator'] = 'nid_op';
-  $handler->display->display_options['filters']['nid']['expose']['identifier'] = 'nid';
+  $handler->display->display_options['filters']['nid']['expose']['identifier'] = 'univeristy';
   $handler->display->display_options['filters']['nid']['expose']['remember_roles'] = array(
     2 => '2',
     1 => 0,

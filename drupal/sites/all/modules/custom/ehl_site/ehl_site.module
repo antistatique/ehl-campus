@@ -68,3 +68,31 @@ function ehl_site_preprocess_node(&$vars){
   }
 }
 
+
+
+
+function ehl_site_form_views_exposed_form_alter(&$form, $form_state, $form_id) {
+  $nid_options = ehl_site_universities_form_options();
+
+  $form['univeristy'] = array (
+    '#type'           => 'select',
+    '#multiple'       => false,
+    '#required'       => false,
+    '#options'        => $nid_options,
+    '#default_value'  => '',
+  ); 
+}
+
+
+function ehl_site_universities_form_options(){
+  $options = array('' => t('-- All --'));
+  $result = db_query("SELECT nid, title FROM {node} WHERE type = :type LIMIT 50",
+    array(
+      ':type' => 'school',
+    )
+  );
+  foreach($result as $record) {
+    $options[$record->nid] = $record->title;
+  }
+  return $options;
+}
