@@ -183,8 +183,7 @@ function ehl_social_views_default_views() {
   $handler->display->display_options['empty']['area']['table'] = 'views';
   $handler->display->display_options['empty']['area']['field'] = 'area';
   $handler->display->display_options['empty']['area']['empty'] = TRUE;
-  $handler->display->display_options['empty']['area']['content'] = '<h3>:( You don\'t have a project yet</h3>
-<b><a href=\'/node/add/project\'>Create one </a></b>.';
+  $handler->display->display_options['empty']['area']['content'] = '<h3>:( This user didn\'t publish a project yet.</h3>';
   $handler->display->display_options['empty']['area']['format'] = 'full_html';
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
