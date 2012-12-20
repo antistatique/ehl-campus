@@ -33,18 +33,21 @@
 <div class="comments" class="<?php print $classes; ?>"<?php print $attributes; ?>>
 	<div class="row-fluid">
 		<div class="span9 offset3">
-			<?php if ($node->type != 'forum'): ?>
-			  <h4><?php print t('Comments'); ?></h4>
-			<?php endif; ?>
-
-			<?php print render($content['comments']); ?>
-
-			<?php if ($content['comment_form']): ?>
-			  <h3><?php print t('Add new comment'); ?></h3>
-			  <?php print render($content['comment_form']); ?>
-			<?php endif; ?>
+			<h4>
+			  <?php print t('Comments'); ?>
+			</h4>
+			<hr />
 		</div>
 	</div>
+
+	<?php print render($content['comments']); ?>
+	
+	<div class="row-fluid">
+		<div class="span9 offset3">
+		<?php print render($content['comment_form']); ?>
+		</div>
+	</div>
+
 </div>
 <?php if( theme_get_setting('mothership_poorthemers_helper') ){ ?>
 <!--/ comments-wrapper -->

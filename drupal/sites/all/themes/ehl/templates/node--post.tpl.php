@@ -14,7 +14,7 @@ if ($id_node) {
 hide($content['comments']);
 hide($content['links']);
 hide($content['field_logo']);
-hide($content['field_badge'])
+hide($content['field_badge']);
 ?>
 
 <!-- node.tpl.php -->
@@ -39,8 +39,8 @@ hide($content['field_badge'])
       <?php print render($content);?>
     </div>
 
-    <?php print render($content['links']); ?>
   </div>
+  <div class="pull-right"><i class="icon-comment"></i> <a href="./user.html#comment">(2)</a> | <?php print l('Write a comment', 'node/' . $node->nid . '/reply'); ?>| <a href="./user.html#comment">See all comments</a></div>
 
   <?php print render($content['comments']); ?>
 </article>

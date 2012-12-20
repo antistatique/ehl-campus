@@ -20,7 +20,7 @@
 
 <div class="jumbotron masthead">
   <div class="container">
-    <div class="logo"></div>
+    <a title="home" href='/'><div class="logo"></div></a>
     <h1>Campus Development Forum</h1>
     <p>International students workshop</p>
   </div>
