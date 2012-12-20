@@ -8,16 +8,43 @@
  */
 function ehl_preprocess_page(&$vars,$hook) {
   $args = arg();
+
+  // USER PAGE
   if($args[0] === 'user' && is_numeric($args[1])) {
     // load the user of the current user page (not the current user)
     $page_user = user_load($args[1]);
-    // Get the user cover image
+    // User name
+    if(!empty($page_user->name)){
+      $vars['user_name'] = $page_user->name;
+    }
+    // FIELD  user cover image
     if(!empty($page_user->field_cover_image)) {
       // hide the field
       hide($vars['page']['content']['system_main']['field_cover_image']);
       // Load the cover image url in the page
       $field_cover_image = field_view_field('user', $page_user, 'field_cover_image','default');
-      $vars['page_user']['field_cover_image_url'] = image_style_url('banner', $field_cover_image['#items'][0]['uri']);
+      $vars['field_cover_image_url'] = image_style_url('banner', $field_cover_image['#items'][0]['uri']);
+    }
+    // FIELD School
+    if(!empty($page_user->field_school)){
+      hide($vars['page']['content']['system_main']['field_school']);
+      $vars['field_school'] = field_view_field('user', $page_user, 'field_school', 'default');
+    } 
+    // USER Picture
+    if(!empty($page_user->picture)){
+      hide($vars['page']['content']['system_main']['user_picture']);
+      
+      // This is not a field, so we have to create the structure by hand.
+      $vars['user_picture'] = theme('image_style',
+          array(
+            'style_name' => 'thumb',
+            'path' =>$page_user->picture->uri,
+            'alt' => $page_user->name,
+            'attributes' => array(
+              'class' => 'avatar user-cover-image',
+            ),           
+          )
+        );
     }
   }
 }

@@ -5,9 +5,10 @@
 //page--[CONTENT TYPE].tpl.php
 
 $cover_style = '';
-if(isset($page_user['field_cover_image_url'])){
-  $cover_style .= 'background-image:url(' . $page_user['field_cover_image_url'] . '); ';
+if(isset($field_cover_image_url)){
+  $cover_style .= 'background-image:url(' . $field_cover_image_url . '); ';
 }
+
 ?>
 <?php if( theme_get_setting('mothership_poorthemers_helper') ){ ?>
 <!--page.tpl.php-->
@@ -24,14 +25,14 @@ if(isset($page_user['field_cover_image_url'])){
 </div>
 
 <div class="marketing">
-    <div style="<?php print $cover_style; ?>" id="user-cover">
+    <div style="<?php print $cover_style; ?>" class="user-cover">
       <div class="container">
         <div class="row-fluid">
-          <div id="user-cover-infos">
-            <div style="text-align:left;" id="user-cover-text">
-              <img width="180" height="180" id="user-cover-image" alt="Marc" src="assets/img/marc.png">
-              <h1>Marc Friederich</h1>
-              <p class="marketing-byline">Architect student from <a href="./school.html">HEPIA, Geneva</a> </p>
+          <div class="user-cover-infos">
+            <div style="text-align:left;" class="user-cover-text">
+              <?php print render($user_picture);?>
+              <h1><?php print render($user_name); ?></h1>
+              <p class="marketing-byline">Architect student from <?php print render($field_school); ?></p>
             </div>
           </div>
         </div>
