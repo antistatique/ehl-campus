@@ -37,7 +37,7 @@ function ehl_preprocess_page(&$vars,$hook) {
       // This is not a field, so we have to create the structure by hand.
       $vars['user_picture'] = theme('image_style',
           array(
-            'style_name' => 'thumb',
+            'style_name' => 'avatar',
             'path' =>$page_user->picture->uri,
             'alt' => $page_user->name,
             'attributes' => array(
