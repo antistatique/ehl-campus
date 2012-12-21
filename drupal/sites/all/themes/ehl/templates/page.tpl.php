@@ -18,13 +18,15 @@
   </div>
 </div>
 
+<?php if(!empty($banner_text)): ?>
 <div class="jumbotron masthead">
   <div class="container">
     <a title="home" href='/'><div class="logo"></div></a>
     <h1>Campus Development Forum</h1>
-    <p>International students workshop</p>
+    <p><?php print $banner_text; ?></p>
   </div>
 </div>
+<?php endif; ?>
 
 <?php if($page['header']): ?>
   <div class="header-wrapper">

@@ -9,6 +9,16 @@
 function ehl_preprocess_page(&$vars,$hook) {
   $args = arg();
 
+  // FRONT
+  if(drupal_is_front_page()){
+    $vars['banner_text'] = 'International students workshop';
+  }
+
+  // NEWS
+  if($args[0] == 'news'){
+    $vars['banner_text'] = 'News';
+  }
+
   // USER PAGE
   if($args[0] === 'user' && is_numeric($args[1])) {
     // load the user of the current user page (not the current user)
@@ -33,7 +43,7 @@ function ehl_preprocess_page(&$vars,$hook) {
     // USER Picture
     if(!empty($page_user->picture)){
       hide($vars['page']['content']['system_main']['user_picture']);
-      
+
       // This is not a field, so we have to create the structure by hand.
       $vars['user_picture'] = theme('image_style',
           array(

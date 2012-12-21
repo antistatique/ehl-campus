@@ -40,8 +40,9 @@ hide($content['field_badge']);
     </div>
 
   </div>
-  <div class="pull-right"><i class="icon-comment"></i> <a href="./user.html#comment">(2)</a> | <?php print l('Write a comment', 'node/' . $node->nid . '/reply'); ?>| <a href="./user.html#comment">See all comments</a></div>
 
   <?php print render($content['comments']); ?>
+
+    <div class="pull-right"><i class="icon-comment"></i> <a href="./user.html#comment">(2)</a> | <?php print l('Write a comment', 'node/' . $node->nid . '/reply'); ?>| <a href="./user.html#comment">See all comments</a></div>
 </article>
 <hr />
