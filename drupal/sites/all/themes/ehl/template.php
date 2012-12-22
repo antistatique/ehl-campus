@@ -10,19 +10,32 @@ function ehl_preprocess_page(&$vars,$hook) {
   $args = arg();
 
   // FRONT
-  if(drupal_is_front_page()){
+  if(drupal_is_front_page()) {
     $vars['banner_text'] = 'International students workshop';
   }
 
   // NEWS
-  if($args[0] == 'news'){
+  if($args[0] == 'news') {
     $vars['banner_text'] = 'News';
   }
+
+  // POST PAGE
+  if($args[0] === 'node' &&  is_numeric($vars['node']->uid)){
+    $vars['title'] = 'Post';
+
+    $vars['theme_hook_suggestions'][] = 'page__user';
+    $page_user = user_load($vars['node']->uid);
+  }
+
+  // 
 
   // USER PAGE
   if($args[0] === 'user' && is_numeric($args[1])) {
     // load the user of the current user page (not the current user)
     $page_user = user_load($args[1]);
+  }
+  
+  if(isset($page_user)) {
     // User name
     if(!empty($page_user->name)){
       $vars['user_name'] = $page_user->name;

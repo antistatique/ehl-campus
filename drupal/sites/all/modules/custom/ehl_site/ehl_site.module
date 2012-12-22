@@ -62,7 +62,17 @@ function ehl_site_url_outbound_alter( &$path, &$options, $original_path ) {
 }
 */
 
-function ehl_site_preprocess_node(&$vars){
+/**
+ * hook_node_presave
+ */
+function ehl_site_node_presave($node) {
+  if($node->type == 'post') {
+    // Cute the title to make it shorter
+    $node->title = substr($node->title, 0, 20);
+  }
+}
+
+function ehl_site_preprocess_node(&$vars) {
   if($vars['node']->type == 'project'){
     $vars['node_url'] = url('user/' . $vars['node']->uid . '/project');
   }

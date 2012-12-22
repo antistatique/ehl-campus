@@ -42,11 +42,13 @@
 
 	<?php print render($content['comments']); ?>
 
+	<?php if ($content['comment_form']): ?>
 	<div class="row-fluid">
 		<div class="span9 offset3">
-		<?php //print render($content['comment_form']); ?>
+		<?php print render($content['comment_form']); ?>
 		</div>
 	</div>
+	<?php endif; ?>
 
 </div>
 <?php if( theme_get_setting('mothership_poorthemers_helper') ){ ?>
