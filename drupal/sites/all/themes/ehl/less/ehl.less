@@ -8,55 +8,12 @@
 /*=============================================================================
 ** GENERAL
 **============================================================================*/
-h1, h2, h3, h4, h5{
-  font-weight: normal;
-}
-body {
-  position: relative;
-  padding-top: 40px;
-}
-
-
-/*=============================================================================
-** FORMS
-**============================================================================*/
+@import "snippet/general.less";
 
 /*=============================================================================
 ** HEADER
 **============================================================================*/
-body > .navbar {
-  font-size: 13px;
-}
-.block-search .form-actions{
-  display:none;
-}
-.logo{
-  background: url(../img/logo_ehl_white.png) no-repeat 0 0;
-  float: left;
-  width: 140px;
-  height: 100px;
-}
-.jumbotron {
-  padding: 20px 0 20px;
-  color: #fff;
-  background: @ehlblue;
-  h1 {
-    margin-top: 0.6em;
-    font-size: 30px;
-    padding-left: 150px;
-    line-height: 1;
-  }
-  p {
-    padding-left: 150px;
-    font-size: 18px;
-    line-height: 1.25;
-  }
-  .logo{
-    border-right: 1px solid rgba(255,255,255,0.3);
-    padding-right: 30px;
-    margin-right: 40px;
-  }
-}
+@import "snippet/header.less";
 
 /*=============================================================================
 ** NAVIGATION
@@ -68,114 +25,28 @@ body > .navbar {
 /*=============================================================================
 ** CONTENT
 **============================================================================*/
-/* Marketing section of Overview
--------------------------------------------------- */
 
-.marketing {
-  text-align: center;
-  color: #5a5a5a;
-}
-.marketing h1 {
-  margin: 60px 0 10px;
-  font-size: 40px;
-  font-weight: 200;
-  line-height: 1;
-  letter-spacing: -1px;
-}
-.marketing h2 {
-  font-weight: 200;
-  margin-bottom: 5px;
-}
-.marketing p {
-  font-size: 16px;
-  line-height: 1.5;
-}
-.marketing .marketing-byline {
-  margin-bottom: 40px;
-  font-size: 20px;
-  font-weight: 300;
-  line-height: 1.25;
-  color: #999;
-}
-.marketing img {
-  display: block;
-  margin: 0 auto 30px;
-}
 
-/*=============================================================================
-** SCHOOLS
-**============================================================================*/
-.school a{
-}
-.school-color{
-  color: @white;
-  background-color: red;
-  padding: 0.6em 0.9em;
-  display: inline-block;
-}
-.schools{
-  margin: 0;
-  li{
-    float: left;
-    margin: 0.3em 0.6em 0.3em 0;
-  }
-}
 /*=============================================================================
 ** SCHOOLS COLORS
 **============================================================================*/
-.chile{
-  background-color: #C2CD15;
-}
+@import "snippet/colors.less";
 
 /*=============================================================================
 ** USER
 **============================================================================*/
-.user-cover-infos{
-  margin-top: 180px;
-}
-.user-cover-text{
-  float: left;
-  background-color: #fff;
-  height: 160px;
-  position: relative;
-  padding-left: 100px;
-  margin-left: 40px;
-  padding-right: 30px;
-}
-.user-cover-text h1{
-  margin-top: 40px;
-}
-.user-cover-image{
-  width: 160px;
-  height: 160px;
-  position: absolute;
-  left:-80px;
-  top: 0;
-  /*background-color: #fff;*/
-}
-.user-cover{
-  min-height: 390px;
-  background-size: cover;
-}
-.node-type-post{
-  .user-cover-infos{
-    margin-top: 30px;
-  }
-  .user-cover{
-    min-height: 120px;
-  }
-}
+@import "snippet/user.less";
+
+/*=============================================================================
+** COMMENTS
+**============================================================================*/
+@import "snippet/comment.less";
+
 
 /*=============================================================================
 ** FOOTER
 **============================================================================*/
-.footer{
-  background-color: @grayDark;
-  color: @white;
-  padding: 40px 0;
-  margin-top: 70px;
-  border-top: 1px solid #e5e5e5;
-}
+@import "snippet/footer.less";
 
 /*=============================================================================
 ** ADMIN

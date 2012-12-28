@@ -1,0 +1,51 @@
+/*=============================================================================
+** USER
+**============================================================================*/
+.user-cover-infos{
+  margin-top: 160px;
+}
+.user-cover-text{
+  float: left;
+  position: relative;
+  padding-left: 90px;
+  padding-right: 30px;
+  margin-left: 100px;
+  text-align: left;
+  h1{
+    margin-top: 10px;
+    padding-bottom: 15px;
+    border-bottom-color: @white;
+    border-bottom: 1px solid rgba(255,255,255,0.5);
+  }
+  h1, .marketing-byline, a{
+    color: @white;
+  }
+  a{
+    text-decoration: underline;
+  }
+  .user-picture{
+    .border-radius(70px);
+    border:4px solid @white;
+  }
+}
+.user-cover .avatar-frame{
+  width: 140px;
+  height: 140px;
+  position: absolute;
+  left:-70px;
+  top: 50%;
+  margin-top: -70px;
+  /*background-color: #fff;*/
+}
+.user-cover{
+  min-height: 390px;
+  background-size: cover;
+}
+.node-type-post{
+  .user-cover-infos{
+    margin-top: 30px;
+  }
+  .user-cover{
+    min-height: 150px;
+  }
+}

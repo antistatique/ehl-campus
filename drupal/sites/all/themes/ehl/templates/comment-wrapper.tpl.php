@@ -45,7 +45,11 @@
 	<?php if ($content['comment_form']): ?>
 	<div class="row-fluid">
 		<div class="span9 offset3">
-		<?php print render($content['comment_form']); ?>
+		<hr>
+		<div class="comment-form-wrapper">
+			<h4><?php print t('Add your comment'); ?></h4>
+			<?php print render($content['comment_form']); ?>
+		</div>
 		</div>
 	</div>
 	<?php endif; ?>

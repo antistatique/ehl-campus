@@ -25,14 +25,16 @@ if(isset($field_cover_image_url)){
 </div>
 
 <div class="marketing">
-    <div style="<?php print $cover_style; ?>" class="user-cover">
+    <div style="<?php print $cover_style; ?>" class="user-cover switzerland">
       <div class="container">
         <div class="row-fluid">
-          <div class="user-cover-infos">
-            <div style="text-align:left;" class="user-cover-text">
-              <?php print render($user_picture);?>
+          <div class="user-cover-infos span6 offset3">
+            <div class="user-cover-text switzerland">
+              <div class="avatar-frame"><div class="user-picture">
+                <?php print render($user_picture);?>
+              </div></div>
               <h1><?php print render($user_name); ?></h1>
-              <p class="marketing-byline">Architect student from <?php print render($field_school); ?></p>
+              <p class="marketing-byline">Student from <?php print render($field_school); ?></p>
             </div>
           </div>
         </div>

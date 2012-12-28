@@ -12,29 +12,33 @@ if ($classes) {
   <?php print render($title_suffix); ?>
 
 
-  <div class="row-fluid comment">
+  <div class="row-fluid comment <?php if ($new): print "new-element"; endif; ?>">
     <div class="span1 offset3" style="text-align: right;">
-    <?php if ($new): ?>
-      <mark><?php print $new; ?></mark>
-    <?php endif; ?>
     
     <?php print $picture; ?>
-    
+
   </div>
 
 
 
   <div class="content span8"<?php print $content_attributes; ?>>
-    <h4>
-      <?php print $author; ?>, <span class="date"><time><?php print $created; ?></time></span>
-    </h4>
+    <div class="comment-content">
+      <p class="comment-meta">
+        <?php print $author; ?>, 
+        <span class="date">
+          <time><?php print $created; ?></time>
+          <?php if ($new): ?>
+            <mark><?php print $new; ?></mark>
+          <?php endif; ?>
+        </span>
+      </p>
 
-    <?php
-      // We hide the comments and links now so that we can render them later.
-      hide($content['links']);
-      print render($content);
-    ?>
-
+      <?php
+        // We hide the comments and links now so that we can render them later.
+        hide($content['links']);
+        print render($content);
+      ?>
+    </div>
   </div>
 
 

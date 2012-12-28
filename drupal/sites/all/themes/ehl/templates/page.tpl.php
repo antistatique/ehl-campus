@@ -91,15 +91,12 @@
 <div class="footer">
     <div class="container">
         <div class="row-fluid">
-            <div class="span3">
-                <div class="logo"></div>
-            </div>
-            <div class="span6">
+            <div class="span8">
               <h1>Campus Development Forum</h1>
               <h2>International students workshop</h2>
               <p>A project organized by the <a href="http://ehl.edu/eng/About-us" title="About us / Home - Ecole hôtelière de Lausanne">Ecole hôtelière de Lausanne</a> to collaborate with worldwide students on building the new campus.</p>
             </div>
-            <div class="span3">
+            <div class="span4">
                 <?php print render($page['footer']); ?>
             </div>
         </div>
