@@ -20,7 +20,7 @@ function ehl_preprocess_page(&$vars,$hook) {
   }
 
   // POST PAGE
-  if($args[0] === 'node' &&  is_numeric($vars['node']->uid)){
+  if($args[0] === 'node' && isset($vars['node']) && $vars['node']->type == 'post'){
     $vars['title'] = 'Post';
 
     $vars['theme_hook_suggestions'][] = 'page__user';
