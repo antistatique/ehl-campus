@@ -18,7 +18,7 @@
 <?php } ?>
 <?php if ($user_picture): ?>
   <div class="avatar-frame">
-    <div class="user-picture switzerland colorborder">
+    <div class="user-picture <?php print $account->field_school_field_slug; ?> colorborder">
       <?php print $user_picture; ?>
     </div>
   </div>

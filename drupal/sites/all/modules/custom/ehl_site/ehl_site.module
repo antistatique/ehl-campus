@@ -106,3 +106,15 @@ function ehl_site_universities_form_options(){
   }
   return $options;
 }
+
+/**
+ * hook_user_view
+ */
+function ehl_site_user_view($account){
+  // Load the school slug
+  $field_school = field_get_items('user', $account, 'field_school');
+  if(!empty($field_school)){
+    $field_school_fields_slug = field_get_items('node', $field_school[0]['entity'],'field_slug');
+    $account->field_school_field_slug = $field_school_fields_slug[0]['safe_value'];
+  }
+}

@@ -25,11 +25,11 @@ if(isset($field_cover_image_url)){
 </div>
 
 <div class="marketing">
-    <div style="<?php print $cover_style; ?>" class="user-cover switzerland">
+    <div style="<?php print $cover_style; ?>" class="user-cover <?php print $field_school_field_slug; ?>">
       <div class="container">
         <div class="row-fluid">
           <div class="user-cover-infos span6 offset3">
-            <div class="user-cover-text switzerland">
+            <div class="user-cover-text <?php print $field_school_field_slug; ?>">
               <div class="avatar-frame"><div class="user-picture">
                 <?php print render($user_picture);?>
               </div></div>
