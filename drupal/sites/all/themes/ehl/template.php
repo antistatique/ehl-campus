@@ -54,10 +54,11 @@ function ehl_preprocess_page(&$vars,$hook) {
       hide($vars['page']['content']['system_main']['field_school']);
       $vars['field_school'] = field_view_field('user', $page_user, 'field_school', 'default');
     } 
-    // User slug
-    if(!empty($page_user->field_school_field_slug)){
+    // FIELD Slug (from school)
+    if(!empty($vars['field_school']['#items'][0])){
       // field_slug
-      $vars['field_school_field_slug'] = $page_user->field_school_field_slug;
+      $school_fields_slug = field_get_items('node',$vars['field_school']['#items'][0]['entity'],'field_slug');
+      $vars['field_school_field_slug'] = $school_fields_slug[0]['safe_value'];
     }
     // USER Picture
     if(!empty($page_user->picture)){
