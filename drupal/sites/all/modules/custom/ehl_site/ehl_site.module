@@ -65,6 +65,19 @@ function ehl_site_preprocess_node(&$vars) {
   }
 }
 
+/**
+ * hook_views_pre_render
+ */
+function ehl_site_views_pre_render(&$view){
+  if($view->name == 'my_project' && empty($view->result)){
+    // if the current user is on is own project page
+    global $user;
+    if($user->uid == $view->args[0]){
+      $view->empty['area']->options['content'] = "<h3>:( You didn't create a project. " . l('Create one', 'node/add/project') . " now.</h3>";
+    }
+  } 
+}
+
 
 
 /**
