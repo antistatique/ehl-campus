@@ -6,7 +6,9 @@
 
 include_once 'ehl_site.features.inc';
 
-
+/**
+ * hook_block_info
+ */
 function ehl_site_block_info() {
   // This example comes from node.module.
   $blocks['ehl_site_user_menu'] = array(
@@ -16,7 +18,9 @@ function ehl_site_block_info() {
   return $blocks;
 }
 
-
+/**
+ * hook_block_view
+ */
 function ehl_site_block_view($delta = '') {
   // This example is adapted from node.module.
   $block = array();
@@ -46,23 +50,6 @@ function ehl_site_user_menu_content(){
 }
 
 /**
- * hook_url_outbound_alter
- **/
-// Try to find a better solution for performance reason...
-/*
-function ehl_site_url_outbound_alter( &$path, &$options, $original_path ) {
-  $current_path = explode("/", $original_path );
-  if ($current_path[0] == "node" && is_numeric($current_path[1]) == "node" && empty($current_path[2])) {
-    dpm($original_path);
-    $node = node_load($current_path[1]);
-    if($node->type == 'project'){
-      $path = 'user/' . $node->uid . '/project';
-    }
-  }
-}
-*/
-
-/**
  * hook_node_presave
  */
 function ehl_site_node_presave($node) {
@@ -80,7 +67,11 @@ function ehl_site_preprocess_node(&$vars) {
 
 
 
-
+/**
+ * hook_form_FORM_ID_alter
+ *
+ * Generate the select to filter by school
+ */
 function ehl_site_form_views_exposed_form_alter(&$form, $form_state, $form_id) {
   $nid_options = ehl_site_universities_form_options();
 
