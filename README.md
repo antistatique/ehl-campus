@@ -40,7 +40,8 @@ Functional wireframe:  http://dev.antistatique.net/ehl/
 # Deploy with capistrano
 
 gem install capistrano-drupal
-# After installation update the script with https://github.com/antistatique/capistrano-drupal
+
+After installation overwrite the script with https://github.com/antistatique/capistrano-drupal
 
 ## Documentations
 
