@@ -3,6 +3,8 @@ ehl-campus
 
 EHL Campus Developement Forum - Drupal
 
+Functional wireframe:  http://dev.antistatique.net/ehl/
+
 ## Quick install
     $ cd drupal
     $ drush site-install minimal --db-url=mysql://ehlcampus:ehlcampus@localhost/ehlcampus --db-su=root --db-su-pw= --site-name=ehl Campus
