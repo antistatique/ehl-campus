@@ -5476,6 +5476,7 @@ body > .navbar {
   padding-bottom: 15px;
   border-bottom-color: #ffffff;
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  font-size: 30px;
 }
 .user-cover-text h1,
 .user-cover-text .marketing-byline,
