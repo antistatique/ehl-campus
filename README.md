@@ -3,6 +3,8 @@ ehl-campus
 
 EHL Campus Developement Forum - Drupal
 
+Functional wireframe:  http://dev.antistatique.net/ehl/
+
 ## Quick install
     $ cd drupal
     $ drush site-install minimal --db-url=mysql://ehlcampus:ehlcampus@localhost/ehlcampus --db-su=root --db-su-pw= --site-name=ehl Campus
@@ -38,7 +40,8 @@ EHL Campus Developement Forum - Drupal
 # Deploy with capistrano
 
 gem install capistrano-drupal
-# After installation update the script with https://github.com/antistatique/capistrano-drupal
+
+After installation overwrite the script with https://github.com/antistatique/capistrano-drupal
 
 ## Documentations
 

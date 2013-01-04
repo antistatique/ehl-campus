@@ -92,6 +92,11 @@ function ehl_preprocess_block(&$variables) {
   }
 }
 
+function ehl_preprocess_user_picture(&$vars){
+  if(!isset($vars['account']->field_school_field_slug)){
+    $vars['account']->field_school_field_slug = '';
+  }
+}
 
 // ------ Theme ------
 

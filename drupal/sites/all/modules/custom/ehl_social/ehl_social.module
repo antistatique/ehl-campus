@@ -5,3 +5,15 @@
  */
 
 include_once 'ehl_social.features.inc';
+
+/**
+ * hook_node_view
+ */ 
+function ehl_social_node_view($node, $view_mode, $langcode) {
+  if($node->type == 'post'){
+  	// hide comment form on feed page
+  	if(arg(0) == 'live-feed' || drupal_is_front_page()){
+  		$node->comment = 1;
+  	}
+  }
+}

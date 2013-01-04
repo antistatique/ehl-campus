@@ -38,11 +38,12 @@ hide($content['field_badge']);
     <div class="span9 content">
       <?php print render($content);?>
     </div>
-
   </div>
+  
+  <a name="<?php print $node->nid . '-comments'; ?>"></a>
 
   <?php print render($content['comments']); ?>
 
-    <div class="pull-right"><i class="icon-comment"></i> <a href="./user.html#comment">(2)</a> | <?php print l('Write a comment', 'node/' . $node->nid . '/reply'); ?>| <a href="./user.html#comment">See all comments</a></div>
+    <div class="pull-right"><i class="icon-comment"></i> <?php print l($node->comment_count, 'node/' . $node->nid, array('fragment' => $node->nid . '-comments')); ?> | <?php print l('Write a comment', 'node/' . $node->nid . '/reply', array('fragment' => 'comment-form')); ?>| <?php print l('See all comments', 'node/' . $node->nid, array('fragment' => $node->nid . '-comments')); ?></div>
 </article>
 <hr class="soften" />

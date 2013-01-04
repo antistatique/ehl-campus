@@ -6,7 +6,9 @@
 
 include_once 'ehl_site.features.inc';
 
-
+/**
+ * hook_block_info
+ */
 function ehl_site_block_info() {
   // This example comes from node.module.
   $blocks['ehl_site_user_menu'] = array(
@@ -16,7 +18,9 @@ function ehl_site_block_info() {
   return $blocks;
 }
 
-
+/**
+ * hook_block_view
+ */
 function ehl_site_block_view($delta = '') {
   // This example is adapted from node.module.
   $block = array();
@@ -33,10 +37,38 @@ function ehl_site_block_view($delta = '') {
 function ehl_site_user_menu_content(){
 	global $user;
 	$content = '';
-	$content .= '<ul class="nav">';
+	$content .= '
+    <ul class="nav">
+      <li class="divider-vertical"></li>';
 	if($user->uid) {
-		$content .= '<li>' . l('My account','user/' . $user->uid .'/posts') . '</li>';
-		$content .= '<li>' . l('Logout','user/logout') . '</li>';
+    // Get the user image
+    $user_picture_file_path = ''; // TODO get a default
+    if (is_numeric($user->picture)) {
+        $user_picture = file_load($user->picture);
+    }
+    if (!empty($user_picture->uri)) {
+        $user_picture_file_path = file_create_url($user_picture->uri);
+    }
+    // Create the drop down structure
+    $content .= '';
+    $content .=  '
+    <li class="dropdown">
+      <a data-toggle="dropdown" class="dropdown-toggle" href="#"><img width="20" src="' . $user_picture_file_path . '">&nbsp; ' . $user->name .' <b class="caret"></b></a>
+      <ul class="dropdown-menu">
+        <li class="">
+          ' . l('My profile','user/' . $user->uid) . '
+        </li>
+        <li class="">
+          ' . l('My project','user/' . $user->uid .'/project') . '
+        </li>
+        <li class="">
+          ' . l('Preferences','user/' . $user->uid .'/edit') . '
+        </li>
+        <li class="divider"></li>
+        <li>' . l('Logout','user/logout') . '</li>
+      </ul>
+    </li>';
+
 	} else {
 		$content .= '<li>' . l('Login','user') . '</li>';
 	}
@@ -44,23 +76,6 @@ function ehl_site_user_menu_content(){
 
 	return array('#markup' => $content);
 }
-
-/**
- * hook_url_outbound_alter
- **/
-// Try to find a better solution for performance reason...
-/*
-function ehl_site_url_outbound_alter( &$path, &$options, $original_path ) {
-  $current_path = explode("/", $original_path );
-  if ($current_path[0] == "node" && is_numeric($current_path[1]) == "node" && empty($current_path[2])) {
-    dpm($original_path);
-    $node = node_load($current_path[1]);
-    if($node->type == 'project'){
-      $path = 'user/' . $node->uid . '/project';
-    }
-  }
-}
-*/
 
 /**
  * hook_node_presave
@@ -78,9 +93,26 @@ function ehl_site_preprocess_node(&$vars) {
   }
 }
 
+/**
+ * hook_views_pre_render
+ */
+function ehl_site_views_pre_render(&$view){
+  if($view->name == 'my_project' && empty($view->result)){
+    // if the current user is on is own project page
+    global $user;
+    if($user->uid == $view->args[0]){
+      $view->empty['area']->options['content'] = "<h3>:( You didn't create a project. " . l('Create one', 'node/add/project') . " now.</h3>";
+    }
+  } 
+}
 
 
 
+/**
+ * hook_form_FORM_ID_alter
+ *
+ * Generate the select to filter by school
+ */
 function ehl_site_form_views_exposed_form_alter(&$form, $form_state, $form_id) {
   $nid_options = ehl_site_universities_form_options();
 
@@ -116,5 +148,37 @@ function ehl_site_user_view($account){
   if(!empty($field_school)){
     $field_school_fields_slug = field_get_items('node', $field_school[0]['entity'],'field_slug');
     $account->field_school_field_slug = $field_school_fields_slug[0]['safe_value'];
+  }
+}
+
+
+/**
+ * Implements hook_module_implements_alter().
+ */
+function ehl_site_module_implements_alter(&$implementations, $hook) {
+  if ($hook == 'library_alter') {
+    // Move jquery update to the end. This will make sure our hook_library_alter
+    // is always called before the jquery_update.
+    if(isset($implementations['jquery_update'])) { 
+      $jquery_update = $implementations['jquery_update'];
+      unset($implementations['jquery_update']);
+      $implementations['jquery_update'] = $jquery_update;
+    }
+  }
+}
+
+/**
+ * Implements hook_library_alter().
+ */
+function ehl_site_library_alter(&$libraries, $module) {
+  // If it is the admin theme all we want to do is change the global $conf
+  // variable so when jquery_update runs right after us it will use 1.5.
+  // We are not using path_is_admin(current_path()) because some admin path can use
+  // the frontend theme like node edit page
+  global $theme_key;
+  if (variable_get('admin_theme') == $theme_key) {
+    // Modifying global $conf variable, can be dangerous. Be carefull.
+    global $conf;
+    $conf['jquery_update_jquery_version'] = '1.5';
   }
 }
