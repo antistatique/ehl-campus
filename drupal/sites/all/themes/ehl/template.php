@@ -116,6 +116,23 @@ function ehl_menu_tree($variables) {
   return '<ul class="nav">' . $variables['tree'] . '</ul>';
 }
 
+function ehl_menu_local_tasks($variables) {
+  $output = '';
+
+  if (!empty($variables['primary'])) {
+    $variables['primary']['#prefix'] .= '<ul class="tabs primary nav nav-tabs">';
+    $variables['primary']['#suffix'] = '</ul>';
+    $output .= drupal_render($variables['primary']);
+  }
+  if (!empty($variables['secondary'])) {
+    $variables['secondary']['#prefix'] .= '<ul class="tabs secondary nav nav-tabs">';
+    $variables['secondary']['#suffix'] = '</ul>';
+    $output .= drupal_render($variables['secondary']);
+  }
+
+  return $output;
+}
+
 
 
 // -------- Alter -----
