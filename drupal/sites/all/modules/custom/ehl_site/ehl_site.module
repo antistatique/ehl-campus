@@ -159,9 +159,11 @@ function ehl_site_module_implements_alter(&$implementations, $hook) {
   if ($hook == 'library_alter') {
     // Move jquery update to the end. This will make sure our hook_library_alter
     // is always called before the jquery_update.
-    $jquery_update = $implementations['jquery_update'];
-    unset($implementations['jquery_update']);
-    $implementations['jquery_update'] = $jquery_update;
+    if(isset($implementations['jquery_update'])) { 
+      $jquery_update = $implementations['jquery_update'];
+      unset($implementations['jquery_update']);
+      $implementations['jquery_update'] = $jquery_update;
+    }
   }
 }
 
