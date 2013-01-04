@@ -37,31 +37,38 @@ function ehl_site_block_view($delta = '') {
 function ehl_site_user_menu_content(){
 	global $user;
 	$content = '';
-	$content .= '<ul class="nav">';
+	$content .= '
+    <ul class="nav">
+      <li class="divider-vertical"></li>';
 	if($user->uid) {
-    $content .= '<li class="divider-vertical"></li>';
+    // Get the user image
+    $user_picture_file_path = ''; // TODO get a default
+    if (is_numeric($user->picture)) {
+        $user_picture = file_load($user->picture);
+    }
+    if (!empty($user_picture->uri)) {
+        $user_picture_file_path = file_create_url($user_picture->uri);
+    }
+    // Create the drop down structure
+    $content .= '';
     $content .=  '
     <li class="dropdown">
-      <a data-toggle="dropdown" class="dropdown-toggle" href="#"><img width="20" src="assets/img/marc.png">&nbsp;Marc Friederich <b class="caret"></b></a>
+      <a data-toggle="dropdown" class="dropdown-toggle" href="#"><img width="20" src="' . $user_picture_file_path . '">&nbsp; ' . $user->name .' <b class="caret"></b></a>
       <ul class="dropdown-menu">
         <li class="">
-          <a href="./user_detail.html">My profile</a>
+          ' . l('My profile','user/' . $user->uid) . '
         </li>
         <li class="">
-          <a href="./user_project.html">My project</a>
+          ' . l('My project','user/' . $user->uid .'/project') . '
         </li>
         <li class="">
-          <a href="./user_pref.html">Preferences</a>
+          ' . l('Preferences','user/' . $user->uid .'/edit') . '
         </li>
         <li class="divider"></li>
-        <li><a href="./login.html">Logout</a></li>
+        <li>' . l('Logout','user/logout') . '</li>
       </ul>
     </li>';
 
-
-
-		$content .= '<li>' . l('My account','user/' . $user->uid .'/posts') . '</li>';
-		$content .= '<li>' . l('Logout','user/logout') . '</li>';
 	} else {
 		$content .= '<li>' . l('Login','user') . '</li>';
 	}
