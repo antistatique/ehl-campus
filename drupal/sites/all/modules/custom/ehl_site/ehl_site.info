@@ -167,6 +167,7 @@ features[variable][] = theme_ehl_settings
 features[variable][] = user_admin_role
 features[variable][] = user_default_timezone
 features[variable][] = user_email_verification
+features[variable][] = user_picture_default
 features[variable][] = user_picture_dimensions
 features[variable][] = user_picture_file_size
 features[variable][] = user_picture_style
