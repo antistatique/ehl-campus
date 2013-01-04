@@ -169,9 +169,12 @@ function ehl_site_module_implements_alter(&$implementations, $hook) {
  * Implements hook_library_alter().
  */
 function ehl_site_library_alter(&$libraries, $module) {
-  // If it is an admin path all we want to do is change the global $conf
+  // If it is the admin theme all we want to do is change the global $conf
   // variable so when jquery_update runs right after us it will use 1.5.
-  if (path_is_admin(current_path())) {
+  // We are not using path_is_admin(current_path()) because some admin path can use
+  // the frontend theme like node edit page
+  global $theme_key;
+  if (variable_get('admin_theme') == $theme_key) {
     // Modifying global $conf variable, can be dangerous. Be carefull.
     global $conf;
     $conf['jquery_update_jquery_version'] = '1.5';
