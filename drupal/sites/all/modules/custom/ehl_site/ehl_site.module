@@ -19,6 +19,14 @@ function ehl_site_block_info() {
 }
 
 /**
+ * admin_paths_alter
+ */ 
+function ehl_site_admin_paths_alter(&$paths) {
+    // Treat all user pages as NOT administrative.
+    $paths['user/*'] = FALSE;
+}
+
+/**
  * hook_block_view
  */
 function ehl_site_block_view($delta = '') {
