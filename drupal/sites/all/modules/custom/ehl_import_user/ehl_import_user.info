@@ -1,0 +1,8 @@
+name = ehl_import_user
+core = 7.x
+package = Features
+dependencies[] = features
+dependencies[] = uif
+dependencies[] = uif_plus
+features[features_api][] = api:1
+features[user_permission][] = import users
