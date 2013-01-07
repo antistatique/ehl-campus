@@ -123,6 +123,11 @@
 <?php endif; ?>
 
 <div class="container">
+
+  <div id="toggle-button">
+    
+  </div>
+
   <div class="page row">
 
   <div role="main" id="main-content" class="span12">

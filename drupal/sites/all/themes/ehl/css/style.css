@@ -5362,14 +5362,31 @@ body > .navbar {
   position: absolute;
   top: 43px;
   left: 0px;
-  z-index: 99;
+  z-index: 98;
   width: 100%;
   background: rgba(0, 131, 148, 0.9);
+}
+#toggle-button {
+  height: 50px;
+  width: 40px;
+  position: relative;
+  top: -30px;
+  margin: 0 auto;
+  background: #ffffff;
+  z-index: 99;
+  color: #000000;
+}
+#toggle-button:hover {
+  cursor: pointer;
 }
 #global-map {
   background: #ed8818 /*url('../img/square.png') repeat*/;
   position: relative;
   overflow: hidden;
+  box-shadow: inset 0px -2px 5px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 0px -2px 5px 0px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0px -2px 5px 0px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: inset 0px -2px 5px 0px rgba(0, 0, 0, 0.3);
 }
 .map {
   height: 580px;
@@ -5382,7 +5399,7 @@ body > .navbar {
   width: 150px;
   left: 20px;
   top: 160px;
-  z-index: 99;
+  z-index: 95;
 }
 #global-map-controls a {
   display: block;

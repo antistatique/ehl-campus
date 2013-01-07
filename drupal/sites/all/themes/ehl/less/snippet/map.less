@@ -2,9 +2,23 @@
   position: absolute;
   top: 43px;
   left: 0px;
-  z-index: 99;
+  z-index: 98;
   width: 100%;
   background: @ehlbluetransparent;
+}
+
+#toggle-button {
+  height: 50px;
+  width: 40px;
+  position: relative;
+  top: -30px;
+  margin: 0 auto;
+  background: @white;
+  z-index: 99;
+  color: @black;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 #global-map {
@@ -12,12 +26,15 @@
   background: @southkorea /*url('../img/square.png') repeat*/;
   position: relative;
   overflow: hidden;
+  box-shadow: inset 0px -2px 5px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 0px -2px 5px 0px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0px -2px 5px 0px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: inset 0px -2px 5px 0px rgba(0, 0, 0, 0.3);
 }
 
 .map {
   height: 580px;
   max-width: 1375px;
-  //width: 100%;
   margin: 0 auto;
 }
 
@@ -27,7 +44,7 @@
   width: 150px;
   left: 20px;
   top: 160px;
-  z-index: 99;
+  z-index: 95;
   a {
     display: block;
     background: rgba(0, 0, 0, 0.3);
