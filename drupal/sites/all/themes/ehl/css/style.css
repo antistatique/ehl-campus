@@ -5329,7 +5329,7 @@ hr.soften {
 body > .navbar {
   font-size: 13px;
 }
-.block-search .form-actions {
+.block-search .form-submit {
   display: none;
 }
 .logo {

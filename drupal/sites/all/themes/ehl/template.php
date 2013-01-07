@@ -157,5 +157,5 @@ function ehl_menu_local_tasks(&$variables) {
 
 function ehl_form_search_block_form_alter(&$form, &$form_state, $form_id) {
 	$form['#attributes']['class'] = 'navbar-search';
-    $form['search_block_form']['#attributes']['class'][] = 'search-query';
+  $form['search_block_form']['#attributes']['class'][] = 'search-query';
 }
