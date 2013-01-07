@@ -1,6 +1,12 @@
 
 (function ($) {
 
+  $(document).ready(function() {
+    setTimeout(function(){ 
+      $('#india-marker').trigger('click');
+    }, 500);
+  });
+
   $('.map').craftmap({
     image: {
       width: 1375,
