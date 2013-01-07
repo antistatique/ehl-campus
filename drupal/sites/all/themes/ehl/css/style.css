@@ -5358,6 +5358,113 @@ body > .navbar {
 /*=============================================================================
 ** CONTENT
 **============================================================================*/
+.front .jumbotron {
+  position: absolute;
+  top: 43px;
+  left: 0px;
+  z-index: 99;
+  width: 100%;
+  background: rgba(0, 131, 148, 0.9);
+}
+#global-map {
+  background: #ed8818 /*url('../img/square.png') repeat*/;
+  position: relative;
+  overflow: hidden;
+}
+.map {
+  height: 580px;
+  max-width: 1375px;
+  margin: 0 auto;
+}
+#global-map-controls {
+  display: none;
+  position: absolute;
+  width: 150px;
+  left: 20px;
+  top: 160px;
+  z-index: 99;
+}
+#global-map-controls a {
+  display: block;
+  background: rgba(0, 0, 0, 0.3);
+  margin: 2px 0;
+  color: #ffffff;
+  padding: 5px;
+}
+#global-map-controls a:hover,
+#global-map-controls a.active {
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.6);
+}
+.marker {
+  width: 10px;
+  height: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  border: 2px solid #ffffff;
+  cursor: pointer;
+}
+.popup h4 {
+  width: 210px;
+  color: #ffffff;
+  padding: 10px 15px;
+  font-size: 14px;
+  font-weight: 400;
+  margin: 3px 0;
+}
+.popup .map-post-data {
+  width: 210px;
+  background-color: #ffffff;
+  padding: 10px 15px;
+  margin-top: 3px;
+}
+.popup .triangle {
+  width: 240px;
+  background: url('../img/triangle.png') no-repeat;
+  background-position: top center;
+  height: 15px;
+}
+#usa-marker,
+.usa-marker h4 {
+  background: #ca0022;
+}
+#spain-marker,
+.spain-marker h4 {
+  background: #f8b800;
+}
+#southkorea-marker,
+.southkorea-marker h4 {
+  background: #ed8818;
+}
+#slovenia-marker,
+.slovenia-marker h4 {
+  background: #409536;
+}
+#portugal-marker,
+.portugal-marker h4 {
+  background: #b20560;
+}
+#india-marker,
+.india-marker h4 {
+  background: #006a9f;
+}
+#switzerland-marker,
+.switzerland-marker h4 {
+  background: #61256f;
+}
+#chile-marker,
+.chile-marker h4 {
+  background: #c2cd15;
+}
+#argentina-marker,
+.argentina-marker h4 {
+  background: #e44e20;
+}
 /*=============================================================================
 ** SCHOOLS COLORS
 **============================================================================*/
