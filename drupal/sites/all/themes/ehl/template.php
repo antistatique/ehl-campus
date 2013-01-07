@@ -1,5 +1,8 @@
 <?php
 
+$theme_path = drupal_get_path('theme', 'ehl');
+require_once $theme_path . '/includes/form.inc';
+require_once $theme_path . '/includes/pager.inc';
 
 // ----- Preprocess ------
 
@@ -118,6 +121,12 @@ function ehl_menu_tree($variables) {
   return '<ul class="nav">' . $variables['tree'] . '</ul>';
 }
 
+
+
+/**
+ * theme_menu_local_tasks
+ */
+
 function ehl_menu_local_tasks(&$variables) {
   $output = '';
 
@@ -139,6 +148,7 @@ function ehl_menu_local_tasks(&$variables) {
 
 
 
+
 // -------- Alter -----
 
 /**
@@ -147,5 +157,5 @@ function ehl_menu_local_tasks(&$variables) {
 
 function ehl_form_search_block_form_alter(&$form, &$form_state, $form_id) {
 	$form['#attributes']['class'] = 'navbar-search';
-    $form['search_block_form']['#attributes']['class'][] = 'search-query';
+  $form['search_block_form']['#attributes']['class'][] = 'search-query';
 }

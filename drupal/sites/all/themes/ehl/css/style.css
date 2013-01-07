@@ -5305,6 +5305,16 @@ hr.soften {
 .marketing img {
   display: block;
 }
+.node-post .field-type-image img {
+  border: 1px solid #eeeeee;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
 /* Fix menu tabs */
 .nav-tabs > li {
   margin-bottom: -4px;
@@ -5319,7 +5329,7 @@ hr.soften {
 body > .navbar {
   font-size: 13px;
 }
-.block-search .form-actions {
+.block-search .form-submit {
   display: none;
 }
 .logo {
@@ -5358,6 +5368,9 @@ body > .navbar {
 /*=============================================================================
 ** CONTENT
 **============================================================================*/
+.views-exposed-form .views-exposed-widget .form-submit {
+  margin-top: 0;
+}
 /*=============================================================================
 ** SCHOOLS COLORS
 **============================================================================*/
@@ -5476,6 +5489,7 @@ body > .navbar {
   padding-bottom: 15px;
   border-bottom-color: #ffffff;
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  font-size: 30px;
 }
 .user-cover-text h1,
 .user-cover-text .marketing-byline,
