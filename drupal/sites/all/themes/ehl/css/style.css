@@ -5305,10 +5305,42 @@ hr.soften {
 .marketing img {
   display: block;
 }
+.node-post .field-type-image img {
+  border: 1px solid #eeeeee;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
 /* Fix menu tabs */
 .nav-tabs > li {
   margin-bottom: -4px;
   padding: 0;
+}
+.help-block {
+  display: none;
+}
+.form-vertical .form-horizontal .control-group > label {
+  text-align: left;
+}
+.form-horizontal .form-vertical .control-group > label,
+.form-horizontal .form-vertical .control-label {
+  float: none;
+  padding-top: 0;
+  text-align: left;
+}
+.form-horizontal .form-vertical .controls {
+  margin-left: 0;
+}
+.form-horizontal .form-vertical.form-actions,
+.form-horizontal .form-vertical .form-actions {
+  padding-left: 20px;
+}
+.control-group .control-group {
+  margin-bottom: 0;
 }
 /*=============================================================================
 ** HEADER
@@ -5319,7 +5351,7 @@ hr.soften {
 body > .navbar {
   font-size: 13px;
 }
-.block-search .form-actions {
+.block-search .form-submit {
   display: none;
 }
 .logo {
@@ -5482,6 +5514,9 @@ body > .navbar {
 .argentina-marker h4 {
   background: #e44e20;
 }
+.views-exposed-form .views-exposed-widget .form-submit {
+  margin-top: 0;
+}
 /*=============================================================================
 ** SCHOOLS COLORS
 **============================================================================*/
@@ -5600,6 +5635,7 @@ body > .navbar {
   padding-bottom: 15px;
   border-bottom-color: #ffffff;
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  font-size: 30px;
 }
 .user-cover-text h1,
 .user-cover-text .marketing-byline,
