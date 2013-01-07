@@ -116,6 +116,11 @@ function ehl_menu_tree($variables) {
   return '<ul class="nav">' . $variables['tree'] . '</ul>';
 }
 
+
+/**
+ * theme_menu_local_tasks
+ */
+
 function ehl_menu_local_tasks(&$variables) {
   $output = '';
 
