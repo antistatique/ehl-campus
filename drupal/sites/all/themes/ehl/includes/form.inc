@@ -17,7 +17,21 @@ function ehl_form_alter(&$form, &$form_state, $form_id) {
   if (isset($form['#form_id']) && !in_array($form['#form_id'], $form_ids) && !isset($form['#node_edit_form'])) {
     $form['actions']['#theme_wrappers'] = array();
   }
-}  
+  if(isset($form['#node_edit_form']) && $form['#node_edit_form'] === TRUE){
+    $form['#attributes']['class'][] = 'form-horizontal';
+  }
+}
+
+
+function ehl_vertical_tabs($variables) {
+  $element = $variables['element'];
+  // Add required JavaScript and Stylesheet.
+  drupal_add_library('system', 'drupal.vertical-tabs');
+
+  $output = '<h2 class="element-invisible">' . t('Vertical Tabs') . '</h2>';
+  $output .= '<div class="vertical-tabs-panes form-vertical">' . $element['#children'] . '</div>';
+  return $output;
+}
 
 /**
  * Returns HTML for a form element.
