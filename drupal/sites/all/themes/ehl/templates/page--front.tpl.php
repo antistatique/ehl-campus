@@ -143,7 +143,7 @@
 <div class="container">
 
   <div id="toggle-button">
-    
+    <img class="arrow" src="<?php echo $image_path = $path . '/img/arrow.jpg';?>" />
   </div>
 
   <div class="page row">

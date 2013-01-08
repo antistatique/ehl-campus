@@ -13,12 +13,26 @@
   position: relative;
   top: -30px;
   margin: 0 auto;
+  padding-top: 7px;
   background: @white;
   z-index: 99;
   color: @black;
   &:hover {
     cursor: pointer;
   }
+  img {
+    width: 26px;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+#toggle-button.top img {
+  -webkit-transform: rotate(-180deg);
+  -moz-transform: rotate(-180deg);
+  -o-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  transform: rotate(-180deg);
 }
 
 #global-map {

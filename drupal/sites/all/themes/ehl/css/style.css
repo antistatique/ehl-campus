@@ -5404,12 +5404,25 @@ body > .navbar {
   position: relative;
   top: -30px;
   margin: 0 auto;
+  padding-top: 7px;
   background: #ffffff;
   z-index: 99;
   color: #000000;
 }
 #toggle-button:hover {
   cursor: pointer;
+}
+#toggle-button img {
+  width: 26px;
+  display: block;
+  margin: 0 auto;
+}
+#toggle-button.top img {
+  -webkit-transform: rotate(-180deg);
+  -moz-transform: rotate(-180deg);
+  -o-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  transform: rotate(-180deg);
 }
 #global-map {
   background: #9fd0d5 /*url('../img/square.png') repeat*/;

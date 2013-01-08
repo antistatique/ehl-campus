@@ -4,6 +4,9 @@
   var $maxHeight = 580;
   var $minHeight = 155;
 
+  var $mapBlock = $('.map');
+  var $toggleButton = $("#toggle-button");
+
   // Set craftmap ////////////////////////////////////////////////////
   
   function craftMap(){
@@ -24,7 +27,7 @@
 
   function openTooltip(){
     setTimeout(function(){ 
-      $('#india-marker').trigger('click');
+      $('#southkorea-marker').trigger('click');
     }, 700);
   };
 
@@ -34,38 +37,44 @@
     $(document).ready(function() {
       openTooltip();
     });
+  }else {
+    $toggleButton.addClass('top');
   }
 
   $.cookie("ehl-forum", $mapHeight);
 
-  $('.map').height($.cookie("ehl-forum"));
+  $mapBlock.height($.cookie("ehl-forum"));
 
   // Set slide up/down on map ////////////////////////////////////////
   function animationHeight(){
-    $('.map').animate({height:$.cookie("ehl-forum")},700);
+    $mapBlock.animate({height:$.cookie("ehl-forum")},700);
   }
 
   if($.cookie("ehl-forum") == $maxHeight){
-    $("#toggle-button").toggle(function(){
+    $toggleButton.toggle(function(){
       $mapHeight = $minHeight;
       $.cookie("ehl-forum", $mapHeight);
       animationHeight();
+      $(this).addClass('top');
     },function(){
       $mapHeight = $maxHeight;
       $.cookie("ehl-forum", $mapHeight);
       animationHeight();
       openTooltip();
+      $(this).removeClass('top');
     });
   }else {
-    $("#toggle-button").toggle(function(){
+    $toggleButton.toggle(function(){
       $mapHeight = $maxHeight;
       $.cookie("ehl-forum", $mapHeight);
       animationHeight();
       openTooltip();
+      $(this).removeClass('top');
     },function(){
       $mapHeight = $minHeight;
       $.cookie("ehl-forum", $mapHeight);
       animationHeight();
+      $(this).addClass('top');
     });
   }
 
