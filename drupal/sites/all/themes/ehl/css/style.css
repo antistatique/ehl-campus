@@ -5396,7 +5396,7 @@ body > .navbar {
   left: 0px;
   z-index: 98;
   width: 100%;
-  background: rgba(0, 131, 148, 0.9);
+  background: rgba(0, 131, 148, 0.8);
 }
 #toggle-button {
   height: 50px;
