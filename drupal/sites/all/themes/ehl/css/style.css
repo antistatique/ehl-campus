@@ -5457,6 +5457,11 @@ body > .navbar {
   border: 2px solid #ffffff;
   cursor: pointer;
 }
+.popup a,
+.popup a:hover {
+  color: #666666;
+  text-decoration: none;
+}
 .popup h4 {
   width: 210px;
   color: #ffffff;
@@ -5512,6 +5517,33 @@ body > .navbar {
 #argentina-marker,
 .argentina-marker h4 {
   background: #e44e20;
+}
+.usa-marker strong {
+  color: #ca0022;
+}
+.spain-marker strong {
+  color: #f8b800;
+}
+.southkorea-marker strong {
+  color: #ed8818;
+}
+.slovenia-marker strong {
+  color: #409536;
+}
+.portugal-marker strong {
+  color: #b20560;
+}
+.india-marker strong {
+  color: #006a9f;
+}
+.switzerland-marker strong {
+  color: #61256f;
+}
+.chile-marker strong {
+  color: #c2cd15;
+}
+.argentina-marker strong {
+  color: #e44e20;
 }
 .views-exposed-form .views-exposed-widget .form-submit {
   margin-top: 0;

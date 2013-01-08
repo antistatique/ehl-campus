@@ -32,66 +32,84 @@
   <div class="map">
     <?php $path = drupal_get_path('theme', 'ehl'); ?>
     <div id="usa-marker" class="marker" data-coords="280, 450">
-      <h4>New Post</h4>
-      <div class="map-post-data">
-        <a href="#">Yago Tsumabuki</a> from Korea just posted an message.
-      </div>
+      <a href="#">
+        <h4>New Post</h4>
+        <div class="map-post-data">
+          <strong>Yago Tsumabuki</strong> from Korea just posted an message.
+        </div>
+      </a>
       <div class="triangle"></div>
     </div>
     <div id="spain-marker" class="marker" data-coords="613, 420">
-      <h4>New Post</h4>
-      <div class="map-post-data">
-        <a href="#">Yago Tsumabuki</a> from Korea just posted an message.
-      </div>
+      <a href="#">
+        <h4>New Post</h4>
+        <div class="map-post-data">
+          <strong>Yago Tsumabuki</strong> from Korea just posted an message.
+        </div>
+      </a>
       <div class="triangle"></div>
     </div>
     <div id="southkorea-marker" class="marker" data-coords="1135, 435">
-      <h4>New Post</h4>
-      <div class="map-post-data">
-        <a href="#">Yago Tsumabuki</a> from Korea just posted an message.
-      </div>
+      <a href="#">
+        <h4>New Post</h4>
+        <div class="map-post-data">
+          <strong>Yago Tsumabuki</strong> from Korea just posted an message.
+        </div>
+      </a>
       <div class="triangle"></div>
     </div>
     <div id="slovenia-marker" class="marker" data-coords="685, 385">
-      <h4>New Post</h4>
-      <div class="map-post-data">
-        <a href="#">Yago Tsumabuki</a> from Korea just posted an message.
-      </div>
+      <a href="#">
+        <h4>New Post</h4>
+        <div class="map-post-data">
+          <strong>Yago Tsumabuki</strong> from Korea just posted an message.
+        </div>
+      </a>
       <div class="triangle"></div>
     </div>
     <div id="portugal-marker" class="marker" data-coords="595, 415">
-      <h4>New Post</h4>
-      <div class="map-post-data">
-        <a href="#">Yago Tsumabuki</a> from Korea just posted an message.
-      </div>
+      <a href="#">
+        <h4>New Post</h4>
+        <div class="map-post-data">
+          <strong>Yago Tsumabuki</strong> from Korea just posted an message.
+        </div>
+      </a>
       <div class="triangle"></div>
     </div>
     <div id="india-marker" class="marker" data-coords="933, 520">
-      <h4>New Post</h4>
-      <div class="map-post-data">
-        <a href="#">Yago Tsumabuki</a> from Korea just posted an message.
-      </div>
+      <a href="#">
+        <h4>New Post</h4>
+        <div class="map-post-data">
+          <strong>Yago Tsumabuki</strong> from Korea just posted an message.
+        </div>
+      </a>
       <div class="triangle"></div>
     </div>
     <div id="switzerland-marker" class="marker" data-coords="666, 387">
-      <h4>New Post</h4>
-      <div class="map-post-data">
-        <a href="#">Yago Tsumabuki</a> from Korea just posted an message.
-      </div>
+      <a href="#">
+        <h4>New Post</h4>
+        <div class="map-post-data">
+          <strong>Yago Tsumabuki</strong> from Korea just posted an message.
+        </div>
+      </a>
       <div class="triangle"></div>
     </div>
     <div id="chile-marker" class="marker" data-coords="360, 785">
-      <h4>New Post</h4>
-      <div class="map-post-data">
-        <a href="#">Yago Tsumabuki</a> from Korea just posted an message.
-      </div>
+      <a href="#">
+        <h4>New Post</h4>
+        <div class="map-post-data">
+          <strong>Yago Tsumabuki</strong> from Korea just posted an message.
+        </div>
+      </a>
       <div class="triangle"></div>
     </div>
     <div id="argentina-marker" class="marker" data-coords="378, 795">
-      <h4>New Post</h4>
-      <div class="map-post-data">
-        <a href="#">Yago Tsumabuki</a> from Korea just posted an message.
-      </div>
+      <a href="#">
+        <h4>New Post</h4>
+        <div class="map-post-data">
+          <strong>Yago Tsumabuki</strong> from Korea just posted an message.
+        </div>
+      </a>
       <div class="triangle"></div>
     </div>
     <img class="imgMap" src="<?php echo $image_path = $path . '/img/carte_opacity40.png'; ?>" alt="Global white map" />
