@@ -23,7 +23,7 @@
 
 #global-map {
   //height: 750px;
-  background: @southkorea /*url('../img/square.png') repeat*/;
+  background: @ehlclearblue /*url('../img/square.png') repeat*/;
   position: relative;
   overflow: hidden;
   box-shadow: inset 0px -2px 5px 0px rgba(0, 0, 0, 0.3);
@@ -41,20 +41,27 @@
 #global-map-controls {
   display: none;
   position: absolute;
-  width: 150px;
+  width: 120px;
   left: 20px;
   top: 160px;
   z-index: 95;
   a {
     display: block;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(255, 255, 255, 0.3);
     margin: 2px 0;
-    color: @white;
+    color: @ehlblue;
     padding: 5px;
+    .border-radius(4px);
   }
   a:hover, a.active {
     cursor: pointer;
-    background: rgba(0, 0, 0, 0.6);
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.6);
+    font-weight: normal;
+    outline:none !important;
+  }
+  a.active {
+    background: rgba(255, 255, 255, 0.8);
   }
 }
 
