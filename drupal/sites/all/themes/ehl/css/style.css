@@ -5421,6 +5421,7 @@ body > .navbar {
   -o-box-shadow: inset 0px -2px 5px 0px rgba(0, 0, 0, 0.3);
 }
 .map {
+  height: 580px;
   max-width: 1375px;
   margin: 0 auto;
 }
@@ -5463,7 +5464,7 @@ body > .navbar {
   text-decoration: none;
 }
 .popup h4 {
-  width: 210px;
+  width: 220px;
   color: #ffffff;
   padding: 10px 15px;
   font-size: 14px;
@@ -5471,13 +5472,13 @@ body > .navbar {
   margin: 3px 0;
 }
 .popup .map-post-data {
-  width: 210px;
+  width: 220px;
   background-color: #ffffff;
   padding: 10px 15px;
   margin-top: 3px;
 }
 .popup .triangle {
-  width: 240px;
+  width: 250px;
   background: url('../img/triangle.png') no-repeat;
   background-position: top center;
   height: 15px;
