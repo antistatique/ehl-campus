@@ -5596,6 +5596,17 @@ body > .navbar {
     height: auto;
   }
 }
+.news-content h2 {
+  font-size: 38.5px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+.news-content h2 a {
+  color: #333333;
+}
+.news-content .field-type-image {
+  margin-top: 20px;
+}
 /*=============================================================================
 ** SCHOOLS COLORS
 **============================================================================*/

@@ -22,15 +22,15 @@ hide($content['field_badge'])
 
     <div class="span2">
       <?php print $user_picture; ?>
-        <span class="author"><?php print t('Written by'); ?> <?php print $name; ?></span>
-        <span class="date"><?php print t('On the'); ?> <time><?php print $date; ?></time></span>
+      <span class="author"><?php print t('Written by'); ?> <?php print $name; ?></span><br />
+      <span class="date"><?php print t('On the'); ?> <time><?php print $date; ?></time></span><br />
 
-        <?php if(module_exists('comment')): ?>
-          <span class="comments"><?php print $comment_count; ?> Comments</span>
-        <?php endif; ?>
+      <?php if(module_exists('comment')): ?>
+        <span class="comments"><?php print $comment_count; ?> Comments</span>
+      <?php endif; ?>
     </div>
 
-    <div class="span9 offset1">
+    <div class="span9 offset1 news-content">
       <?php print render($title_prefix); ?>
       <?php if (!$page): ?>
         <h2<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>" rel="bookmark"><?php print $title; ?></a></h2>
