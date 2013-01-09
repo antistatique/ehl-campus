@@ -5596,6 +5596,13 @@ body > .navbar {
     height: auto;
   }
 }
+.page-news .node-article {
+  margin: 40px 0;
+}
+.page-news .node-article .row {
+  margin: 0;
+  margin-bottom: 50px;
+}
 .news-content h2 {
   font-size: 38.5px;
   font-weight: bold;
@@ -5606,6 +5613,30 @@ body > .navbar {
 }
 .news-content .field-type-image {
   margin-top: 20px;
+}
+.news-content ul.links {
+  margin: 0;
+  margin-top: 40px;
+}
+.news-content .comments {
+  margin-top: 10px;
+}
+.news-content .comments h4 {
+  font-weight: bold;
+}
+.news-content .comments [class*=offset] {
+  margin: 0;
+}
+.sidebar .author {
+  font-size: 17.5px;
+  font-weight: bold;
+}
+.sidebar .date {
+  font-size: 12px;
+  font-weight: bold;
+  color: #999999;
+  margin: 5px 0;
+  display: block;
 }
 /*=============================================================================
 ** SCHOOLS COLORS
