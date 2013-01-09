@@ -5390,8 +5390,26 @@ body > .navbar {
 /*=============================================================================
 ** CONTENT
 **============================================================================*/
+#main-title-wrapper {
+  margin-bottom: 90px;
+}
+#main-title-wrapper hr {
+  margin-top: 30px;
+}
 .node-post .content blockquote {
   margin: 30px 0;
+}
+.comment-meta {
+  font-weight: bold;
+}
+.comment-meta .username {
+  font-weight: bold;
+  font-size: 17px;
+}
+.comment-meta .date time {
+  font-size: 14px;
+  font-weight: normal;
+  color: #999999;
 }
 .front .jumbotron {
   position: absolute;
