@@ -5551,6 +5551,12 @@ body > .navbar {
   background: #eeeeee;
   margin-bottom: 30px;
 }
+.project-item {
+  padding: 5px 0;
+}
+.project-item .views-field {
+  margin: 0 5px;
+}
 /*=============================================================================
 ** SCHOOLS COLORS
 **============================================================================*/
