@@ -18,7 +18,7 @@ function ehl_form_alter(&$form, &$form_state, $form_id) {
     $form['actions']['#theme_wrappers'] = array();
   }
   if(isset($form['#node_edit_form']) && $form['#node_edit_form'] === TRUE){
-    $form['#attributes']['class'][] = 'form-horizontal';
+    $form['#attributes']['class'][] = 'form-horizontal span10 offset1';
   }
 }
 

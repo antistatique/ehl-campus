@@ -5390,10 +5390,10 @@ body > .navbar {
 /*=============================================================================
 ** CONTENT
 **============================================================================*/
-#main-title-wrapper {
+.front #main-title-wrapper {
   margin-bottom: 90px;
 }
-#main-title-wrapper hr {
+.front #main-title-wrapper hr {
   margin-top: 30px;
 }
 .node-post .content blockquote {
