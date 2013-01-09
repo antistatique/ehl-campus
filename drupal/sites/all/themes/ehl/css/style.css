@@ -5543,9 +5543,13 @@ body > .navbar {
   display: block;
   height: 70px;
 }
-.row-fluid .view-project-list .first {
+.row-fluid .view-project-list .no-margin {
   margin-left: 0 !important;
-  background-color: red;
+}
+.row-fluid .view-project-list .span3 {
+  height: 300px;
+  background: #eeeeee;
+  margin-bottom: 30px;
 }
 /*=============================================================================
 ** SCHOOLS COLORS
