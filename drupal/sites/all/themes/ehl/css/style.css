@@ -5547,18 +5547,18 @@ body > .navbar {
   margin-left: 0 !important;
 }
 .row-fluid .view-project-list .span3 {
-  height: 216px;
+  height: 186px;
   background: #eeeeee;
   margin-bottom: 30px;
 }
 @media only screen and (min-width: 1200px) {
   .row-fluid .view-project-list .span3 {
-    height: 244px;
+    height: 214px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 979px) {
   .row-fluid .view-project-list .span3 {
-    height: 187px;
+    height: 157px;
   }
 }
 @media only screen and (max-width: 767px) {
