@@ -5547,15 +5547,54 @@ body > .navbar {
   margin-left: 0 !important;
 }
 .row-fluid .view-project-list .span3 {
-  height: 300px;
+  height: 216px;
   background: #eeeeee;
   margin-bottom: 30px;
+}
+@media only screen and (min-width: 1200px) {
+  .row-fluid .view-project-list .span3 {
+    height: 244px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 979px) {
+  .row-fluid .view-project-list .span3 {
+    height: 187px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .row-fluid .view-project-list .span3 {
+    height: auto;
+  }
 }
 .project-item {
   padding: 5px 0;
 }
 .project-item .views-field {
   margin: 0 5px;
+}
+.views-field-field-project-cover-image .field-content {
+  width: 100%;
+  overflow: hidden;
+  height: 116px;
+}
+.views-field-field-project-cover-image .field-content a {
+  display: block;
+  width: 100%;
+}
+@media only screen and (min-width: 1200px) {
+  .views-field-field-project-cover-image .field-content {
+    height: 144px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 979px) {
+  .views-field-field-project-cover-image .field-content {
+    height: 87px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .views-field-field-project-cover-image .field-content {
+    height: auto;
+  }
 }
 /*=============================================================================
 ** SCHOOLS COLORS

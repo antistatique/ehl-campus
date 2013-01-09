@@ -9,9 +9,12 @@
 }
 
 .row-fluid .view-project-list .span3 {
-  height: 300px;
+  height: 216px;
   background: @grayLighter;
   margin-bottom: 30px;
+ @media only screen and (min-width: 1200px) {height: 244px;}
+  @media only screen and (min-width: 768px) and (max-width: 979px) {height: 187px;}
+  @media only screen and (max-width: 767px) {height: auto;}
 }
 
 .project-item {
@@ -19,4 +22,17 @@
   .views-field {
     margin: 0 5px;
   }
+}
+
+.views-field-field-project-cover-image .field-content {
+  width: 100%;
+  overflow: hidden;
+  height: 116px;
+  a {
+    display: block;
+    width: 100%;
+  }
+  @media only screen and (min-width: 1200px) {height: 144px;}
+  @media only screen and (min-width: 768px) and (max-width: 979px) {height: 87px;}
+  @media only screen and (max-width: 767px) {height: auto;}
 }
