@@ -5538,6 +5538,15 @@ body > .navbar {
 .views-exposed-form .views-exposed-widget .form-submit {
   margin-top: 0;
 }
+.page-projects .view-filters {
+  width: 100%;
+  display: block;
+  height: 70px;
+}
+.row-fluid .view-project-list .first {
+  margin-left: 0 !important;
+  background-color: red;
+}
 /*=============================================================================
 ** SCHOOLS COLORS
 **============================================================================*/
