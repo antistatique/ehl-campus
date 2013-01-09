@@ -27,4 +27,10 @@
 
   $(".page-projects .view-project-list .view-filters + .span3, .page-projects .view-project-list .span3:nth-child(4n+2)").addClass("no-margin");
 
+  $('#edit-submit-project-list').hide();
+
+  $('#edit-univeristy').change(function(){
+    $(this).parents('form').submit();
+  });
+
 })(jQuery);
