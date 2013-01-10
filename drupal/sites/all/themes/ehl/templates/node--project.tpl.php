@@ -35,6 +35,9 @@ hide($content['field_badge'])
       </div>
 
       <div class="span3 sidebar">
+        <?php if(node_access('update', $node)): ?>
+          <p><a class="btn" href="<?php print url('node/' . $node->nid . '/edit', array('query' => array('destination'=> $node_url))); ?>">Edit my project</a></p>
+        <?php endif; ?>
         <?php print render($content['field_about_the_project']); ?>
         <table class="table table-striped">
           <tbody>
