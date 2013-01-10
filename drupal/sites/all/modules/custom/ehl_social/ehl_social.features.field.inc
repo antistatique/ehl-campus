@@ -850,7 +850,6 @@ function ehl_social_field_default_fields() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('About the project');
   t('An color in hexa like f49956 (without #).');
   t('Body');
   t('Color');
@@ -863,7 +862,6 @@ function ehl_social_field_default_fields() {
   t('Image used on listing or if you don\'t have a video');
   t('Project description');
   t('Project summary');
-  t('Short description about your project');
   t('Slug');
   t('Video');
   t('You can upload some images to illustrate your project.');
