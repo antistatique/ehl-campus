@@ -31,7 +31,7 @@
 <div id="global-map">
   <div class="map">
     <?php $path = drupal_get_path('theme', 'ehl'); ?>
-    <div id="usa-marker" class="marker" data-coords="280, 450">
+    <div id="usa-marker" class="marker usa" data-coords="280, 450">
       <a href="#">
         <h4>New Post</h4>
         <div class="map-post-data">
@@ -40,7 +40,7 @@
       </a>
       <div class="triangle"></div>
     </div>
-    <div id="spain-marker" class="marker" data-coords="613, 420">
+    <div id="spain-marker" class="marker spain" data-coords="613, 420">
       <a href="#">
         <h4>New Post</h4>
         <div class="map-post-data">
@@ -49,7 +49,7 @@
       </a>
       <div class="triangle"></div>
     </div>
-    <div id="southkorea-marker" class="marker" data-coords="1135, 435">
+    <div id="southkorea-marker" class="marker southkorea" data-coords="1135, 435">
       <a href="#">
         <h4>New Post</h4>
         <div class="map-post-data">
@@ -58,7 +58,7 @@
       </a>
       <div class="triangle"></div>
     </div>
-    <div id="slovenia-marker" class="marker" data-coords="685, 385">
+    <div id="slovenia-marker" class="marker slovenia" data-coords="685, 385">
       <a href="#">
         <h4>New Post</h4>
         <div class="map-post-data">
@@ -67,7 +67,7 @@
       </a>
       <div class="triangle"></div>
     </div>
-    <div id="portugal-marker" class="marker" data-coords="595, 415">
+    <div id="portugal-marker" class="marker portugal" data-coords="595, 415">
       <a href="#">
         <h4>New Post</h4>
         <div class="map-post-data">
@@ -76,7 +76,7 @@
       </a>
       <div class="triangle"></div>
     </div>
-    <div id="india-marker" class="marker" data-coords="933, 520">
+    <div id="india-marker" class="marker india" data-coords="933, 520">
       <a href="#">
         <h4>New Post</h4>
         <div class="map-post-data">
@@ -85,7 +85,7 @@
       </a>
       <div class="triangle"></div>
     </div>
-    <div id="switzerland-marker" class="marker" data-coords="666, 387">
+    <div id="switzerland-marker" class="marker switzerland" data-coords="666, 387">
       <a href="#">
         <h4>New Post</h4>
         <div class="map-post-data">
@@ -94,7 +94,7 @@
       </a>
       <div class="triangle"></div>
     </div>
-    <div id="chile-marker" class="marker" data-coords="360, 785">
+    <div id="chile-marker" class="marker chile" data-coords="360, 785">
       <a href="#">
         <h4>New Post</h4>
         <div class="map-post-data">
@@ -103,7 +103,7 @@
       </a>
       <div class="triangle"></div>
     </div>
-    <div id="argentina-marker" class="marker" data-coords="378, 795">
+    <div id="argentina-marker" class="marker argentina" data-coords="378, 795">
       <a href="#">
         <h4>New Post</h4>
         <div class="map-post-data">

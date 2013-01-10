@@ -5502,39 +5502,30 @@ body > .navbar {
   background-position: top center;
   height: 15px;
 }
-#usa-marker,
 .usa-marker h4 {
   background: #ca0022;
 }
-#spain-marker,
 .spain-marker h4 {
   background: #f8b800;
 }
-#southkorea-marker,
 .southkorea-marker h4 {
   background: #ed8818;
 }
-#slovenia-marker,
 .slovenia-marker h4 {
   background: #409536;
 }
-#portugal-marker,
 .portugal-marker h4 {
   background: #b20560;
 }
-#india-marker,
 .india-marker h4 {
   background: #006a9f;
 }
-#switzerland-marker,
 .switzerland-marker h4 {
   background: #61256f;
 }
-#chile-marker,
 .chile-marker h4 {
   background: #c2cd15;
 }
-#argentina-marker,
 .argentina-marker h4 {
   background: #e44e20;
 }
