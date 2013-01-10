@@ -5423,6 +5423,10 @@ body > .navbar {
   font-weight: normal;
   color: #999999;
 }
+.comment-options {
+  position: relative;
+  bottom: -25px;
+}
 .front .jumbotron {
   position: absolute;
   top: 43px;
