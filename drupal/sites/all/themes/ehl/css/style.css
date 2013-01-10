@@ -5315,6 +5315,18 @@ hr.soften {
   -o-border-radius: 4px;
   border-radius: 4px;
 }
+.date mark {
+  background: #008394;
+  color: #ffffff;
+  padding: 0 5px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+}
 /* Fix menu tabs */
 .nav-tabs > li {
   margin-bottom: -4px;
