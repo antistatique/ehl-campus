@@ -43,7 +43,6 @@
       $toggleButton.addClass('top');
       $mapBlock.height($mapHeight[1]);
     }
-    console.log('height : ' + $mapBlock.height());
   }
 
 
