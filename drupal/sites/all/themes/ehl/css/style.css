@@ -5393,10 +5393,14 @@ body > .navbar {
   padding-right: 30px;
   margin-right: 40px;
 }
-.navbar .dropdown {
-  height: 33px;
+.navbar .dropdown-toggle {
+  height: 12px;
   overflow: hidden;
   display: block;
+}
+.dropdown-menu {
+  margin-top: 10px;
+  margin-left: 5px;
 }
 /*=============================================================================
 ** NAVIGATION
