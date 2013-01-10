@@ -5670,7 +5670,7 @@ body > .navbar {
   left: 0px;
   z-index: 98;
   width: 100%;
-  background: rgba(0, 131, 148, 0.9);
+  background: rgba(0, 131, 148, 0.8);
 }
 #toggle-button {
   height: 50px;
@@ -5678,6 +5678,7 @@ body > .navbar {
   position: relative;
   top: -30px;
   margin: 0 auto;
+  padding-top: 7px;
   background: #ffffff;
   z-index: 99;
   color: #000000;
@@ -5685,8 +5686,20 @@ body > .navbar {
 #toggle-button:hover {
   cursor: pointer;
 }
+#toggle-button img {
+  width: 26px;
+  display: block;
+  margin: 0 auto;
+}
+#toggle-button.top img {
+  -webkit-transform: rotate(-180deg);
+  -moz-transform: rotate(-180deg);
+  -o-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+}
 #global-map {
-  background: #ed8818 /*url('../img/square.png') repeat*/;
+  background: #9fd0d5 /*url('../img/square.png') repeat*/;
   position: relative;
   overflow: hidden;
   box-shadow: inset 0px -2px 5px 0px rgba(0, 0, 0, 0.3);
@@ -5702,22 +5715,28 @@ body > .navbar {
 #global-map-controls {
   display: none;
   position: absolute;
-  width: 150px;
+  width: 120px;
   left: 20px;
   top: 160px;
   z-index: 95;
 }
 #global-map-controls a {
   display: block;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(255, 255, 255, 0.3);
   margin: 2px 0;
-  color: #ffffff;
+  color: #008394;
   padding: 5px;
 }
 #global-map-controls a:hover,
 #global-map-controls a.active {
   cursor: pointer;
-  background: rgba(0, 0, 0, 0.6);
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.6);
+  font-weight: normal;
+  outline: none !important;
+}
+#global-map-controls a.active {
+  background: rgba(255, 255, 255, 0.8);
 }
 .marker {
   width: 10px;
@@ -5732,8 +5751,13 @@ body > .navbar {
   border: 2px solid #ffffff;
   cursor: pointer;
 }
+.popup a,
+.popup a:hover {
+  color: #666666;
+  text-decoration: none;
+}
 .popup h4 {
-  width: 210px;
+  width: 220px;
   color: #ffffff;
   padding: 10px 15px;
   font-size: 14px;
@@ -5741,52 +5765,70 @@ body > .navbar {
   margin: 3px 0;
 }
 .popup .map-post-data {
-  width: 210px;
+  width: 220px;
   background-color: #ffffff;
   padding: 10px 15px;
   margin-top: 3px;
 }
 .popup .triangle {
-  width: 240px;
+  width: 250px;
   background: url('../img/triangle.png') no-repeat;
   background-position: top center;
   height: 15px;
 }
-#usa-marker,
 .usa-marker h4 {
   background: #ca0022;
 }
-#spain-marker,
 .spain-marker h4 {
   background: #f8b800;
 }
-#southkorea-marker,
 .southkorea-marker h4 {
   background: #ed8818;
 }
-#slovenia-marker,
 .slovenia-marker h4 {
   background: #409536;
 }
-#portugal-marker,
 .portugal-marker h4 {
   background: #b20560;
 }
-#india-marker,
 .india-marker h4 {
   background: #006a9f;
 }
-#switzerland-marker,
 .switzerland-marker h4 {
   background: #61256f;
 }
-#chile-marker,
 .chile-marker h4 {
   background: #c2cd15;
 }
-#argentina-marker,
 .argentina-marker h4 {
   background: #e44e20;
+}
+.usa-marker strong {
+  color: #ca0022;
+}
+.spain-marker strong {
+  color: #f8b800;
+}
+.southkorea-marker strong {
+  color: #ed8818;
+}
+.slovenia-marker strong {
+  color: #409536;
+}
+.portugal-marker strong {
+  color: #b20560;
+}
+.india-marker strong {
+  color: #006a9f;
+}
+.switzerland-marker strong {
+  color: #61256f;
+}
+.chile-marker strong {
+  color: #c2cd15;
+}
+.argentina-marker strong {
+  color: #e44e20;
 }
 .views-exposed-form .views-exposed-widget .form-submit {
   margin-top: 0;
