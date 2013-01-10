@@ -5617,7 +5617,6 @@ body > .navbar {
 }
 .page-news .node-article .row {
   margin: 0;
-  margin-bottom: 50px;
 }
 .news-content h2 {
   font-size: 38.5px;
@@ -5640,9 +5639,6 @@ body > .navbar {
 .news-content .comments h4 {
   font-weight: bold;
 }
-.news-content .comments [class*=offset] {
-  margin: 0;
-}
 .sidebar .author {
   font-size: 17.5px;
   font-weight: bold;
@@ -5653,6 +5649,12 @@ body > .navbar {
   color: #999999;
   margin: 5px 0;
   display: block;
+}
+.page-news .comments {
+  margin-bottom: 50px;
+}
+.row-fluid .span12.news-comments-wrapper {
+  margin: 0;
 }
 /*=============================================================================
 ** SCHOOLS COLORS
