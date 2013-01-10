@@ -5612,10 +5612,12 @@ body > .navbar {
     height: auto;
   }
 }
-.page-news .node-article {
+.page-news .node-article,
+.node-type-article .node-article {
   margin: 40px 0;
 }
-.page-news .node-article .row {
+.page-news .node-article .row,
+.node-type-article .node-article .row {
   margin: 0;
 }
 .news-content h2 {
