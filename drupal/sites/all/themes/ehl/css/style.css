@@ -5393,6 +5393,11 @@ body > .navbar {
   padding-right: 30px;
   margin-right: 40px;
 }
+.navbar .dropdown {
+  height: 33px;
+  overflow: hidden;
+  display: block;
+}
 /*=============================================================================
 ** NAVIGATION
 **============================================================================*/
