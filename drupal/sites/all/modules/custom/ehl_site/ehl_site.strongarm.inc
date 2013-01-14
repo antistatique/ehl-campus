@@ -183,6 +183,91 @@ function ehl_site_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'node_limit_article_access_arguments';
+  $strongarm->value = array(
+    0 => 'create',
+    1 => 'article',
+  );
+  $export['node_limit_article_access_arguments'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_limit_article_access_callback';
+  $strongarm->value = 'node_access';
+  $export['node_limit_article_access_callback'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_limit_page_access_arguments';
+  $strongarm->value = array(
+    0 => 'create',
+    1 => 'page',
+  );
+  $export['node_limit_page_access_arguments'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_limit_page_access_callback';
+  $strongarm->value = 'node_access';
+  $export['node_limit_page_access_callback'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_limit_post_access_arguments';
+  $strongarm->value = array(
+    0 => 'create',
+    1 => 'post',
+  );
+  $export['node_limit_post_access_arguments'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_limit_post_access_callback';
+  $strongarm->value = 'node_access';
+  $export['node_limit_post_access_callback'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_limit_project_access_arguments';
+  $strongarm->value = array(
+    0 => 'create',
+    1 => 'project',
+  );
+  $export['node_limit_project_access_arguments'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_limit_project_access_callback';
+  $strongarm->value = 'node_access';
+  $export['node_limit_project_access_callback'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_limit_school_access_arguments';
+  $strongarm->value = array(
+    0 => 'create',
+    1 => 'school',
+  );
+  $export['node_limit_school_access_arguments'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_limit_school_access_callback';
+  $strongarm->value = 'node_access';
+  $export['node_limit_school_access_callback'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'node_options_page';
   $strongarm->value = array(
     0 => 'status',
