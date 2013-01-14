@@ -155,13 +155,35 @@ function ehl_site_universities_form_options(){
  */
 function ehl_site_user_view($account){
   // Load the school slug
-  $field_school = field_get_items('user', $account, 'field_school');
-  if(!empty($field_school)){
-    $field_school_fields_slug = field_get_items('node', $field_school[0]['entity'],'field_slug');
-    $account->field_school_field_slug = $field_school_fields_slug[0]['safe_value'];
+  $account->field_school_field_slug = ehl_site_get_school_slug($account);
+}
+
+/**
+ * hook_node_view
+ */
+function ehl_site_node_view($node, $view_mode, $langcode){
+  if($node->type == 'post'){
+    $account = user_load($node->uid);
+    $node->school_slug = ehl_site_get_school_slug($account);
   }
 }
 
+/**
+ * Get the school slug of a user
+ *
+ * @argument uid int 
+ */
+function ehl_site_get_school_slug($account){
+    $result = false;
+    $field_school = field_get_items('user', $account, 'field_school');
+    if(!empty($field_school)){
+      $school = node_load($field_school[0]['target_id']);
+      $field_school_fields_slug = field_get_items('node', $school,'field_slug');
+      $result = $field_school_fields_slug[0]['safe_value'];
+    }
+
+    return $result;
+}
 
 /**
  * Implements hook_module_implements_alter().

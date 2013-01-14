@@ -19,7 +19,7 @@ hide($content['field_badge']);
 
 <!-- node.tpl.php -->
 
-<article <?php print $id_node . $classes .  $attributes; ?> role="article">
+<article data-school="<?php print $school_slug; ?>"<?php print $id_node . $classes .  $attributes; ?> role="article">
       <?php print render($title_prefix); ?>
     <?php print render($title_suffix); ?>
   <div class="row-fluid" style="text-align:left;">
