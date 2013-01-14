@@ -283,6 +283,16 @@ function ehl_social_views_default_views() {
   $handler->display->display_options['relationships']['field_school_target_id']['field'] = 'field_school_target_id';
   $handler->display->display_options['relationships']['field_school_target_id']['relationship'] = 'uid';
   $handler->display->display_options['relationships']['field_school_target_id']['required'] = TRUE;
+  /* Field: Content: Slug */
+  $handler->display->display_options['fields']['field_slug']['id'] = 'field_slug';
+  $handler->display->display_options['fields']['field_slug']['table'] = 'field_data_field_slug';
+  $handler->display->display_options['fields']['field_slug']['field'] = 'field_slug';
+  $handler->display->display_options['fields']['field_slug']['relationship'] = 'field_school_target_id';
+  $handler->display->display_options['fields']['field_slug']['label'] = '';
+  $handler->display->display_options['fields']['field_slug']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_slug']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_slug']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_slug']['type'] = 'text_plain';
   /* Field: Content: Author uid */
   $handler->display->display_options['fields']['uid']['id'] = 'uid';
   $handler->display->display_options['fields']['uid']['table'] = 'node';
@@ -306,6 +316,13 @@ function ehl_social_views_default_views() {
     'image_style' => 'project_cover',
     'image_link' => '',
   );
+  /* Field: User: Picture */
+  $handler->display->display_options['fields']['picture']['id'] = 'picture';
+  $handler->display->display_options['fields']['picture']['table'] = 'users';
+  $handler->display->display_options['fields']['picture']['field'] = 'picture';
+  $handler->display->display_options['fields']['picture']['relationship'] = 'uid';
+  $handler->display->display_options['fields']['picture']['label'] = '';
+  $handler->display->display_options['fields']['picture']['element_label_colon'] = FALSE;
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
