@@ -226,7 +226,7 @@ function ehl_social_field_default_fields() {
           'summary_rows' => 5,
         ),
         'type' => 'text_textarea_with_summary',
-        'weight' => '2',
+        'weight' => '4',
       ),
     ),
   );
@@ -264,7 +264,7 @@ function ehl_social_field_default_fields() {
     'field_instance' => array(
       'bundle' => 'project',
       'deleted' => '0',
-      'description' => 'You can upload some images to illustrate your project.',
+      'description' => '',
       'display' => array(
         'default' => array(
           'label' => 'hidden',
@@ -302,7 +302,7 @@ function ehl_social_field_default_fields() {
         'active' => 1,
         'module' => 'image',
         'settings' => array(
-          'preview_image_style' => 'standard',
+          'preview_image_style' => 'thumbnail',
           'progress_indicator' => 'throbber',
         ),
         'type' => 'image_image',
@@ -378,11 +378,11 @@ function ehl_social_field_default_fields() {
         'active' => 1,
         'module' => 'image',
         'settings' => array(
-          'preview_image_style' => 'standard',
+          'preview_image_style' => 'medium',
           'progress_indicator' => 'throbber',
         ),
         'type' => 'image_image',
-        'weight' => '3',
+        'weight' => '2',
       ),
     ),
   );
@@ -506,7 +506,7 @@ function ehl_social_field_default_fields() {
         'module' => 'video_embed_field',
         'settings' => array(),
         'type' => 'video_embed_field_video',
-        'weight' => '4',
+        'weight' => '3',
       ),
     ),
   );
@@ -871,7 +871,6 @@ function ehl_social_field_default_fields() {
   t('Project summary');
   t('Slug');
   t('Video');
-  t('You can upload some images to illustrate your project.');
   t('Youtube or vimeo link');
 
   return $fields;
