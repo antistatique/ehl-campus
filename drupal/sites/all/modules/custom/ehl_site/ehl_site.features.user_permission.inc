@@ -73,6 +73,7 @@ function ehl_site_user_default_permissions() {
     'name' => 'access contextual links',
     'roles' => array(
       0 => 'administrator',
+      1 => 'moderator',
     ),
     'module' => 'contextual',
   );
@@ -399,8 +400,9 @@ function ehl_site_user_default_permissions() {
     'name' => 'edit own comments',
     'roles' => array(
       0 => 'administrator',
-      1 => 'moderator',
-      2 => 'student',
+      1 => 'authenticated user',
+      2 => 'moderator',
+      3 => 'student',
     ),
     'module' => 'comment',
   );
@@ -428,6 +430,7 @@ function ehl_site_user_default_permissions() {
     'name' => 'flush caches',
     'roles' => array(
       0 => 'administrator',
+      1 => 'moderator',
     ),
     'module' => 'admin_menu',
   );
