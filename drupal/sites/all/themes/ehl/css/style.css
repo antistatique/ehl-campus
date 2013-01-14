@@ -5750,6 +5750,12 @@ body > .navbar {
   border-radius: 10px;
   border: 2px solid #ffffff;
   cursor: pointer;
+  position: absolute;
+  top: -40px;
+  left: -40px;
+}
+.marker a {
+  display: none;
 }
 .popup a,
 .popup a:hover {
