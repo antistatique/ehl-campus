@@ -5546,14 +5546,18 @@ hr.soften {
 .date mark {
   background: #008394;
   color: #ffffff;
-  padding: 0 5px;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  border-radius: 2px;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  -o-border-radius: 2px;
-  border-radius: 2px;
+  padding: 0 5px 2px 5px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: normal;
+  position: relative;
+  top: -10px;
 }
 /* Fix menu tabs */
 .nav-tabs > li {
@@ -5604,12 +5608,15 @@ body > .navbar {
   padding: 20px 0 20px;
   color: #fff;
   background: #008394;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4), 0 0 30px rgba(0, 0, 0, 0.075);
 }
 .jumbotron h1 {
-  margin-top: 0.6em;
-  font-size: 30px;
+  margin-top: 10px;
+  font-size: 40px;
   padding-left: 150px;
   line-height: 1;
+  letter-spacing: -2px;
+  font-weight: bold;
 }
 .jumbotron p {
   padding-left: 150px;
@@ -5663,6 +5670,9 @@ body > .navbar {
 .comment-options {
   position: relative;
   bottom: -25px;
+}
+.new-element .comment-content {
+  background-color: #FFFFFF !important;
 }
 .front .jumbotron {
   position: absolute;
@@ -6115,6 +6125,16 @@ article.node-project .sidebar table {
 }
 #user-profile-form .avatar-frame {
   text-align: left;
+}
+.user-data h2 {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.table-user {
+  margin-top: 30px;
+}
+.table-user a {
+  color: #ffffff;
 }
 /*=============================================================================
 ** COMMENTS
