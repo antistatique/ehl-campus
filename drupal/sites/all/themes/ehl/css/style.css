@@ -5546,14 +5546,18 @@ hr.soften {
 .date mark {
   background: #008394;
   color: #ffffff;
-  padding: 0 5px;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  border-radius: 2px;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  -o-border-radius: 2px;
-  border-radius: 2px;
+  padding: 0 5px 2px 5px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: normal;
+  position: relative;
+  top: -10px;
 }
 /* Fix menu tabs */
 .nav-tabs > li {
@@ -5666,6 +5670,9 @@ body > .navbar {
 .comment-options {
   position: relative;
   bottom: -25px;
+}
+.new-element .comment-content {
+  background-color: #FFFFFF !important;
 }
 .front .jumbotron {
   position: absolute;
