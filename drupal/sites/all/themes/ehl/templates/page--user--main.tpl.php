@@ -79,12 +79,15 @@ if(isset($field_cover_image_url)){
       <?php print $messages; ?>
     </div>
     <?php } ?>
-    <div class="row-fluid">
+    <div class="row-fluid user-data">
       <h2>About me</h2>
       <?php print render($field_about_me); ?>
-      <table class="table table-striped">
+      <table class="table table-striped table-user">
         <tbody>
-          <tr><td>Age</td><td><span class="badge badge-info"><?php print render($birthdate); ?></span></td></tr>
+          <tr><td>Age</td><td><span class="badge badge-info"><?php print render($field_birthdate); ?></span></td></tr>
+          <tr><td>University</td><td><span class="badge badge-info"><?php print render($field_school); ?></span></td></tr>
+          <tr><td>Location</td><td><span class="badge badge-info"><?php print render($field_school); ?></span></td></tr>
+          <tr><td>Other profiles</td><td><span class="badge badge-info"><?php print render($field_social_link); ?></span></td></tr>
         </tbody>
       </table>
     </div>

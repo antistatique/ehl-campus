@@ -80,7 +80,19 @@ function ehl_preprocess_page(&$vars,$hook) {
     if(!empty($page_user->field_birthdate)){
       hide($vars['page']['content']['system_main']['field_birthdate']);
       $vars['field_birthdate'] = field_view_field('user', $page_user, 'field_birthdate', 'default');
-    } 
+    }
+
+    // FIELD school
+    if(!empty($page_user->field_school)){
+      hide($vars['page']['content']['system_main']['field_school']);
+      $vars['field_school'] = field_view_field('user', $page_user, 'field_school', 'default');
+    }
+
+    // FIELD social
+    if(!empty($page_user->field_social_link)){
+      hide($vars['page']['content']['system_main']['field_social_link']);
+      $vars['field_social_link'] = field_view_field('user', $page_user, 'field_social_link', 'default');
+    }
 
     // USER Picture
     if(!empty($page_user->picture)){

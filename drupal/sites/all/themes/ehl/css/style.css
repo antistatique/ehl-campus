@@ -6126,6 +6126,16 @@ article.node-project .sidebar table {
 #user-profile-form .avatar-frame {
   text-align: left;
 }
+.user-data h2 {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.table-user {
+  margin-top: 30px;
+}
+.table-user a {
+  color: #ffffff;
+}
 /*=============================================================================
 ** COMMENTS
 **============================================================================*/
