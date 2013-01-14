@@ -67,10 +67,6 @@ if(isset($field_cover_image_url)){
 
     <?php print render($page['content_pre']); ?>
     <?php print render($title_prefix); ?>
-    <?php if ($title): ?>
-        <h2><?php print $title; ?></h2>
-        <br />
-    <?php endif; ?>
     <?php print render($title_suffix); ?>
 
     <?php if ($action_links): ?>
@@ -84,7 +80,13 @@ if(isset($field_cover_image_url)){
     </div>
     <?php } ?>
     <div class="row-fluid">
+      <h2>About me</h2>
       <?php print render($field_about_me); ?>
+      <table class="table table-striped">
+        <tbody>
+          <tr><td>Age</td><td><span class="badge badge-info"><?php print render($birthdate); ?></span></td></tr>
+        </tbody>
+      </table>
     </div>
 
     <?php print render($page['content_post']); ?>

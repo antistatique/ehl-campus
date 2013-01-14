@@ -36,6 +36,10 @@ function ehl_preprocess_page(&$vars,$hook) {
   if($args[0] === 'user' && is_numeric($args[1])) {
     // load the user of the current user page (not the current user)
     $page_user = user_load($args[1]);
+    //principal user page
+    if(!isset($args[2]) && empty($args[2])){
+      $vars['theme_hook_suggestions'][] = 'page__user__main';
+    }
   }
   
   if(isset($page_user)) {
@@ -65,6 +69,19 @@ function ehl_preprocess_page(&$vars,$hook) {
       $school_fields_slug = field_get_items('node',$vars['field_school']['#items'][0]['entity'],'field_slug');
       $vars['field_school_field_slug'] = $school_fields_slug[0]['safe_value'];
     }
+
+    // FIELD about me
+    if(!empty($page_user->field_about_me)){
+      hide($vars['page']['content']['system_main']['field_about_me']);
+      $vars['field_about_me'] = field_view_field('user', $page_user, 'field_about_me', 'default');
+    }
+
+    // FIELD age
+    if(!empty($page_user->field_birthdate)){
+      hide($vars['page']['content']['system_main']['field_birthdate']);
+      $vars['field_birthdate'] = field_view_field('user', $page_user, 'field_birthdate', 'default');
+    } 
+
     // USER Picture
     if(!empty($page_user->picture)){
       hide($vars['page']['content']['system_main']['user_picture']);
