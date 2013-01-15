@@ -320,7 +320,7 @@ function ehl_social_views_default_views() {
   $handler->display->display_options['fields']['field_project_cover_image']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_project_cover_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_project_cover_image']['settings'] = array(
-    'image_style' => 'project_cover',
+    'image_style' => 'project_thumb',
     'image_link' => '',
   );
   /* Field: User: Picture */

@@ -61,6 +61,7 @@ features[filter][] = safer_filtered_html
 features[image][] = avatar
 features[image][] = banner
 features[image][] = project_cover
+features[image][] = project_thumb
 features[image][] = standard
 features[image][] = thumb
 features[node][] = page
