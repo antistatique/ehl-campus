@@ -94,13 +94,24 @@ function ehl_preprocess_page(&$vars,$hook) {
 * preprocess_profile
 */
 function ehl_preprocess_user_profile(&$vars) {
-  $account = $vars['elements']['#account'];
+  global $user;
 
-   // FIELD school
-    if(isset($account->field_school_field_slug) && !empty($account->field_school_field_slug)) {
-      $vars['location_static_map'] = 'http://maps.googleapis.com/maps/api/staticmap?markers=color:blue%7C' . $account->field_school_field_slug .'&sensor=false&maptype=terrain&zoom=4&size=250x180';
-      $vars['location_static_map'] = '<img src="' . $vars['location_static_map'] . '" />';
-    }
+  $account = $vars['elements']['#account'];
+  $vars['profile_uid'] = $account->uid;
+  //Check if it's the current user profile
+  if($user->uid == $account->uid){
+    $vars['current_user_profile'] = true;
+  } else {
+    $vars['current_user_profile'] = false;
+  }
+
+  // FIELD school
+  if(isset($account->field_school_field_slug) && !empty($account->field_school_field_slug)) {
+    $vars['location_static_map'] = 'http://maps.googleapis.com/maps/api/staticmap?markers=color:blue%7C' . $account->field_school_field_slug .'&sensor=false&maptype=terrain&zoom=4&size=250x180';
+    $vars['location_static_map'] = '<img src="' . $vars['location_static_map'] . '" />';
+  }
+
+
 }
 
 /**
