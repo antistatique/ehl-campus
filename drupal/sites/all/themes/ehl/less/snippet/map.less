@@ -107,11 +107,15 @@
     font-weight: 400;
     margin: 3px 0;
   }
-  .map-post-data {
+  .marker-container {
     width: 220px;
     background-color: @white;
     padding: 10px 15px;
     margin-top: 3px;
+    margin-bottom: 0;
+  }
+  .map-post-data {
+    font-weight: bold;
   }
   .triangle {
     width: 250px;
@@ -131,12 +135,12 @@
 .chile-marker h4 {background: @chile;}
 .argentina-marker h4 {background: @argentina;}
 
-.usa-marker strong {color: @usa;}
-.spain-marker strong {color: @spain;}
-.southkorea-marker strong {color: @southkorea;}
-.slovenia-marker strong {color: @slovenia;}
-.portugal-marker strong {color: @portugal;}
-.india-marker strong {color: @india;}
-.switzerland-marker strong {color: @switzerland;}
-.chile-marker strong {color: @chile;}
-.argentina-marker strong {color: @argentina;}
+.usa-marker .map-post-data {color: @usa;}
+.spain-marker .map-post-data {color: @spain;}
+.southkorea-marker .map-post-data {color: @southkorea;}
+.slovenia-marker .map-post-data {color: @slovenia;}
+.portugal-marker .map-post-data {color: @portugal;}
+.india-marker .map-post-data {color: @india;}
+.switzerland-marker .map-post-data {color: @switzerland;}
+.chile-marker .map-post-data {color: @chile;}
+.argentina-marker .map-post-data {color: @argentina;}
