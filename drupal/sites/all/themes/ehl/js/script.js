@@ -7,10 +7,15 @@
   var openMarker = $('.map .marker:first-child').attr('id');
 
   $(document).ready(function(){
-    craftMap();
-    tooltipContent();
-    defineHeight();
-    toggleButton();
+    if($('.front').length) {
+      craftMap();
+      tooltipContent();
+      defineHeight();
+      toggleButton();
+    }
+    if($('.page-projects').length) {
+      projectPage();
+    }
   });
 
   /**
@@ -129,85 +134,9 @@
   }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   /**
   * Add class on all 4 item and change the select method
   */
-
-  projectPage();
 
   function projectPage(){
 
