@@ -4,9 +4,11 @@
 
   var $mapBlock = $('.map');
   var $toggleButton = $("#toggle-button");
+  var openMarker = $('.map .marker:first-child').attr('id');
 
   $(document).ready(function(){
     craftMap();
+    tooltipContent();
     defineHeight();
     toggleButton();
   });
@@ -26,9 +28,39 @@
     });
   }
 
+  /**
+   * Define the marker tooltip's content
+   */
+  function tooltipContent(){
+    var $firstPost = $('.view-live-feed .node-post:first-child').data('school');
+
+    $('.marker').each( function() {
+      var $markerSchool = $(this).data('school');
+      var $markerField = $(this).children().find('.marker-tooltip .map-post-data');
+      var $markerContainer = $(this).children().find('.marker-container');
+      var $markerUrl = $(this).children().find('.marker-tooltip');
+      if($firstPost === $markerSchool) {
+        openMarker = $(this).attr('id');
+      }
+      $('.node-post').each( function() {
+        var $postSchool = $(this).data('school');
+        var $postAuthor = $(this).children().find('.author .username').html();
+        var $postUrl = $(this).children().find('.icon-comment + a').attr('href');
+        $postUrl = $postUrl.split('#');
+        $postUrl = $postUrl[0];
+        if( $markerSchool === $postSchool) {
+          $markerField.html($postAuthor);
+          $markerUrl.attr('href', $postUrl);
+          return false;
+        }
+      });
+    });
+
+  };
+
 
   /**
-   * Define de height of the map's wrapper
+   * Define the height of the map's wrapper
    */
   function defineHeight(){
     if($.cookie("ehl-forum") === null){
@@ -50,7 +82,7 @@
    */
   function openTooltip(){
     setTimeout(function(){ 
-      $('#southkorea-marker').trigger('click');
+      $('#' + openMarker).trigger('click');
     }, 700);
   };
 
