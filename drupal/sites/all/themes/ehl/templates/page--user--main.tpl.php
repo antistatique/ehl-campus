@@ -84,10 +84,18 @@ if(isset($field_cover_image_url)){
       <?php print render($field_about_me); ?>
       <table class="table table-striped table-user">
         <tbody>
+          <?php if(isset($field_school)): ?>
           <tr><td>Age</td><td><span class="badge badge-info"><?php print render($field_birthdate); ?></span></td></tr>
+          <?php endif; ?>
+          <?php if(isset($field_school)): ?>
           <tr><td>University</td><td><span class="badge badge-info"><?php print render($field_school); ?></span></td></tr>
-          <tr><td>Location</td><td><span class="badge badge-info"><?php print render($field_school); ?></span></td></tr>
+          <?php endif; ?>
+          <?php if(isset($location_static_map)): ?>
+          <tr><td>Location</td><td><?php print $location_static_map; ?></td></tr>
+          <?php endif; ?>
+          <?php if(isset($field_social_link)): ?>
           <tr><td>Other profiles</td><td><span class="badge badge-info"><?php print render($field_social_link); ?></span></td></tr>
+          <?php endif; ?>
         </tbody>
       </table>
     </div>
