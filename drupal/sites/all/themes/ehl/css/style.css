@@ -5860,36 +5860,60 @@ article.node-project .row {
 .row-fluid .view-project-list .no-margin {
   margin-left: 0 !important;
 }
-.row-fluid .view-project-list .span3 {
+.row-fluid .view-project-list .span3 .project {
   height: 186px;
-  background: #eeeeee;
-  margin-bottom: 30px;
 }
 @media only screen and (min-width: 1200px) {
-  .row-fluid .view-project-list .span3 {
+  .row-fluid .view-project-list .span3 .project {
     height: 214px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 979px) {
-  .row-fluid .view-project-list .span3 {
+  .row-fluid .view-project-list .span3 .project {
     height: 157px;
   }
 }
 @media only screen and (max-width: 767px) {
-  .row-fluid .view-project-list .span3 {
+  .row-fluid .view-project-list .span3 .project {
     height: auto;
   }
 }
 .project-item {
+  margin-bottom: 30px;
+}
+.project-item .project {
   padding: 5px 0;
 }
-.project-item .views-field {
+.project-item .project a {
+  color: #ffffff;
+}
+.project-item .project .views-field {
   margin: 0 5px;
+}
+.project-item .project .avatar-frame .user-picture {
+  border: none;
+  float: left;
+  margin-right: 10px;
+}
+.project-item .project .avatar-frame .user-picture img {
+  width: 60px;
+  height: auto;
+}
+@media only screen and (min-width: 768px) and (max-width: 979px) {
+  .project-item .project .avatar-frame .user-picture img {
+    width: 40px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .project-item .project .avatar-frame .user-picture img {
+    width: 35px;
+  }
 }
 .views-field-field-project-cover-image .field-content {
   width: 100%;
   overflow: hidden;
   height: 116px;
+  margin-bottom: 5px;
 }
 .views-field-field-project-cover-image .field-content a {
   display: block;

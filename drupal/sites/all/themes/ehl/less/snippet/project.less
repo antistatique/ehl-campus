@@ -12,19 +12,35 @@ article.node-project .row {
   margin-left: 0 !important;
 }
 
-.row-fluid .view-project-list .span3 {
+.row-fluid .view-project-list .span3 .project {
   height: 186px;
-  background: @grayLighter;
-  margin-bottom: 30px;
- @media only screen and (min-width: 1200px) {height: 214px;}
+  @media only screen and (min-width: 1200px) {height: 214px;}
   @media only screen and (min-width: 768px) and (max-width: 979px) {height: 157px;}
   @media only screen and (max-width: 767px) {height: auto;}
 }
 
 .project-item {
+  margin-bottom: 30px;
+}
+
+.project-item .project {
   padding: 5px 0;
+  a {
+    color: @white;
+  }
   .views-field {
     margin: 0 5px;
+  }
+  .avatar-frame .user-picture {
+    border: none;
+    float: left;
+    margin-right: 10px;
+    img {
+      width: 60px; 
+      height: auto;
+      @media only screen and (min-width: 768px) and (max-width: 979px) {width: 40px;}
+      @media only screen and (max-width: 767px) {width: 35px;}
+    }
   }
 }
 
@@ -32,6 +48,7 @@ article.node-project .row {
   width: 100%;
   overflow: hidden;
   height: 116px;
+  margin-bottom: 5px;
   a {
     display: block;
     width: 100%;
