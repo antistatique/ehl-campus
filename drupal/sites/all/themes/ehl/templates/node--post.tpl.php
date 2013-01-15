@@ -19,7 +19,7 @@ hide($content['field_badge']);
 
 <!-- node.tpl.php -->
 
-<article <?php print $id_node . $classes .  $attributes; ?> role="article">
+<article data-school="<?php print $school_slug; ?>"<?php print $id_node . $classes .  $attributes; ?> role="article">
       <?php print render($title_prefix); ?>
     <?php print render($title_suffix); ?>
   <div class="row-fluid" style="text-align:left;">
@@ -42,8 +42,9 @@ hide($content['field_badge']);
   
   <a name="<?php print $node->nid . '-comments'; ?>"></a>
 
+  <div class="pull-right comment-options"><i class="icon-comment"></i> <?php print l($node->comment_count, 'node/' . $node->nid, array('fragment' => $node->nid . '-comments')); ?> | <?php print l('Write a comment', 'node/' . $node->nid . '/reply', array('fragment' => 'comment-form')); ?>| <?php print l('See all comments', 'node/' . $node->nid, array('fragment' => $node->nid . '-comments')); ?></div>
+
   <?php print render($content['comments']); ?>
 
-    <div class="pull-right"><i class="icon-comment"></i> <?php print l($node->comment_count, 'node/' . $node->nid, array('fragment' => $node->nid . '-comments')); ?> | <?php print l('Write a comment', 'node/' . $node->nid . '/reply', array('fragment' => 'comment-form')); ?>| <?php print l('See all comments', 'node/' . $node->nid, array('fragment' => $node->nid . '-comments')); ?></div>
 </article>
 <hr class="soften" />

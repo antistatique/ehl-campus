@@ -48,6 +48,8 @@ stylesheets[all][] = css/style.css
 stylesheets[all][] = system.menus.css
 
 ;-------------- JS -------------
+scripts[] = bootstrap/js/bootstrap-dropdown.js
+scripts[] = js/craftmap.js
 scripts[] = js/script.js
 
 ;-------------- Default Mothership Settings  -------------

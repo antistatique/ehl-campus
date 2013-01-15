@@ -1,0 +1,142 @@
+.front .jumbotron {
+  position: absolute;
+  top: 43px;
+  left: 0px;
+  z-index: 98;
+  width: 100%;
+  background: @ehlbluetransparent;
+}
+
+#toggle-button {
+  height: 50px;
+  width: 40px;
+  position: relative;
+  top: -30px;
+  margin: 0 auto;
+  padding-top: 7px;
+  background: @white;
+  z-index: 99;
+  color: @black;
+  &:hover {
+    cursor: pointer;
+  }
+  img {
+    width: 26px;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+#toggle-button.top img {
+  -webkit-transform: rotate(-180deg);
+  -moz-transform: rotate(-180deg);
+  -o-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+}
+
+#global-map {
+  //height: 750px;
+  background: @ehlclearblue /*url('../img/square.png') repeat*/;
+  position: relative;
+  overflow: hidden;
+  box-shadow: inset 0px -2px 5px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 0px -2px 5px 0px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0px -2px 5px 0px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: inset 0px -2px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+.map {
+  height: 580px;
+  max-width: 1375px;
+  margin: 0 auto;
+}
+
+#global-map-controls {
+  display: none;
+  position: absolute;
+  width: 120px;
+  left: 20px;
+  top: 160px;
+  z-index: 95;
+  a {
+    display: block;
+    background: rgba(255, 255, 255, 0.3);
+    margin: 2px 0;
+    color: @ehlblue;
+    padding: 5px;
+  }
+  a:hover, a.active {
+    cursor: pointer;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.6);
+    font-weight: normal;
+    outline:none !important;
+  }
+  a.active {
+    background: rgba(255, 255, 255, 0.8);
+  }
+}
+
+.marker {
+  width: 10px;
+  height: 10px;
+  .border-radius(10px);
+  border: 2px solid @white;
+  cursor: pointer;
+  position: absolute;
+  top: -40px;
+  left: -40px;
+}
+
+
+.marker a {
+  display: none;
+}
+
+.popup {
+  a, a:hover {
+    color: @ehlgray;
+    text-decoration: none;
+  }
+  h4 {
+    width: 220px;
+    color: @white;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 3px 0;
+  }
+  .map-post-data {
+    width: 220px;
+    background-color: @white;
+    padding: 10px 15px;
+    margin-top: 3px;
+  }
+  .triangle {
+    width: 250px;
+    background: url('../img/triangle.png') no-repeat;
+    background-position: top center;
+    height: 15px;
+  }
+}
+
+.usa-marker h4 {background: @usa;}
+.spain-marker h4 {background: @spain;}
+.southkorea-marker h4 {background: @southkorea;}
+.slovenia-marker h4 {background: @slovenia;}
+.portugal-marker h4 {background: @portugal;}
+.india-marker h4 {background: @india;}
+.switzerland-marker h4 {background: @switzerland;}
+.chile-marker h4 {background: @chile;}
+.argentina-marker h4 {background: @argentina;}
+
+.usa-marker strong {color: @usa;}
+.spain-marker strong {color: @spain;}
+.southkorea-marker strong {color: @southkorea;}
+.slovenia-marker strong {color: @slovenia;}
+.portugal-marker strong {color: @portugal;}
+.india-marker strong {color: @india;}
+.switzerland-marker strong {color: @switzerland;}
+.chile-marker strong {color: @chile;}
+.argentina-marker strong {color: @argentina;}

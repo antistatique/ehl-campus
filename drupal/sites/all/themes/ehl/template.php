@@ -1,6 +1,9 @@
 <?php
 
-
+$theme_path = drupal_get_path('theme', 'ehl');
+require_once $theme_path . '/includes/form.inc';
+require_once $theme_path . '/includes/pager.inc';
+drupal_add_library('system', 'jquery.cookie');
 // ----- Preprocess ------
 
 /**
@@ -33,9 +36,14 @@ function ehl_preprocess_page(&$vars,$hook) {
   if($args[0] === 'user' && is_numeric($args[1])) {
     // load the user of the current user page (not the current user)
     $page_user = user_load($args[1]);
+    //principal user page
+    if(!isset($args[2]) && empty($args[2])){
+      $vars['theme_hook_suggestions'][] = 'page__user__main';
+    }
   }
   
   if(isset($page_user)) {
+
     // User name
     if(!empty($page_user->name)){
       $vars['user_name'] = $page_user->name;
@@ -55,11 +63,37 @@ function ehl_preprocess_page(&$vars,$hook) {
       $vars['field_school'] = field_view_field('user', $page_user, 'field_school', 'default');
     } 
     // FIELD Slug (from school)
+    $vars['field_school_field_slug'] = '';
     if(!empty($vars['field_school']['#items'][0])){
       // field_slug
       $school_fields_slug = field_get_items('node',$vars['field_school']['#items'][0]['entity'],'field_slug');
       $vars['field_school_field_slug'] = $school_fields_slug[0]['safe_value'];
     }
+
+    // FIELD about me
+    if(!empty($page_user->field_about_me)){
+      hide($vars['page']['content']['system_main']['field_about_me']);
+      $vars['field_about_me'] = field_view_field('user', $page_user, 'field_about_me', 'default');
+    }
+
+    // FIELD age
+    if(!empty($page_user->field_birthdate)){
+      hide($vars['page']['content']['system_main']['field_birthdate']);
+      $vars['field_birthdate'] = field_view_field('user', $page_user, 'field_birthdate', 'default');
+    }
+
+    // FIELD school
+    if(!empty($page_user->field_school)){
+      hide($vars['page']['content']['system_main']['field_school']);
+      $vars['field_school'] = field_view_field('user', $page_user, 'field_school', 'default');
+    }
+
+    // FIELD social
+    if(!empty($page_user->field_social_link)){
+      hide($vars['page']['content']['system_main']['field_social_link']);
+      $vars['field_social_link'] = field_view_field('user', $page_user, 'field_social_link', 'default');
+    }
+
     // USER Picture
     if(!empty($page_user->picture)){
       hide($vars['page']['content']['system_main']['user_picture']);
@@ -75,6 +109,18 @@ function ehl_preprocess_page(&$vars,$hook) {
             ),           
           )
         );
+    }
+  }
+}
+
+/**
+ * hook_preporcess_node
+ */
+function ehl_preprocess_node(&$vars, $hook) {
+  if($vars['node']->type == 'post'){
+    $vars['school_slug'] = '';
+    if(isset($vars['node']->school_slug)){
+      $vars['school_slug'] = $vars['node']->school_slug;
     }
   }
 }
@@ -118,6 +164,32 @@ function ehl_menu_tree($variables) {
 
 
 
+/**
+ * theme_menu_local_tasks
+ */
+
+function ehl_menu_local_tasks(&$variables) {
+  $output = '';
+
+  if (!empty($variables['primary'])) {
+    $variables['primary']['#prefix'] = '<h2 class="element-invisible">' . t('Primary tabs') . '</h2>';
+    $variables['primary']['#prefix'] .= '<ul class="tabs primary nav nav-tabs">';
+    $variables['primary']['#suffix'] = '</ul>';
+    $output .= drupal_render($variables['primary']);
+  }
+  if (!empty($variables['secondary'])) {
+    $variables['secondary']['#prefix'] = '<h2 class="element-invisible">' . t('Secondary tabs') . '</h2>';
+    $variables['secondary']['#prefix'] .= '<ul class="tabs secondary nav nav-tabs">';
+    $variables['secondary']['#suffix'] = '</ul>';
+    $output .= drupal_render($variables['secondary']);
+  }
+
+  return $output;
+}
+
+
+
+
 // -------- Alter -----
 
 /**
@@ -126,5 +198,5 @@ function ehl_menu_tree($variables) {
 
 function ehl_form_search_block_form_alter(&$form, &$form_state, $form_id) {
 	$form['#attributes']['class'] = 'navbar-search';
-    $form['search_block_form']['#attributes']['class'][] = 'search-query';
+  $form['search_block_form']['#attributes']['class'][] = 'search-query';
 }

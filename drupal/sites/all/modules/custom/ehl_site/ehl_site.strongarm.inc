@@ -13,6 +13,43 @@ function ehl_site_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'admin_menu_cache_client';
+  $strongarm->value = 1;
+  $export['admin_menu_cache_client'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'admin_menu_devel_modules_skip';
+  $strongarm->value = array(
+    'admin_devel' => 0,
+    'context_ui' => 0,
+    'devel' => 0,
+    'devel_node_access' => 0,
+    'field_ui' => 0,
+    'l10n_client' => 0,
+    'l10n_update' => 0,
+    'views_ui' => 0,
+  );
+  $export['admin_menu_devel_modules_skip'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'admin_menu_margin_top';
+  $strongarm->value = 1;
+  $export['admin_menu_margin_top'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'admin_menu_position_fixed';
+  $strongarm->value = 0;
+  $export['admin_menu_position_fixed'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'admin_theme';
   $strongarm->value = 'seven';
   $export['admin_theme'] = $strongarm;
@@ -44,6 +81,27 @@ function ehl_site_strongarm() {
   $strongarm->name = 'date_first_day';
   $strongarm->value = '1';
   $export['date_first_day'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'jquery_update_compression_type';
+  $strongarm->value = 'min';
+  $export['jquery_update_compression_type'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'jquery_update_jquery_cdn';
+  $strongarm->value = 'google';
+  $export['jquery_update_jquery_cdn'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'jquery_update_jquery_version';
+  $strongarm->value = '1.8';
+  $export['jquery_update_jquery_version'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -121,6 +179,91 @@ function ehl_site_strongarm() {
   $strongarm->name = 'logintoboggan_unified_login';
   $strongarm->value = 0;
   $export['logintoboggan_unified_login'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_limit_article_access_arguments';
+  $strongarm->value = array(
+    0 => 'create',
+    1 => 'article',
+  );
+  $export['node_limit_article_access_arguments'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_limit_article_access_callback';
+  $strongarm->value = 'node_access';
+  $export['node_limit_article_access_callback'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_limit_page_access_arguments';
+  $strongarm->value = array(
+    0 => 'create',
+    1 => 'page',
+  );
+  $export['node_limit_page_access_arguments'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_limit_page_access_callback';
+  $strongarm->value = 'node_access';
+  $export['node_limit_page_access_callback'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_limit_post_access_arguments';
+  $strongarm->value = array(
+    0 => 'create',
+    1 => 'post',
+  );
+  $export['node_limit_post_access_arguments'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_limit_post_access_callback';
+  $strongarm->value = 'node_access';
+  $export['node_limit_post_access_callback'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_limit_project_access_arguments';
+  $strongarm->value = array(
+    0 => 'create',
+    1 => 'project',
+  );
+  $export['node_limit_project_access_arguments'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_limit_project_access_callback';
+  $strongarm->value = 'node_access';
+  $export['node_limit_project_access_callback'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_limit_school_access_arguments';
+  $strongarm->value = array(
+    0 => 'create',
+    1 => 'school',
+  );
+  $export['node_limit_school_access_arguments'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_limit_school_access_callback';
+  $strongarm->value = 'node_access';
+  $export['node_limit_school_access_callback'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -345,6 +488,27 @@ function ehl_site_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'user_admin_role';
+  $strongarm->value = '3';
+  $export['user_admin_role'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'user_default_timezone';
+  $strongarm->value = '2';
+  $export['user_default_timezone'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'user_email_verification';
+  $strongarm->value = TRUE;
+  $export['user_email_verification'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'user_pictures';
   $strongarm->value = 1;
   $export['user_pictures'] = $strongarm;
@@ -352,15 +516,22 @@ function ehl_site_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'user_picture_default';
+  $strongarm->value = '/sites/all/themes/ehl/img/default_avatar.png';
+  $export['user_picture_default'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'user_picture_dimensions';
-  $strongarm->value = '1024x1024';
+  $strongarm->value = '400x400';
   $export['user_picture_dimensions'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'user_picture_file_size';
-  $strongarm->value = '800';
+  $strongarm->value = '3000';
   $export['user_picture_file_size'] = $strongarm;
 
   $strongarm = new stdClass();
