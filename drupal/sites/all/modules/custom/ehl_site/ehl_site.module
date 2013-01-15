@@ -90,7 +90,10 @@ function ehl_site_user_menu_content(){
 	} else {
 		$content .= '<li>' . l('Login','user') . '</li>';
 	}
-	$content .= '</ul>';
+	$content .= '<li class="divider-vertical">';
+  $content .= '</li></ul>';
+    $content .= '<a href="' . url('node/add/post') . '"class="btn btn-primary  btn-small">Add a post</a>';
+
 
 	return array('#markup' => $content);
 }
