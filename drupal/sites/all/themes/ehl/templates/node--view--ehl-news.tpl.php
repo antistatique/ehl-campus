@@ -41,17 +41,15 @@ hide($content['field_badge'])
         <div class="content">
           <?php print render($content);?>
         </div>
-        <?php print render($content['links']); ?>
       </div>
 
     </div>
   </div>
   <div class="span12 news-comments-wrapper">
-    <div class="pull-right comment-options"><i class="icon-comment"></i> <?php print l($node->comment_count, 'node/' . $node->nid, array('fragment' => $node->nid . '-comments')); ?> | <?php print l('Write a comment', 'node/' . $node->nid . '/reply', array('fragment' => 'comment-form')); ?>| <?php print l('See all comments', 'node/' . $node->nid, array('fragment' => $node->nid . '-comments')); ?></div>
+    <div class="pull-right comment-options"><i class="icon-comment"></i> <?php print l($node->comment_count, 'node/' . $node->nid, array('fragment' => $node->nid . '-comments')); ?> | <?php print l('Write a comment', 'comment/reply/' . $node->nid , array('fragment' => 'comment-form')); ?> | <?php print l('See all comments', 'node/' . $node->nid, array('fragment' => $node->nid . '-comments')); ?></div>
     <?php print render($content['comments']); ?>
     <hr class="soften">
   </div>
 
 
 </article>
-
