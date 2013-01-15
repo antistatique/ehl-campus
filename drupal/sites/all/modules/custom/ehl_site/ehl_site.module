@@ -7,6 +7,16 @@
 include_once 'ehl_site.features.inc';
 
 /**
+ * hook_menu_alter
+ */
+function ehl_site_menu_alter(&$items) {
+    // Change user tab
+    $items['user/%user/edit']['type'] = MENU_CALLBACK;
+    $items['user/%user/view']['title'] = "Profile";
+    $items['user/%user/view']['weight'] = 10;
+}
+
+/**
  * hook_block_info
  */
 function ehl_site_block_info() {
