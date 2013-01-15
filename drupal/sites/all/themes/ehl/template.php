@@ -114,6 +114,18 @@ function ehl_preprocess_page(&$vars,$hook) {
 }
 
 /**
+ * hook_preporcess_node
+ */
+function ehl_preprocess_node(&$vars, $hook) {
+  if($vars['node']->type == 'post'){
+    $vars['school_slug'] = '';
+    if(isset($vars['node']->school_slug)){
+      $vars['school_slug'] = $vars['node']->school_slug;
+    }
+  }
+}
+
+/**
  * hook_preprocess_block
  */
 function ehl_preprocess_block(&$variables) {

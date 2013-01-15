@@ -211,88 +211,22 @@ function ehl_social_field_default_fields() {
       ),
       'entity_type' => 'node',
       'field_name' => 'body',
-      'label' => 'Body',
-      'required' => FALSE,
-      'settings' => array(
-        'display_summary' => TRUE,
-        'text_processing' => 1,
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'module' => 'text',
-        'settings' => array(
-          'rows' => 20,
-          'summary_rows' => 5,
-        ),
-        'type' => 'text_textarea_with_summary',
-        'weight' => -4,
-      ),
-    ),
-  );
-
-  // Exported field: 'node-project-field_about_the_project'.
-  $fields['node-project-field_about_the_project'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_about_the_project',
-      'foreign keys' => array(
-        'format' => array(
-          'columns' => array(
-            'format' => 'format',
-          ),
-          'table' => 'filter_format',
-        ),
-      ),
-      'indexes' => array(
-        'format' => array(
-          0 => 'format',
-        ),
-      ),
-      'locked' => '0',
-      'module' => 'text',
-      'settings' => array(),
-      'translatable' => '0',
-      'type' => 'text_long',
-    ),
-    'field_instance' => array(
-      'bundle' => 'project',
-      'default_value' => NULL,
-      'deleted' => '0',
-      'description' => 'Short description about your project',
-      'display' => array(
-        'default' => array(
-          'label' => 'above',
-          'module' => 'text',
-          'settings' => array(),
-          'type' => 'text_default',
-          'weight' => '1',
-        ),
-        'teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-      ),
-      'entity_type' => 'node',
-      'field_name' => 'field_about_the_project',
-      'label' => 'About the project',
+      'label' => 'Project description',
       'required' => 0,
       'settings' => array(
-        'text_processing' => '0',
+        'display_summary' => 0,
+        'text_processing' => '1',
         'user_register_form' => FALSE,
       ),
       'widget' => array(
         'active' => 1,
         'module' => 'text',
         'settings' => array(
-          'rows' => '3',
+          'rows' => '20',
+          'summary_rows' => 5,
         ),
-        'type' => 'text_textarea',
-        'weight' => '3',
+        'type' => 'text_textarea_with_summary',
+        'weight' => '4',
       ),
     ),
   );
@@ -330,7 +264,7 @@ function ehl_social_field_default_fields() {
     'field_instance' => array(
       'bundle' => 'project',
       'deleted' => '0',
-      'description' => 'You can upload some images to illustrate your project.',
+      'description' => '',
       'display' => array(
         'default' => array(
           'label' => 'hidden',
@@ -368,7 +302,7 @@ function ehl_social_field_default_fields() {
         'active' => 1,
         'module' => 'image',
         'settings' => array(
-          'preview_image_style' => 'standard',
+          'preview_image_style' => 'thumbnail',
           'progress_indicator' => 'throbber',
         ),
         'type' => 'image_image',
@@ -444,78 +378,11 @@ function ehl_social_field_default_fields() {
         'active' => 1,
         'module' => 'image',
         'settings' => array(
-          'preview_image_style' => 'standard',
+          'preview_image_style' => 'medium',
           'progress_indicator' => 'throbber',
         ),
         'type' => 'image_image',
         'weight' => '2',
-      ),
-    ),
-  );
-
-  // Exported field: 'node-project-field_project_description'.
-  $fields['node-project-field_project_description'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_project_description',
-      'foreign keys' => array(
-        'format' => array(
-          'columns' => array(
-            'format' => 'format',
-          ),
-          'table' => 'filter_format',
-        ),
-      ),
-      'indexes' => array(
-        'format' => array(
-          0 => 'format',
-        ),
-      ),
-      'locked' => '0',
-      'module' => 'text',
-      'settings' => array(),
-      'translatable' => '0',
-      'type' => 'text_long',
-    ),
-    'field_instance' => array(
-      'bundle' => 'project',
-      'default_value' => NULL,
-      'deleted' => '0',
-      'description' => '',
-      'display' => array(
-        'default' => array(
-          'label' => 'hidden',
-          'module' => 'text',
-          'settings' => array(),
-          'type' => 'text_default',
-          'weight' => '2',
-        ),
-        'teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-      ),
-      'entity_type' => 'node',
-      'field_name' => 'field_project_description',
-      'label' => 'Project description',
-      'required' => 0,
-      'settings' => array(
-        'text_processing' => '1',
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 1,
-        'module' => 'text',
-        'settings' => array(
-          'rows' => '10',
-        ),
-        'type' => 'text_textarea',
-        'weight' => '4',
       ),
     ),
   );
@@ -990,7 +857,6 @@ function ehl_social_field_default_fields() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('About the project');
   t('An color in hexa like f49956 (without #).');
   t('Body');
   t('Color');
@@ -1003,10 +869,8 @@ function ehl_social_field_default_fields() {
   t('Image used on listing or if you don\'t have a video');
   t('Project description');
   t('Project summary');
-  t('Short description about your project');
   t('Slug');
   t('Video');
-  t('You can upload some images to illustrate your project.');
   t('Youtube or vimeo link');
 
   return $fields;
