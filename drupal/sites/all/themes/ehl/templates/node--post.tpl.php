@@ -29,7 +29,7 @@ hide($content['field_badge']);
       <?php print $user_picture; ?>
       <center>
         <small>
-          <span class="author"><?php print t('by'); ?> <?php print $name; ?></span>
+          <span class="author"><?php print t('by'); ?> <?php print $name; ?></span><br />
           <span class="date"><time><?php print $date; ?></time></span>
         </small>
       </center>
