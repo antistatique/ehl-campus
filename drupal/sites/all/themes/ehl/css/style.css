@@ -5861,16 +5861,16 @@ article.node-project .row {
   margin-left: 0 !important;
 }
 .row-fluid .view-project-list .span3 .project {
-  height: 186px;
+  height: 181px;
 }
 @media only screen and (min-width: 1200px) {
   .row-fluid .view-project-list .span3 .project {
-    height: 214px;
+    height: 209px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 979px) {
   .row-fluid .view-project-list .span3 .project {
-    height: 157px;
+    height: auto;
   }
 }
 @media only screen and (max-width: 767px) {
