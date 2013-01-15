@@ -8,13 +8,13 @@
 				<?php if(isset($user_profile['field_birthdate'])): ?>
 				<tr><td>Age</td><td><span class="badge badge-info"><?php print render($user_profile['field_birthdate']); ?></span></td></tr>
 				<?php endif; ?>
-				<?php if(isset($user_profile['field_birthdate'])): ?>
+				<?php if(isset($user_profile['field_school'])): ?>
 				<tr><td>University</td><td><span class="badge badge-info"><?php print render($user_profile['field_school']); ?></span></td></tr>
 				<?php endif; ?>
-				<?php if(isset($user_profile['field_birthdate'])): ?>
+				<?php if(isset($location_static_map)): ?>
 				<tr><td>Location</td><td><?php print $location_static_map; ?></td></tr>
 				<?php endif; ?>
-				<?php if(isset($user_profile['field_birthdate'])): ?>
+				<?php if(isset($user_profile['field_social_link'])): ?>
 				<tr><td>Other profiles</td><td><span class="badge badge-info"><?php print render($user_profile['field_social_link']); ?></span></td></tr>
 				<?php endif; ?>
 			</tbody>
