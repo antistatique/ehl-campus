@@ -12,8 +12,7 @@
       tooltipContent();
       defineHeight();
       toggleButton();
-    }
-    if($('.page-projects').length) {
+    }else if($('.page-projects').length) {
       projectPage();
     }
   });
