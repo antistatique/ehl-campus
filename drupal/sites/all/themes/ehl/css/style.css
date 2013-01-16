@@ -5566,6 +5566,11 @@ hr.soften {
 .help-block {
   display: none;
 }
+/* Fix btn */
+.btn-primary:hover {
+  background-position: 0 0;
+  background: #005294;
+}
 .form-vertical .form-horizontal .control-group > label {
   text-align: left;
 }
@@ -5639,6 +5644,9 @@ body > .navbar {
 .dropdown-menu {
   margin-top: 10px;
   margin-left: 5px;
+}
+.navbar .pull-right .btn {
+  margin-top: 8px;
 }
 /*=============================================================================
 ** NAVIGATION
