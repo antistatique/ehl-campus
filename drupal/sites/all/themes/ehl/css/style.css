@@ -6196,6 +6196,18 @@ article.node-project .sidebar table {
 .table-user a {
   color: #ffffff;
 }
+.page-user .sidebar {
+  margin-top: 20px;
+}
+.page-user .node-project h2 {
+  margin-top: 40px;
+}
+.page-user .content .field-type-image {
+  margin-top: 60px;
+}
+.page-user .content .field-type-image .field-item {
+  margin-bottom: 40px;
+}
 /*=============================================================================
 ** COMMENTS
 **============================================================================*/
