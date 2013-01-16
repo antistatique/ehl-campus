@@ -39,6 +39,24 @@ function ehl_site_user_default_permissions() {
     'module' => 'views',
   );
 
+  // Exported permission: access backup and migrate.
+  $permissions['access backup and migrate'] = array(
+    'name' => 'access backup and migrate',
+    'roles' => array(
+      0 => 'administrator',
+    ),
+    'module' => 'backup_migrate',
+  );
+
+  // Exported permission: access backup files.
+  $permissions['access backup files'] = array(
+    'name' => 'access backup files',
+    'roles' => array(
+      0 => 'administrator',
+    ),
+    'module' => 'backup_migrate',
+  );
+
   // Exported permission: access comments.
   $permissions['access comments'] = array(
     'name' => 'access comments',
@@ -138,6 +156,15 @@ function ehl_site_user_default_permissions() {
     'module' => 'system',
   );
 
+  // Exported permission: administer backup and migrate.
+  $permissions['administer backup and migrate'] = array(
+    'name' => 'administer backup and migrate',
+    'roles' => array(
+      0 => 'administrator',
+    ),
+    'module' => 'backup_migrate',
+  );
+
   // Exported permission: administer blocks.
   $permissions['administer blocks'] = array(
     'name' => 'administer blocks',
@@ -164,6 +191,13 @@ function ehl_site_user_default_permissions() {
       0 => 'administrator',
     ),
     'module' => 'node',
+  );
+
+  // Exported permission: administer contexts.
+  $permissions['administer contexts'] = array(
+    'name' => 'administer contexts',
+    'roles' => array(),
+    'module' => 'context_ui',
   );
 
   // Exported permission: administer features.
@@ -202,6 +236,15 @@ function ehl_site_user_default_permissions() {
     'module' => 'menu',
   );
 
+  // Exported permission: administer message types.
+  $permissions['administer message types'] = array(
+    'name' => 'administer message types',
+    'roles' => array(
+      0 => 'administrator',
+    ),
+    'module' => 'message',
+  );
+
   // Exported permission: administer module filter.
   $permissions['administer module filter'] = array(
     'name' => 'administer module filter',
@@ -218,6 +261,15 @@ function ehl_site_user_default_permissions() {
       0 => 'administrator',
     ),
     'module' => 'system',
+  );
+
+  // Exported permission: administer node limits.
+  $permissions['administer node limits'] = array(
+    'name' => 'administer node limits',
+    'roles' => array(
+      0 => 'administrator',
+    ),
+    'module' => 'node_limit',
   );
 
   // Exported permission: administer nodes.
@@ -311,6 +363,15 @@ function ehl_site_user_default_permissions() {
     'module' => 'user',
   );
 
+  // Exported permission: administer video styles.
+  $permissions['administer video styles'] = array(
+    'name' => 'administer video styles',
+    'roles' => array(
+      0 => 'administrator',
+    ),
+    'module' => 'video_embed_field',
+  );
+
   // Exported permission: administer views.
   $permissions['administer views'] = array(
     'name' => 'administer views',
@@ -359,6 +420,24 @@ function ehl_site_user_default_permissions() {
     'module' => 'user',
   );
 
+  // Exported permission: create messages.
+  $permissions['create messages'] = array(
+    'name' => 'create messages',
+    'roles' => array(
+      0 => 'administrator',
+    ),
+    'module' => 'message',
+  );
+
+  // Exported permission: create page content.
+  $permissions['create page content'] = array(
+    'name' => 'create page content',
+    'roles' => array(
+      0 => 'administrator',
+    ),
+    'module' => 'node',
+  );
+
   // Exported permission: create url aliases.
   $permissions['create url aliases'] = array(
     'name' => 'create url aliases',
@@ -366,6 +445,33 @@ function ehl_site_user_default_permissions() {
       0 => 'administrator',
     ),
     'module' => 'path',
+  );
+
+  // Exported permission: delete any page content.
+  $permissions['delete any page content'] = array(
+    'name' => 'delete any page content',
+    'roles' => array(
+      0 => 'administrator',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: delete backup files.
+  $permissions['delete backup files'] = array(
+    'name' => 'delete backup files',
+    'roles' => array(
+      0 => 'administrator',
+    ),
+    'module' => 'backup_migrate',
+  );
+
+  // Exported permission: delete own page content.
+  $permissions['delete own page content'] = array(
+    'name' => 'delete own page content',
+    'roles' => array(
+      0 => 'administrator',
+    ),
+    'module' => 'node',
   );
 
   // Exported permission: delete revisions.
@@ -395,6 +501,15 @@ function ehl_site_user_default_permissions() {
     'module' => 'admin_menu',
   );
 
+  // Exported permission: edit any page content.
+  $permissions['edit any page content'] = array(
+    'name' => 'edit any page content',
+    'roles' => array(
+      0 => 'administrator',
+    ),
+    'module' => 'node',
+  );
+
   // Exported permission: edit own comments.
   $permissions['edit own comments'] = array(
     'name' => 'edit own comments',
@@ -405,6 +520,15 @@ function ehl_site_user_default_permissions() {
       3 => 'student',
     ),
     'module' => 'comment',
+  );
+
+  // Exported permission: edit own page content.
+  $permissions['edit own page content'] = array(
+    'name' => 'edit own page content',
+    'roles' => array(
+      0 => 'administrator',
+    ),
+    'module' => 'node',
   );
 
   // Exported permission: edit terms in 1.
@@ -453,6 +577,15 @@ function ehl_site_user_default_permissions() {
     'module' => 'pathauto',
   );
 
+  // Exported permission: perform backup.
+  $permissions['perform backup'] = array(
+    'name' => 'perform backup',
+    'roles' => array(
+      0 => 'administrator',
+    ),
+    'module' => 'backup_migrate',
+  );
+
   // Exported permission: post comments.
   $permissions['post comments'] = array(
     'name' => 'post comments',
@@ -461,6 +594,15 @@ function ehl_site_user_default_permissions() {
       1 => 'authenticated user',
     ),
     'module' => 'comment',
+  );
+
+  // Exported permission: restore from backup.
+  $permissions['restore from backup'] = array(
+    'name' => 'restore from backup',
+    'roles' => array(
+      0 => 'administrator',
+    ),
+    'module' => 'backup_migrate',
   );
 
   // Exported permission: revert revisions.
@@ -545,6 +687,15 @@ function ehl_site_user_default_permissions() {
     'name' => 'use text format full_html',
     'roles' => array(
       0 => 'administrator',
+    ),
+    'module' => 'filter',
+  );
+
+  // Exported permission: use text format safer_filtered_html.
+  $permissions['use text format safer_filtered_html'] = array(
+    'name' => 'use text format safer_filtered_html',
+    'roles' => array(
+      0 => 'authenticated user',
     ),
     'module' => 'filter',
   );
