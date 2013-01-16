@@ -5567,9 +5567,27 @@ hr.soften {
   display: none;
 }
 /* Fix btn */
-.btn-primary:hover {
+.btn:hover {
   background-position: 0 0;
+  background: #e6e6e6;
+}
+.btn-primary:hover {
   background: #005294;
+}
+.btn-danger:hover {
+  background: #bd362f;
+}
+.btn-info:hover {
+  background: #2f96b4;
+}
+.btn-success:hover {
+  background: #51a351;
+}
+.btn-warning:hover {
+  background: #f89406;
+}
+.btn-inverse:hover {
+  background: #222222;
 }
 .form-vertical .form-horizontal .control-group > label {
   text-align: left;
