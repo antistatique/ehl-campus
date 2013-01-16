@@ -216,7 +216,7 @@ function ehl_site_field_default_fields() {
           'year_range' => '1920:+0',
         ),
         'type' => 'date_select',
-        'weight' => '2',
+        'weight' => '3',
       ),
     ),
   );
@@ -290,7 +290,7 @@ function ehl_site_field_default_fields() {
           'progress_indicator' => 'throbber',
         ),
         'type' => 'image_image',
-        'weight' => '3',
+        'weight' => '2',
       ),
     ),
   );
@@ -361,7 +361,7 @@ function ehl_site_field_default_fields() {
       'label' => 'School',
       'required' => 0,
       'settings' => array(
-        'user_register_form' => 1,
+        'user_register_form' => 0,
       ),
       'widget' => array(
         'active' => 1,

@@ -507,6 +507,7 @@ function ehl_site_user_default_permissions() {
     'name' => 'switch users',
     'roles' => array(
       0 => 'administrator',
+      1 => 'moderator',
     ),
     'module' => 'devel',
   );
@@ -534,7 +535,7 @@ function ehl_site_user_default_permissions() {
     'name' => 'use text format filtered_html',
     'roles' => array(
       0 => 'administrator',
-      1 => 'authenticated user',
+      1 => 'moderator',
     ),
     'module' => 'filter',
   );

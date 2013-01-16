@@ -5585,6 +5585,10 @@ hr.soften {
 .control-group .control-group {
   margin-bottom: 0;
 }
+.form-item.error {
+  background-image: none;
+  background-color: none;
+}
 /*=============================================================================
 ** HEADER
 **============================================================================*/
@@ -5779,11 +5783,15 @@ body > .navbar {
   font-weight: 400;
   margin: 3px 0;
 }
-.popup .map-post-data {
+.popup .marker-container {
   width: 220px;
   background-color: #ffffff;
   padding: 10px 15px;
   margin-top: 3px;
+  margin-bottom: 0;
+}
+.popup .map-post-data {
+  font-weight: bold;
 }
 .popup .triangle {
   width: 250px;
@@ -5818,31 +5826,31 @@ body > .navbar {
 .argentina-marker h4 {
   background: #e44e20;
 }
-.usa-marker strong {
+.usa-marker .map-post-data {
   color: #ca0022;
 }
-.spain-marker strong {
+.spain-marker .map-post-data {
   color: #f8b800;
 }
-.southkorea-marker strong {
+.southkorea-marker .map-post-data {
   color: #ed8818;
 }
-.slovenia-marker strong {
+.slovenia-marker .map-post-data {
   color: #409536;
 }
-.portugal-marker strong {
+.portugal-marker .map-post-data {
   color: #b20560;
 }
-.india-marker strong {
+.india-marker .map-post-data {
   color: #006a9f;
 }
-.switzerland-marker strong {
+.switzerland-marker .map-post-data {
   color: #61256f;
 }
-.chile-marker strong {
+.chile-marker .map-post-data {
   color: #c2cd15;
 }
-.argentina-marker strong {
+.argentina-marker .map-post-data {
   color: #e44e20;
 }
 .views-exposed-form .views-exposed-widget .form-submit {

@@ -7,6 +7,16 @@
 include_once 'ehl_site.features.inc';
 
 /**
+ * hook_menu_alter
+ */
+function ehl_site_menu_alter(&$items) {
+    // Change user tab
+    $items['user/%user/edit']['type'] = MENU_CALLBACK;
+    $items['user/%user/view']['title'] = "Profile";
+    $items['user/%user/view']['weight'] = 10;
+}
+
+/**
  * hook_block_info
  */
 function ehl_site_block_info() {
@@ -80,7 +90,10 @@ function ehl_site_user_menu_content(){
 	} else {
 		$content .= '<li>' . l('Login','user') . '</li>';
 	}
-	$content .= '</ul>';
+	$content .= '<li class="divider-vertical">';
+  $content .= '</li></ul>';
+    $content .= '<a href="' . url('node/add/post') . '"class="btn btn-primary  btn-small">Add a post</a>';
+
 
 	return array('#markup' => $content);
 }

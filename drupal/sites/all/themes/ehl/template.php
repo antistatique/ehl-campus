@@ -70,47 +70,48 @@ function ehl_preprocess_page(&$vars,$hook) {
       $vars['field_school_field_slug'] = $school_fields_slug[0]['safe_value'];
     }
 
-    // FIELD about me
-    if(!empty($page_user->field_about_me)){
-      hide($vars['page']['content']['system_main']['field_about_me']);
-      $vars['field_about_me'] = field_view_field('user', $page_user, 'field_about_me', 'default');
-    }
-
-    // FIELD age
-    if(!empty($page_user->field_birthdate)){
-      hide($vars['page']['content']['system_main']['field_birthdate']);
-      $vars['field_birthdate'] = field_view_field('user', $page_user, 'field_birthdate', 'default');
-    }
-
-    // FIELD school
-    if(!empty($page_user->field_school)){
-      hide($vars['page']['content']['system_main']['field_school']);
-      $vars['field_school'] = field_view_field('user', $page_user, 'field_school', 'default');
-    }
-
-    // FIELD social
-    if(!empty($page_user->field_social_link)){
-      hide($vars['page']['content']['system_main']['field_social_link']);
-      $vars['field_social_link'] = field_view_field('user', $page_user, 'field_social_link', 'default');
-    }
-
     // USER Picture
     if(!empty($page_user->picture)){
       hide($vars['page']['content']['system_main']['user_picture']);
 
       // This is not a field, so we have to create the structure by hand.
       $vars['user_picture'] = theme('image_style',
-          array(
-            'style_name' => 'avatar',
-            'path' =>$page_user->picture->uri,
-            'alt' => $page_user->name,
-            'attributes' => array(
-              'class' => 'avatar user-cover-image',
+        array(
+          'style_name' => 'avatar',
+          'path' =>$page_user->picture->uri,
+          'alt' => $page_user->name,
+          'attributes' => array(
+            'class' => 'avatar user-cover-image',
             ),           
           )
         );
     }
+
   }
+}
+
+/**
+* preprocess_profile
+*/
+function ehl_preprocess_user_profile(&$vars) {
+  global $user;
+
+  $account = $vars['elements']['#account'];
+  $vars['profile_uid'] = $account->uid;
+  //Check if it's the current user profile
+  if($user->uid == $account->uid){
+    $vars['current_user_profile'] = true;
+  } else {
+    $vars['current_user_profile'] = false;
+  }
+
+  // FIELD school
+  if(isset($account->field_school_field_slug) && !empty($account->field_school_field_slug)) {
+    $vars['location_static_map'] = 'http://maps.googleapis.com/maps/api/staticmap?markers=color:blue%7C' . $account->field_school_field_slug .'&sensor=false&maptype=terrain&zoom=4&size=250x180';
+    $vars['location_static_map'] = '<img src="' . $vars['location_static_map'] . '" />';
+  }
+
+
 }
 
 /**
