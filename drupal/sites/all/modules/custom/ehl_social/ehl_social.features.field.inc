@@ -271,7 +271,7 @@ function ehl_social_field_default_fields() {
           'module' => 'image',
           'settings' => array(
             'image_link' => '',
-            'image_style' => 'thumbnail',
+            'image_style' => 'project_cover',
           ),
           'type' => 'image',
           'weight' => '3',
