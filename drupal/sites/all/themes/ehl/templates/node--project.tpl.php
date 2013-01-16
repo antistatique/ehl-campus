@@ -13,6 +13,7 @@ if ($id_node) {
 
 hide($content['comments']);
 hide($content['links']);
+hide($content['field_project_summary']);
 if(isset($content['field_video']) && !empty($content['field_video'])){
   unset($content['field_project_cover_image']);
 }
