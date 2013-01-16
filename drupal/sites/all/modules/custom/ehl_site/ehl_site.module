@@ -178,6 +178,7 @@ function ehl_site_node_view($node, $view_mode, $langcode){
   if($node->type == 'post'){
     $account = user_load($node->uid);
     $node->school_slug = ehl_site_get_school_slug($account);
+    $node->school_nid = ehl_site_get_school_nid($account);
   }
 }
 
@@ -197,6 +198,22 @@ function ehl_site_get_school_slug($account){
 
     return $result;
 }
+
+/**
+ * Get the school nid of a user
+ *
+ * @argument uid int 
+ */
+function ehl_site_get_school_nid($account){
+    $result = false;
+    $field_school = field_get_items('user', $account, 'field_school');
+    if(!empty($field_school)){
+      $result = $field_school[0]['target_id'];
+    }
+
+    return $result;
+}
+
 
 /**
  * Implements hook_module_implements_alter().

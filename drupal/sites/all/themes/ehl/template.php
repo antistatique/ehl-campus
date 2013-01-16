@@ -119,6 +119,9 @@ function ehl_preprocess_node(&$vars, $hook) {
     if(isset($vars['node']->school_slug)){
       $vars['school_slug'] = $vars['node']->school_slug;
     }
+    if(isset($vars['node']->school_nid)){
+      $vars['school_nid'] = $vars['node']->school_nid;
+    }
   }
 }
 

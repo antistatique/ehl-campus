@@ -5566,6 +5566,29 @@ hr.soften {
 .help-block {
   display: none;
 }
+/* Fix btn */
+.btn:hover {
+  background-position: 0 0;
+  background: #e6e6e6;
+}
+.btn-primary:hover {
+  background: #005294;
+}
+.btn-danger:hover {
+  background: #bd362f;
+}
+.btn-info:hover {
+  background: #2f96b4;
+}
+.btn-success:hover {
+  background: #51a351;
+}
+.btn-warning:hover {
+  background: #f89406;
+}
+.btn-inverse:hover {
+  background: #222222;
+}
 .form-vertical .form-horizontal .control-group > label {
   text-align: left;
 }
@@ -5639,6 +5662,9 @@ body > .navbar {
 .dropdown-menu {
   margin-top: 10px;
   margin-left: 5px;
+}
+.navbar .pull-right .btn {
+  margin-top: 8px;
 }
 /*=============================================================================
 ** NAVIGATION
@@ -5790,8 +5816,8 @@ body > .navbar {
   margin-top: 3px;
   margin-bottom: 0;
 }
-.popup .map-post-data {
-  font-weight: bold;
+.popup .marker-container a:hover {
+  text-decoration: underline;
 }
 .popup .triangle {
   width: 250px;
@@ -5826,31 +5852,31 @@ body > .navbar {
 .argentina-marker h4 {
   background: #e44e20;
 }
-.usa-marker .map-post-data {
+.usa-marker .marker-container a {
   color: #ca0022;
 }
-.spain-marker .map-post-data {
+.spain-marker .marker-container a {
   color: #f8b800;
 }
-.southkorea-marker .map-post-data {
+.southkorea-marker .marker-container a {
   color: #ed8818;
 }
-.slovenia-marker .map-post-data {
+.slovenia-marker .marker-container a {
   color: #409536;
 }
-.portugal-marker .map-post-data {
+.portugal-marker .marker-container a {
   color: #b20560;
 }
-.india-marker .map-post-data {
+.india-marker .marker-container a {
   color: #006a9f;
 }
-.switzerland-marker .map-post-data {
+.switzerland-marker .marker-container a {
   color: #61256f;
 }
-.chile-marker .map-post-data {
+.chile-marker .marker-container a {
   color: #c2cd15;
 }
-.argentina-marker .map-post-data {
+.argentina-marker .marker-container a {
   color: #e44e20;
 }
 .views-exposed-form .views-exposed-widget .form-submit {
@@ -5868,11 +5894,11 @@ article.node-project .row {
   margin-left: 0 !important;
 }
 .row-fluid .view-project-list .span3 .project {
-  height: 181px;
+  height: 216px;
 }
 @media only screen and (min-width: 1200px) {
   .row-fluid .view-project-list .span3 .project {
-    height: 209px;
+    height: 254px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 979px) {
@@ -5919,7 +5945,7 @@ article.node-project .row {
 .views-field-field-project-cover-image .field-content {
   width: 100%;
   overflow: hidden;
-  height: 116px;
+  height: 153px;
   margin-bottom: 5px;
 }
 .views-field-field-project-cover-image .field-content a {
@@ -5928,12 +5954,12 @@ article.node-project .row {
 }
 @media only screen and (min-width: 1200px) {
   .views-field-field-project-cover-image .field-content {
-    height: 144px;
+    height: 189px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 979px) {
   .views-field-field-project-cover-image .field-content {
-    height: 87px;
+    height: 114px;
   }
 }
 @media only screen and (max-width: 767px) {
