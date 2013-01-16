@@ -5979,6 +5979,22 @@ article.node-project .sidebar table {
 .field-type-video-embed-field legend {
   display: none;
 }
+.player {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+}
+.player iframe,
+.player object,
+.player embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 .page-news .node-article,
 .node-type-article .node-article {
   margin: 40px 0;
