@@ -5876,11 +5876,11 @@ article.node-project .row {
   margin-left: 0 !important;
 }
 .row-fluid .view-project-list .span3 .project {
-  height: 181px;
+  height: 216px;
 }
 @media only screen and (min-width: 1200px) {
   .row-fluid .view-project-list .span3 .project {
-    height: 209px;
+    height: 254px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 979px) {
@@ -5927,7 +5927,7 @@ article.node-project .row {
 .views-field-field-project-cover-image .field-content {
   width: 100%;
   overflow: hidden;
-  height: 116px;
+  height: 153px;
   margin-bottom: 5px;
 }
 .views-field-field-project-cover-image .field-content a {
@@ -5936,12 +5936,12 @@ article.node-project .row {
 }
 @media only screen and (min-width: 1200px) {
   .views-field-field-project-cover-image .field-content {
-    height: 144px;
+    height: 189px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 979px) {
   .views-field-field-project-cover-image .field-content {
-    height: 87px;
+    height: 114px;
   }
 }
 @media only screen and (max-width: 767px) {
