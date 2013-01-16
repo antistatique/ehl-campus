@@ -6025,6 +6025,20 @@ article.node-project .sidebar table {
 .row-fluid .span12.news-comments-wrapper {
   margin: 0;
 }
+#user-login {
+  max-width: 220px;
+  margin: 0 auto;
+  margin-bottom: 60px;
+}
+.page-toboggan {
+  padding-top: 0;
+}
+.page-toboggan .jumbotron {
+  margin-bottom: 60px;
+}
+.page-toboggan .drupal-messages {
+  margin-bottom: 60px;
+}
 /*=============================================================================
 ** SCHOOLS COLORS
 **============================================================================*/
@@ -6195,6 +6209,18 @@ article.node-project .sidebar table {
 }
 .table-user a {
   color: #ffffff;
+}
+.page-user .sidebar {
+  margin-top: 20px;
+}
+.page-user .node-project h2 {
+  margin-top: 40px;
+}
+.page-user .content .field-type-image {
+  margin-top: 60px;
+}
+.page-user .content .field-type-image .field-item {
+  margin-bottom: 40px;
 }
 /*=============================================================================
 ** COMMENTS
