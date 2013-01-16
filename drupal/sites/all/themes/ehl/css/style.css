@@ -5816,8 +5816,8 @@ body > .navbar {
   margin-top: 3px;
   margin-bottom: 0;
 }
-.popup .map-post-data {
-  font-weight: bold;
+.popup .marker-container a:hover {
+  text-decoration: underline;
 }
 .popup .triangle {
   width: 250px;
@@ -5852,31 +5852,31 @@ body > .navbar {
 .argentina-marker h4 {
   background: #e44e20;
 }
-.usa-marker .map-post-data {
+.usa-marker .marker-container a {
   color: #ca0022;
 }
-.spain-marker .map-post-data {
+.spain-marker .marker-container a {
   color: #f8b800;
 }
-.southkorea-marker .map-post-data {
+.southkorea-marker .marker-container a {
   color: #ed8818;
 }
-.slovenia-marker .map-post-data {
+.slovenia-marker .marker-container a {
   color: #409536;
 }
-.portugal-marker .map-post-data {
+.portugal-marker .marker-container a {
   color: #b20560;
 }
-.india-marker .map-post-data {
+.india-marker .marker-container a {
   color: #006a9f;
 }
-.switzerland-marker .map-post-data {
+.switzerland-marker .marker-container a {
   color: #61256f;
 }
-.chile-marker .map-post-data {
+.chile-marker .marker-container a {
   color: #c2cd15;
 }
-.argentina-marker .map-post-data {
+.argentina-marker .marker-container a {
   color: #e44e20;
 }
 .views-exposed-form .views-exposed-widget .form-submit {
