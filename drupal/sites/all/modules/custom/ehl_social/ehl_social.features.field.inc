@@ -117,7 +117,7 @@ function ehl_social_field_default_fields() {
           'module' => 'image',
           'settings' => array(
             'image_link' => '',
-            'image_style' => 'large',
+            'image_style' => 'post_large',
           ),
           'type' => 'image',
           'weight' => '1',
