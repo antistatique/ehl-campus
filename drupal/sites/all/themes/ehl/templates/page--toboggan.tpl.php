@@ -10,23 +10,13 @@
 
 <?php print $mothership_poorthemers_helper; ?>
 
-<div class="navbar navbar-inverse navbar-fixed-top">
-  <div class="navbar-inner">
-    <div class="container">
-        <?php print render($page['nav_bar']); ?>
-    </div>
-  </div>
-</div>
-
-<?php if(!empty($banner_text)): ?>
 <div class="jumbotron masthead">
   <div class="container">
     <a title="home" href='/'><div class="logo"></div></a>
     <h1>Campus Development Forum</h1>
-    <p><?php print $banner_text; ?></p>
+    <p>Personnal access page</p>
   </div>
 </div>
-<?php endif; ?>
 
 <?php if($page['header']): ?>
   <div class="header-wrapper">
@@ -42,49 +32,17 @@
 
 <div class="container">
   <div class="page row">
-
-  <div role="main" id="main-content" class="span12">
-
-    <?php print render($page['content_pre']); ?>
-    <?php print render($title_prefix); ?>
-    <?php if ($title): ?>
-      <div class="marketing" id="main-title-wrapper">
-        <h1><?php print $title; ?></h1>
-        <hr>
-      </div>
-    <?php endif; ?>
-    <?php print render($title_suffix); ?>
-
-    <?php if ($action_links): ?>
-      <ul class="action-links"><?php print render($action_links); ?></ul>
-    <?php endif; ?>
-
-    <?php if (isset($tabs['#primary'][0]) || isset($tabs['#secondary'][0])): ?>
+    <div role="main" id="main-content" class="span12">
+      <?php if($page['highlighted'] OR $messages){ ?>
+          <div class="drupal-messages">
+            <?php print render($page['highlighted']); ?>
+            <?php print $messages; ?>
+          </div>
+        <?php } ?>
       <div class="row-fluid">
-        <nav class="tabs"><?php print render($tabs); ?></nav>
+        <?php print render($page['content']); ?>
       </div>
-    <?php endif; ?>
-
-    <?php if($page['highlighted'] OR $messages){ ?>
-    <div class="drupal-messages">
-      <?php print render($page['highlighted']); ?>
-      <?php print $messages; ?>
-    </div>
-    <?php } ?>
-    <div class="row-fluid">
-      <?php print render($page['content']); ?>
-    </div>
-
-    <?php print render($page['content_post']); ?>
-
-  </div><!--/main-->
-
-
-  <?php if ($page['sidebar_second']): ?>
-    <div class="sidebar-second">
-      <?php print render($page['sidebar_second']); ?>
-    </div>
-  <?php endif; ?>
+    </div><!--/main-->
   </div><!--/page-->
 </div>
 
