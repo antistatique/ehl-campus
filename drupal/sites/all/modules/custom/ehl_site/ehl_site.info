@@ -60,6 +60,7 @@ features[filter][] = plain_text
 features[filter][] = safer_filtered_html
 features[image][] = avatar
 features[image][] = banner
+features[image][] = post_large
 features[image][] = project_cover
 features[image][] = project_thumb
 features[image][] = standard
