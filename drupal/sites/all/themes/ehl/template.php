@@ -36,10 +36,6 @@ function ehl_preprocess_page(&$vars,$hook) {
   if($args[0] === 'user' && is_numeric($args[1])) {
     // load the user of the current user page (not the current user)
     $page_user = user_load($args[1]);
-    //principal user page
-    if(!isset($args[2]) && empty($args[2])){
-      $vars['theme_hook_suggestions'][] = 'page__user__main';
-    }
   }
   
   if(isset($page_user)) {
