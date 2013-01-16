@@ -13,8 +13,9 @@ if ($id_node) {
 
 hide($content['comments']);
 hide($content['links']);
-//hide($content['field_logo']);
-//hide($content['field_badge'])
+if(isset($content['field_video']) && !empty($content['field_video'])){
+  unset($content['field_project_cover_image']);
+}
 ?>
 
 <!-- node--view--ehl-news.tpl.php -->
@@ -23,7 +24,9 @@ hide($content['links']);
     <div class="row">
 
       <div class="span9 news-content">
-        <?php print render($content['field_project_cover_image']); ?>
+        <?php print render($content['field_video']); ?>
+        <?php print render($content['field_project_cover_image']);  ?>
+
         
         <?php print render($title_prefix); ?>
         <?php if (!$page): ?>
