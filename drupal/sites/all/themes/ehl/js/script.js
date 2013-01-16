@@ -39,25 +39,38 @@
     var $firstPost = $('.view-live-feed .node-post:first-child').data('school');
 
     $('.marker').each( function() {
+
       var $markerSchool = $(this).data('school');
-      var $markerField = $(this).children().find('.marker-tooltip .map-post-data');
       var $markerContainer = $(this).children().find('.marker-container');
       var $markerUrl = $(this).children().find('.marker-tooltip');
+      var $markerTitle = $(this).children().find('.marker-tooltip h4');
+
       if($firstPost === $markerSchool) {
         openMarker = $(this).attr('id');
       }
-      $('.node-post').each( function() {
-        var $postSchool = $(this).data('school');
-        var $postAuthor = $(this).children().find('.author .username').html();
-        var $postUrl = $(this).children().find('.icon-comment + a').attr('href');
+
+      var $firstSchoolPost = $('.node-post[data-school="' + $markerSchool + '"]:first-child');
+      if($firstSchoolPost.length) {
+
+        var $postSchool = $firstSchoolPost.data('school');
+        var $postSchoolId = $firstSchoolPost.data('school-nid');
+
+        var $postAuthor = $firstSchoolPost.children().find('.author').html();
+        $postAuthor = $postAuthor.replace("by ", "");
+
+        var $postUrl = $firstSchoolPost.children().find('.icon-comment + a').attr('href');
         $postUrl = $postUrl.split('#');
         $postUrl = $postUrl[0];
+
+        var $capSchool = $postSchool.charAt(0).toUpperCase() + $postSchool.slice(1);
+        if($capSchool === 'Southkorea'){$capSchool = $capSchool.replace("hk", "h K");}
+
         if( $markerSchool === $postSchool) {
-          $markerField.html($postAuthor);
           $markerUrl.attr('href', $postUrl);
-          return false;
+          $markerTitle.text('New Post');
+          $markerContainer.html('' + $postAuthor + ' from <a href="/projects?univeristy=' + $postSchoolId + '">' + $capSchool + '</a> just posted a <a href="' + $postUrl + '">message</a>');
         }
-      });
+      }
     });
 
   };
