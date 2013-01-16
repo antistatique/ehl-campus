@@ -197,7 +197,7 @@ function ehl_social_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => 0,
+          'weight' => '1',
         ),
         'teaser' => array(
           'label' => 'hidden',
@@ -348,9 +348,13 @@ function ehl_social_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'hidden',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => '4',
+          'module' => 'image',
+          'settings' => array(
+            'image_link' => '',
+            'image_style' => 'project_cover',
+          ),
+          'type' => 'image',
+          'weight' => '0',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -425,7 +429,7 @@ function ehl_social_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => 5,
+          'weight' => '4',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -484,7 +488,7 @@ function ehl_social_field_default_fields() {
             'video_style' => 'normal',
           ),
           'type' => 'video_embed_field',
-          'weight' => '0',
+          'weight' => '2',
         ),
         'teaser' => array(
           'label' => 'above',
