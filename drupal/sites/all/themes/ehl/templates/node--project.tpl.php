@@ -37,10 +37,6 @@ if(isset($content['field_video']) && !empty($content['field_video'])){
           <h2<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>" rel="bookmark"><?php print $title; ?></a></h2>
         <?php endif; ?>
         <?php print render($title_suffix); ?>
-
-        <?php if($hasVideo): ?>
-          <?php print render($content['field_project_cover_image']);  ?>
-        <?php endif; ?>
         
         <div class="content">
           <?php print render($content);?>
