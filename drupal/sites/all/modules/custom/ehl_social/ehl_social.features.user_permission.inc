@@ -48,7 +48,8 @@ function ehl_social_user_default_permissions() {
   $permissions['delete any post content'] = array(
     'name' => 'delete any post content',
     'roles' => array(
-      0 => 'moderator',
+      0 => 'administrator',
+      1 => 'moderator',
     ),
     'module' => 'node',
   );
@@ -76,7 +77,8 @@ function ehl_social_user_default_permissions() {
   $permissions['delete own post content'] = array(
     'name' => 'delete own post content',
     'roles' => array(
-      0 => 'moderator',
+      0 => 'administrator',
+      1 => 'moderator',
     ),
     'module' => 'node',
   );
@@ -105,7 +107,8 @@ function ehl_social_user_default_permissions() {
   $permissions['edit any post content'] = array(
     'name' => 'edit any post content',
     'roles' => array(
-      0 => 'moderator',
+      0 => 'administrator',
+      1 => 'moderator',
     ),
     'module' => 'node',
   );
@@ -134,7 +137,8 @@ function ehl_social_user_default_permissions() {
   $permissions['edit own post content'] = array(
     'name' => 'edit own post content',
     'roles' => array(
-      0 => 'moderator',
+      0 => 'administrator',
+      1 => 'moderator',
     ),
     'module' => 'node',
   );
