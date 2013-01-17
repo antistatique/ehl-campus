@@ -47,4 +47,6 @@ hide($content['field_badge']);
   <?php print render($content['comments']); ?>
 
 </article>
-<hr class="soften" />
+<div class="row">
+  <hr class="soften span12" />
+</div>
