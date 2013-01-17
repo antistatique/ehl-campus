@@ -73,7 +73,7 @@
       }
     });
 
-  };
+  }
 
 
   /**
@@ -101,14 +101,14 @@
     setTimeout(function(){ 
       $('#' + openMarker).trigger('click');
     }, 700);
-  };
+  }
 
 
   /**
    * Set slide up/down on map
    */
-  function animationHeight(){
-    $mapBlock.animate({height:newHeight},700);
+  function animationHeight(param){
+    $mapBlock.animate({height:param},700);
   }
 
 
@@ -118,27 +118,27 @@
   function toggleButton(){
     if($.cookie("ehl-forum") === "1"){
       $toggleButton.toggle(function(){
-        newHeight = $mapHeight[1];
-        animationHeight();
+        var newHeight = $mapHeight[1];
+        animationHeight(newHeight);
         $(this).addClass('top');
         $.cookie("ehl-forum", "0");
       },function(){
-        newHeight = $mapHeight[0];
-        animationHeight();
+        var newHeight = $mapHeight[0];
+        animationHeight(newHeight);
         openTooltip();
         $(this).removeClass('top');
         $.cookie("ehl-forum", "1");
       });
     }else {
       $toggleButton.toggle(function(){
-        newHeight = $mapHeight[0];
-        animationHeight();
+        var newHeight = $mapHeight[0];
+        animationHeight(newHeight);
         openTooltip();
         $(this).removeClass('top');
         $.cookie("ehl-forum", "1");
       },function(){
-        newHeight = $mapHeight[1];
-        animationHeight();
+        var newHeight = $mapHeight[1];
+        animationHeight(newHeight);
         $(this).addClass('top');
         $.cookie("ehl-forum", "0");
       });
