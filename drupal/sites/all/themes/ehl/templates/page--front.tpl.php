@@ -176,7 +176,7 @@
       <?php print $messages; ?>
     </div>
     <?php } ?>
-    <div class="row-fluid">
+    <div class="row">
       <?php print render($page['content']); ?>
     </div>
 

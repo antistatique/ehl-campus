@@ -22,7 +22,7 @@ hide($content['field_badge']);
 <article data-school="<?php print $school_slug; ?>" data-school-nid="<?php print $school_nid; ?>" <?php print $id_node . $classes .  $attributes; ?> role="article">
       <?php print render($title_prefix); ?>
     <?php print render($title_suffix); ?>
-  <div class="row-fluid" style="text-align:left;">
+  <div class="row" style="text-align:left;">
     <?php print $mothership_poorthemers_helper; ?>
 
     <div class="span3">
