@@ -5659,6 +5659,9 @@ body > .navbar {
   overflow: hidden;
   display: block;
 }
+.navbar .dropdown-toggle img {
+  width: 20px;
+}
 .dropdown-menu {
   margin-top: 10px;
   margin-left: 5px;
