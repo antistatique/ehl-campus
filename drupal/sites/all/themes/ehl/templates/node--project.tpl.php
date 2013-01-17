@@ -14,8 +14,9 @@ if ($id_node) {
 hide($content['comments']);
 hide($content['links']);
 hide($content['field_project_summary']);
+$hasVideo = false;
 if(isset($content['field_video']) && !empty($content['field_video'])){
-  unset($content['field_project_cover_image']);
+  $hasVideo = true;
 }
 ?>
 
@@ -26,7 +27,9 @@ if(isset($content['field_video']) && !empty($content['field_video'])){
 
       <div class="span9 news-content">
         <?php print render($content['field_video']); ?>
-        <?php print render($content['field_project_cover_image']);  ?>
+        <?php if(!$hasVideo): ?>
+          <?php print render($content['field_project_cover_image']);  ?>
+        <?php endif; ?>
 
         
         <?php print render($title_prefix); ?>
@@ -34,6 +37,11 @@ if(isset($content['field_video']) && !empty($content['field_video'])){
           <h2<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>" rel="bookmark"><?php print $title; ?></a></h2>
         <?php endif; ?>
         <?php print render($title_suffix); ?>
+
+        <?php if($hasVideo): ?>
+          <?php print render($content['field_project_cover_image']);  ?>
+        <?php endif; ?>
+        
         <div class="content">
           <?php print render($content);?>
         </div>
