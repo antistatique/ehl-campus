@@ -702,7 +702,6 @@ function ehl_site_user_default_permissions() {
     'name' => 'show format tips',
     'roles' => array(
       0 => 'administrator',
-      1 => 'authenticated user',
     ),
     'module' => 'better_formats',
   );
@@ -712,6 +711,7 @@ function ehl_site_user_default_permissions() {
     'name' => 'show more format tips link',
     'roles' => array(
       0 => 'administrator',
+      1 => 'authenticated user',
     ),
     'module' => 'better_formats',
   );
