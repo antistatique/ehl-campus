@@ -19,12 +19,23 @@ hr.soften {
   border: 0;
 }
 
+.lt-ie9 hr.soften, .ie9 hr.soften {
+  display: none;
+}
+
+.lt-ie9 .post-container, .ie9 .post-container {
+  border-bottom: 1px solid #EEEEEE;
+  padding-bottom: 60px;
+  margin-bottom: 60px;
+}
+
 /* Avatar */
 .user-picture{
   .border-radius(70px);
   border:6px solid @white;
   overflow: hidden;
   display: inline-block;
+  width: 120px;
   img{
     width: 120px;
     height: 120px;
@@ -101,13 +112,6 @@ hr.soften {
 .btn-success:hover {background: @btnSuccessBackgroundHighlight;}
 .btn-warning:hover {background: @btnWarningBackgroundHighlight;}
 .btn-inverse:hover {background: @btnInverseBackgroundHighlight;}
-
-
-
-
-
-
-
 
 
 

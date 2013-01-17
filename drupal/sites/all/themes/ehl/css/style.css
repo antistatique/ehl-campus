@@ -5488,6 +5488,16 @@ hr.soften {
   background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
   border: 0;
 }
+.lt-ie9 hr.soften,
+.ie9 hr.soften {
+  display: none;
+}
+.lt-ie9 .post-container,
+.ie9 .post-container {
+  border-bottom: 1px solid #EEEEEE;
+  padding-bottom: 60px;
+  margin-bottom: 60px;
+}
 /* Avatar */
 .user-picture {
   -webkit-border-radius: 70px;
@@ -5500,6 +5510,7 @@ hr.soften {
   border: 6px solid #ffffff;
   overflow: hidden;
   display: inline-block;
+  width: 120px;
 }
 .user-picture img {
   width: 120px;
@@ -5669,6 +5680,10 @@ body > .navbar {
 .navbar .pull-right .btn {
   margin-top: 8px;
 }
+.lt-ie9 .caret {
+  position: relative;
+  top: -20px;
+}
 /*=============================================================================
 ** NAVIGATION
 **============================================================================*/
@@ -5753,6 +5768,16 @@ body > .navbar {
   height: 580px;
   max-width: 1375px;
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+.imgMap {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+.ie9 .imgContent {
+  background: url('../img/carte_opacity40.png');
 }
 #global-map-controls {
   display: none;
@@ -5930,6 +5955,17 @@ article.node-project .row {
   border: none;
   float: left;
   margin-right: 10px;
+  width: 60px;
+}
+@media only screen and (min-width: 768px) and (max-width: 979px) {
+  .project-item .project .avatar-frame .user-picture {
+    width: 40px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .project-item .project .avatar-frame .user-picture {
+    width: 35px;
+  }
 }
 .project-item .project .avatar-frame .user-picture img {
   width: 60px;
@@ -6043,6 +6079,19 @@ article.node-project .sidebar table {
 }
 .row-fluid .span12.news-comments-wrapper {
   margin: 0;
+}
+.lt-ie9 .news-comments-wrapper,
+.ie9 .news-comments-wrapper {
+  border-bottom: 1px solid #EEEEEE;
+  padding: 30px;
+}
+.lt-ie9 .news-wrapper,
+.ie9 .news-wrapper {
+  margin-top: 60px;
+}
+.lt-ie9 .view-ehl-news .news-container:first-child .news-wrapper,
+.ie9 .view-ehl-news .news-container:first-child .news-wrapper {
+  margin-top: 0;
 }
 #user-login {
   max-width: 220px;
@@ -6241,6 +6290,12 @@ article.node-project .sidebar table {
 .page-user .content .field-type-image .field-item {
   margin-bottom: 40px;
 }
+.lt-ie9 .user-post-container,
+.ie9 .user-post-container {
+  margin-bottom: 60px;
+  padding-bottom: 60px;
+  border-bottom: 1px solid #EEEEEE;
+}
 /*=============================================================================
 ** COMMENTS
 **============================================================================*/
@@ -6268,6 +6323,7 @@ article.node-project .sidebar table {
   -o-border-radius: 40px;
   border-radius: 40px;
   border-width: 4px;
+  width: 60px;
 }
 .comment .user-picture img {
   width: 60px;

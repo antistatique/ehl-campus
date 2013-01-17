@@ -19,7 +19,7 @@ hide($content['field_badge'])
 
 <!-- node--view--ehl-news.tpl.php -->
 <article <?php print $id_node . $classes .  $attributes; ?> role="article">
-  <div class="span12">
+  <div class="span12 news-wrapper">
     <div class="row">
 
       <div class="span2 sidebar">

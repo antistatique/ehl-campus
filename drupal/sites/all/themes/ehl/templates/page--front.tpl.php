@@ -31,6 +31,7 @@
 <div id="global-map">
   <div class="map">
     <?php $path = drupal_get_path('theme', 'ehl'); ?>
+    <img class="imgMap" src="<?php echo $image_path = $path . '/img/carte_opacity40.png'; ?>" alt="Global white map" />
     <div id="usa-marker" class="marker usa" data-school="usa" data-coords="280, 492">
       <a href="#" class="marker-tooltip">
         <h4></h4>
@@ -112,7 +113,6 @@
       </p>
       <div class="triangle"></div>
     </div>
-    <img class="imgMap" src="<?php echo $image_path = $path . '/img/carte_opacity40.png'; ?>" alt="Global white map" />
   </div>
   <div class="controls" id="global-map-controls">
     <a rel="usa-marker" href="#">USA</a>
