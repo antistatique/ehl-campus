@@ -634,6 +634,88 @@ function ehl_site_user_default_permissions() {
     'module' => 'user',
   );
 
+  // Exported permission: show format selection for comment.
+  $permissions['show format selection for comment'] = array(
+    'name' => 'show format selection for comment',
+    'roles' => array(
+      0 => 'administrator',
+    ),
+    'module' => 'better_formats',
+  );
+
+  // Exported permission: show format selection for message.
+  $permissions['show format selection for message'] = array(
+    'name' => 'show format selection for message',
+    'roles' => array(
+      0 => 'administrator',
+    ),
+    'module' => 'better_formats',
+  );
+
+  // Exported permission: show format selection for message_type.
+  $permissions['show format selection for message_type'] = array(
+    'name' => 'show format selection for message_type',
+    'roles' => array(
+      0 => 'administrator',
+    ),
+    'module' => 'better_formats',
+  );
+
+  // Exported permission: show format selection for message_type_category.
+  $permissions['show format selection for message_type_category'] = array(
+    'name' => 'show format selection for message_type_category',
+    'roles' => array(
+      0 => 'administrator',
+    ),
+    'module' => 'better_formats',
+  );
+
+  // Exported permission: show format selection for node.
+  $permissions['show format selection for node'] = array(
+    'name' => 'show format selection for node',
+    'roles' => array(
+      0 => 'administrator',
+    ),
+    'module' => 'better_formats',
+  );
+
+  // Exported permission: show format selection for taxonomy_term.
+  $permissions['show format selection for taxonomy_term'] = array(
+    'name' => 'show format selection for taxonomy_term',
+    'roles' => array(
+      0 => 'administrator',
+    ),
+    'module' => 'better_formats',
+  );
+
+  // Exported permission: show format selection for user.
+  $permissions['show format selection for user'] = array(
+    'name' => 'show format selection for user',
+    'roles' => array(
+      0 => 'administrator',
+    ),
+    'module' => 'better_formats',
+  );
+
+  // Exported permission: show format tips.
+  $permissions['show format tips'] = array(
+    'name' => 'show format tips',
+    'roles' => array(
+      0 => 'administrator',
+    ),
+    'module' => 'better_formats',
+  );
+
+  // Exported permission: show more format tips link.
+  $permissions['show more format tips link'] = array(
+    'name' => 'show more format tips link',
+    'roles' => array(
+      0 => 'administrator',
+      1 => 'authenticated user',
+    ),
+    'module' => 'better_formats',
+  );
+
   // Exported permission: skip comment approval.
   $permissions['skip comment approval'] = array(
     'name' => 'skip comment approval',
