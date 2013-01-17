@@ -152,7 +152,7 @@
 
   function projectPage(){
 
-    //@TODO rethink that
+    // @TODO rethink that
     $(".page-projects .view-project-list .view-filters + .span3, .page-projects .view-project-list .span3:nth-child(4n+2)").addClass("no-margin");
 
     $('#edit-submit-project-list').hide();
