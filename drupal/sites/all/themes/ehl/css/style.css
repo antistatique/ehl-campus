@@ -6304,17 +6304,6 @@ article.node-project .sidebar table {
   float: left;
   margin: 0.3em 0.6em 0.3em 0;
 }
-.footer .schools li .field-content a .school-color {
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -o-border-radius: 10px;
-  border-radius: 10px;
-  border: 1px solid #ffffff;
-  behavior: url(ie-css3.htc);
-}
 .footer a {
   color: #ffffff;
   text-decoration: underline;
