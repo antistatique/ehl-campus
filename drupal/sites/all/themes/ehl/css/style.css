@@ -5951,6 +5951,17 @@ article.node-project .row {
   border: none;
   float: left;
   margin-right: 10px;
+  width: 60px;
+}
+@media only screen and (min-width: 768px) and (max-width: 979px) {
+  .project-item .project .avatar-frame .user-picture {
+    width: 40px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .project-item .project .avatar-frame .user-picture {
+    width: 35px;
+  }
 }
 .project-item .project .avatar-frame .user-picture img {
   width: 60px;
