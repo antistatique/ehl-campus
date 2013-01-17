@@ -5755,6 +5755,7 @@ body > .navbar {
   max-width: 1375px;
   margin: 0 auto;
   position: relative;
+  z-index: 1;
 }
 .imgMap {
   position: absolute;
