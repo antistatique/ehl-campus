@@ -76,9 +76,7 @@ function ehl_social_user_default_permissions() {
   $permissions['delete own post content'] = array(
     'name' => 'delete own post content',
     'roles' => array(
-      0 => 'authenticated user',
-      1 => 'moderator',
-      2 => 'student',
+      0 => 'moderator',
     ),
     'module' => 'node',
   );
@@ -136,9 +134,7 @@ function ehl_social_user_default_permissions() {
   $permissions['edit own post content'] = array(
     'name' => 'edit own post content',
     'roles' => array(
-      0 => 'authenticated user',
-      1 => 'moderator',
-      2 => 'student',
+      0 => 'moderator',
     ),
     'module' => 'node',
   );
