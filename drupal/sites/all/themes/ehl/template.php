@@ -27,7 +27,6 @@ function ehl_preprocess_page(&$vars,$hook) {
   // POST PAGE
   if($args[0] === 'node' && isset($vars['node']) && $vars['node']->type == 'post'){
     $vars['title'] = 'Post';
-
     $vars['theme_hook_suggestions'][] = 'page__user';
     $page_user = user_load($vars['node']->uid);
   }
@@ -41,15 +40,12 @@ function ehl_preprocess_page(&$vars,$hook) {
   }
   
   if(isset($page_user)) {
-
     // User name
     if(!empty($page_user->name)){
       $vars['user_name'] = $page_user->name;
     }
     // FIELD  user cover image
     if(!empty($page_user->field_cover_image)) {
-      // hide the field
-      hide($vars['page']['content']['system_main']['field_cover_image']);
       // Load the cover image url in the page
       $field_cover_image = field_view_field('user', $page_user, 'field_cover_image','default');
       $vars['field_cover_image_url'] = image_style_url('banner', $field_cover_image['#items'][0]['uri']);
@@ -57,7 +53,6 @@ function ehl_preprocess_page(&$vars,$hook) {
     // FIELD School
     if(!empty($page_user->field_school)){
       // field_school
-      hide($vars['page']['content']['system_main']['field_school']);
       $vars['field_school'] = field_view_field('user', $page_user, 'field_school', 'default');
     } 
     // FIELD Slug (from school)
@@ -70,8 +65,6 @@ function ehl_preprocess_page(&$vars,$hook) {
 
     // USER Picture
     if(!empty($page_user->picture)){
-      hide($vars['page']['content']['system_main']['user_picture']);
-
       // This is not a field, so we have to create the structure by hand.
       $vars['user_picture'] = theme('image_style',
         array(
@@ -84,7 +77,6 @@ function ehl_preprocess_page(&$vars,$hook) {
           )
         );
     }
-
   }
 }
 
@@ -103,7 +95,7 @@ function ehl_preprocess_user_profile(&$vars) {
     $vars['current_user_profile'] = false;
   }
 
-  // FIELD school
+  // Map
   if(isset($account->field_school_field_slug) && !empty($account->field_school_field_slug)) {
     $vars['location_static_map'] = 'http://maps.googleapis.com/maps/api/staticmap?markers=color:blue%7C' . $account->field_school_field_slug .'&sensor=false&maptype=terrain&zoom=4&size=250x180';
     $vars['location_static_map'] = '<img src="' . $vars['location_static_map'] . '" />';
