@@ -6369,9 +6369,15 @@ article.node-project .sidebar table {
 .footer .schools {
   margin: 0;
 }
+.footer .schools a {
+  text-decoration: none;
+}
 .footer .schools li {
   float: left;
   margin: 0.3em 0.6em 0.3em 0;
+}
+.footer .active {
+  font-weight: normal;
 }
 .footer a {
   color: #ffffff;
