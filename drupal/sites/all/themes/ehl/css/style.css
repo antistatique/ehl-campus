@@ -6126,13 +6126,16 @@ article.node-project .sidebar table {
 /*=============================================================================
 ** SCHOOLS COLORS
 **============================================================================*/
-.ehlblue {
+.ehlblue,
+.no-school {
   background-color: #008394;
 }
-.ehlblue.colorhover:hover {
+.ehlblue.colorhover:hover,
+.no-school.colorhover:hover {
   background-color: #00b0c7;
 }
-.ehlblue.colorborder {
+.ehlblue.colorborder,
+.no-school.colorborder {
   border-color: #008394;
 }
 .usa {

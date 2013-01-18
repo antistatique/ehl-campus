@@ -56,7 +56,7 @@ function ehl_preprocess_page(&$vars,$hook) {
       $vars['field_school'] = field_view_field('user', $page_user, 'field_school', 'default');
     } 
     // FIELD Slug (from school)
-    $vars['field_school_field_slug'] = '';
+    $vars['field_school_field_slug'] = 'no-school';
     if(!empty($vars['field_school']['#items'][0])){
       // field_slug
       $school_fields_slug = field_get_items('node',$vars['field_school']['#items'][0]['entity'],'field_slug');
