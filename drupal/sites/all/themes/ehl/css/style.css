@@ -6094,18 +6094,31 @@ article.node-project .sidebar table {
   margin-top: 0;
 }
 #user-login {
-  max-width: 220px;
-  margin: 0 auto;
-  margin-bottom: 60px;
+  margin: 0;
 }
 .page-toboggan {
   padding-top: 0;
-}
-.page-toboggan .jumbotron {
-  margin-bottom: 60px;
+  background: #f2f2f2;
 }
 .page-toboggan .drupal-messages {
-  margin-bottom: 60px;
+  margin-bottom: 20px;
+}
+.page-toboggan #main-content {
+  max-width: 260px;
+  margin: 0 auto;
+  padding-top: 150px;
+}
+#login-wrapper {
+  padding: 20px;
+  background: #ffffff;
+  box-shadow: 0px 4px 7px 0px rgba(0, 0, 0, 0.2);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
 }
 /*=============================================================================
 ** SCHOOLS COLORS
