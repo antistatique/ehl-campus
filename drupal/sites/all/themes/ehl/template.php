@@ -3,6 +3,8 @@
 $theme_path = drupal_get_path('theme', 'ehl');
 require_once $theme_path . '/includes/form.inc';
 require_once $theme_path . '/includes/pager.inc';
+require_once $theme_path . '/includes/theme.inc';
+
 drupal_add_library('system', 'jquery.cookie');
 // ----- Preprocess ------
 
