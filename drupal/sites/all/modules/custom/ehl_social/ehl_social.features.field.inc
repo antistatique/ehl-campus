@@ -148,7 +148,7 @@ function ehl_social_field_default_fields() {
         'active' => 1,
         'module' => 'image',
         'settings' => array(
-          'preview_image_style' => 'standard',
+          'preview_image_style' => 'large',
           'progress_indicator' => 'throbber',
         ),
         'type' => 'image_image',
