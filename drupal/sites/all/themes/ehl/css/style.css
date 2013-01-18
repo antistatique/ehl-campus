@@ -5600,6 +5600,9 @@ hr.soften {
 .btn-inverse:hover {
   background: #222222;
 }
+div.context-block-region {
+  display: none;
+}
 .form-vertical .form-horizontal .control-group > label {
   text-align: left;
 }
