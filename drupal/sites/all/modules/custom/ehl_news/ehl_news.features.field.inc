@@ -123,7 +123,7 @@ function ehl_news_field_default_fields() {
           'module' => 'image',
           'settings' => array(
             'image_link' => '',
-            'image_style' => 'large',
+            'image_style' => 'post_large',
           ),
           'type' => 'image',
           'weight' => '2',
@@ -158,7 +158,7 @@ function ehl_news_field_default_fields() {
         'active' => 1,
         'module' => 'image',
         'settings' => array(
-          'preview_image_style' => 'standard',
+          'preview_image_style' => 'large',
           'progress_indicator' => 'throbber',
         ),
         'type' => 'image_image',
