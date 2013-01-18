@@ -69,7 +69,7 @@
         if( $markerSchool === $postSchool) {
           $markerUrl.attr('href', $postUrl);
           $markerTitle.text('New Post');
-          $markerContainer.html('' + $postAuthor + ' from <a href="/projects?univeristy=' + $postSchoolId + '">' + $capSchool + '</a> just posted a <a href="' + $postUrl + '">message</a>');
+          $markerContainer.html('' + $postAuthor + ' from <a href="/projects?univeristy=' + $postSchoolId + '">' + $capSchool + '</a> just shared a new <a href="' + $postUrl + '">post</a>');
         }
       }
     });
