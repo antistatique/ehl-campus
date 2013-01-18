@@ -18,7 +18,14 @@
 <meta http-equiv="cleartype" content="on">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <?php print $styles; ?>
-<script type="text/javascript">
+<!--[if lt IE 9]>
+  <script src="<?php print $mothership_path; ?>/js/html5.js"></script>
+<![endif]-->
+<?php print $selectivizr; ?>
+
+</head>
+<body class="default <?php print $classes; ?>" <?php print $attributes;?>>
+	<script type="text/javascript">
 
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-37719428-1']);
@@ -31,13 +38,6 @@
   })();
 
 </script>
-<!--[if lt IE 9]>
-  <script src="<?php print $mothership_path; ?>/js/html5.js"></script>
-<![endif]-->
-<?php print $selectivizr; ?>
-
-</head>
-<body class="default <?php print $classes; ?>" <?php print $attributes;?>>
 <div><div id="texture-wrapper"><div id="color-wrapper"><div id="object-wrapper">
 <a href="#main-content" class="element-invisible element-focusable"><?php print t('Skip to main content'); ?></a>
 <?php print $page_top; //stuff from modules always render first ?>
