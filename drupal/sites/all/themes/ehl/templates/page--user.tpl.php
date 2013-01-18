@@ -34,7 +34,9 @@ if(isset($field_cover_image_url)){
                 <?php print render($user_picture);?>
               </div></div>
               <h1><?php print render($user_name); ?></h1>
+              <?php if(isset($field_school) && !empty($field_school)): ?>
               <p class="marketing-byline">Student from <?php print render($field_school); ?></p>
+              <?php endif; ?>
             </div>
           </div>
         </div>
