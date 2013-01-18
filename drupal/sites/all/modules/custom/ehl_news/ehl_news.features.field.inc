@@ -50,7 +50,7 @@ function ehl_news_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => '0',
+          'weight' => '1',
         ),
         'teaser' => array(
           'label' => 'hidden',
@@ -78,7 +78,7 @@ function ehl_news_field_default_fields() {
           'summary_rows' => 5,
         ),
         'type' => 'text_textarea_with_summary',
-        'weight' => -4,
+        'weight' => '2',
       ),
     ),
   );
@@ -126,7 +126,7 @@ function ehl_news_field_default_fields() {
             'image_style' => 'large',
           ),
           'type' => 'image',
-          'weight' => '1',
+          'weight' => '2',
         ),
         'teaser' => array(
           'label' => 'hidden',
@@ -162,7 +162,7 @@ function ehl_news_field_default_fields() {
           'progress_indicator' => 'throbber',
         ),
         'type' => 'image_image',
-        'weight' => -1,
+        'weight' => '4',
       ),
     ),
   );
@@ -212,7 +212,7 @@ function ehl_news_field_default_fields() {
           'module' => 'taxonomy',
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => '2',
+          'weight' => '3',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -236,7 +236,64 @@ function ehl_news_field_default_fields() {
           'size' => 60,
         ),
         'type' => 'taxonomy_autocomplete',
-        'weight' => -4,
+        'weight' => '3',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-article-field_video'.
+  $fields['node-article-field_video'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_video',
+      'foreign keys' => array(),
+      'indexes' => array(),
+      'locked' => '0',
+      'module' => 'video_embed_field',
+      'settings' => array(),
+      'translatable' => '0',
+      'type' => 'video_embed_field',
+    ),
+    'field_instance' => array(
+      'bundle' => 'article',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'hidden',
+          'module' => 'video_embed_field',
+          'settings' => array(
+            'description' => 1,
+            'video_style' => 'normal',
+          ),
+          'type' => 'video_embed_field',
+          'weight' => '0',
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_video',
+      'label' => 'Video',
+      'required' => 0,
+      'settings' => array(
+        'description_field' => 0,
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 0,
+        'module' => 'video_embed_field',
+        'settings' => array(),
+        'type' => 'video_embed_field_video',
+        'weight' => '1',
       ),
     ),
   );
@@ -248,6 +305,7 @@ function ehl_news_field_default_fields() {
   t('Image');
   t('Tags');
   t('Upload an image to go with this article.');
+  t('Video');
 
   return $fields;
 }
