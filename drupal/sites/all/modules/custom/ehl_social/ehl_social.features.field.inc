@@ -478,7 +478,7 @@ function ehl_social_field_default_fields() {
       'bundle' => 'project',
       'default_value' => NULL,
       'deleted' => '0',
-      'description' => 'Youtube or vimeo link',
+      'description' => 'Copy a youtube or vimeo url. This video will replace the cover image in your project page',
       'display' => array(
         'default' => array(
           'label' => 'hidden',
@@ -865,6 +865,7 @@ function ehl_social_field_default_fields() {
   t('Body');
   t('Color');
   t('Content');
+  t('Copy a youtube or vimeo url. This video will replace the cover image in your project page');
   t('Country');
   t('Cover image');
   t('Full Address');
@@ -875,7 +876,6 @@ function ehl_social_field_default_fields() {
   t('Project summary');
   t('Slug');
   t('Video');
-  t('Youtube or vimeo link');
 
   return $fields;
 }
