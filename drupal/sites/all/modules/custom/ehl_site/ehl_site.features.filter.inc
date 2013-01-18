@@ -108,37 +108,5 @@ function ehl_site_filter_default_formats() {
     ),
   );
 
-  // Exported format: Safer filtered HTML.
-  $formats['safer_filtered_html'] = array(
-    'format' => 'safer_filtered_html',
-    'name' => 'Safer filtered HTML',
-    'cache' => '1',
-    'status' => '1',
-    'weight' => '-10',
-    'filters' => array(
-      'filter_html' => array(
-        'weight' => '-10',
-        'status' => '1',
-        'settings' => array(
-          'allowed_html' => '<a> <em> <strong> <cite> <blockquote> <code> <ul> <ol> <li> <dl> <dt> <dd>',
-          'filter_html_help' => 0,
-          'filter_html_nofollow' => 0,
-        ),
-      ),
-      'filter_autop' => array(
-        'weight' => '0',
-        'status' => '1',
-        'settings' => array(),
-      ),
-      'filter_url' => array(
-        'weight' => '0',
-        'status' => '1',
-        'settings' => array(
-          'filter_url_length' => '72',
-        ),
-      ),
-    ),
-  );
-
   return $formats;
 }

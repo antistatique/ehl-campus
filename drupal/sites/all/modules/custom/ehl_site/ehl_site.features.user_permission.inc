@@ -773,15 +773,6 @@ function ehl_site_user_default_permissions() {
     'module' => 'filter',
   );
 
-  // Exported permission: use text format safer_filtered_html.
-  $permissions['use text format safer_filtered_html'] = array(
-    'name' => 'use text format safer_filtered_html',
-    'roles' => array(
-      0 => 'authenticated user',
-    ),
-    'module' => 'filter',
-  );
-
   // Exported permission: view advanced help index.
   $permissions['view advanced help index'] = array(
     'name' => 'view advanced help index',
