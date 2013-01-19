@@ -53,13 +53,20 @@ function ehl_preprocess_page(&$vars,$hook) {
     // FIELD School
     if(!empty($page_user->field_school)){
       // field_school
-      $vars['field_school'] = field_view_field('user', $page_user, 'field_school', 'default');
+      $field_school = field_view_field('user', $page_user, 'field_school', 'default');
+      $school_node = $field_school['#items'][0]['entity'];
+
+      if(!empty($school_node->title)){
+        $vars['school_node_link'] = l($school_node->title,'projects', array(
+          'query' => array('univeristy' => $school_node->nid))
+        );
+      }
     } 
     // FIELD Slug (from school)
     $vars['field_school_field_slug'] = '';
-    if(!empty($vars['field_school']['#items'][0])){
+    if(isset($school_node->nid)){
       // field_slug
-      $school_fields_slug = field_get_items('node',$vars['field_school']['#items'][0]['entity'],'field_slug');
+      $school_fields_slug = field_get_items('node',$school_node,'field_slug');
       $vars['field_school_field_slug'] = $school_fields_slug[0]['safe_value'];
     }
 
