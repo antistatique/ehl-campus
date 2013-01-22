@@ -8,7 +8,7 @@ $cover_style = '';
 if(isset($field_cover_image_url)){
   $cover_style .= 'background-image:url(' . $field_cover_image_url . '); ';
 }
-if(isset($field_school_field_slug)){
+if(!isset($field_school_field_slug)){
   $field_school_field_slug = "no-school";
 }
 
