@@ -37,8 +37,8 @@ if(!isset($field_school_field_slug)){
                 <?php print render($user_picture);?>
               </div></div>
               <h1><?php print render($user_name); ?></h1>
-              <?php if(isset($field_school) && !empty($field_school)): ?>
-              <p class="marketing-byline">Student from <?php print render($field_school); ?></p>
+              <?php if(isset($school_node_link) && !empty($school_node_link)): ?>
+              <p class="marketing-byline">Student from <?php print $school_node_link; ?></p>
               <?php endif; ?>
             </div>
           </div>
