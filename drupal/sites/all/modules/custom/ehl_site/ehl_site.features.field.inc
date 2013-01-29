@@ -350,7 +350,7 @@ function ehl_site_field_default_fields() {
           'label' => 'hidden',
           'module' => 'entityreference',
           'settings' => array(
-            'link' => 1,
+            'link' => 0,
           ),
           'type' => 'entityreference_label',
           'weight' => '3',
