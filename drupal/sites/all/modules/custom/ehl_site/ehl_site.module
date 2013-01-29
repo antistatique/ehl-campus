@@ -172,8 +172,16 @@ function ehl_site_universities_form_options(){
 function ehl_site_user_view($account){
   // Load the school slug
   $account->field_school_field_slug = ehl_site_get_school_slug($account);
+
 }
 
+function ehl_site_preprocess_user_picture(&$variables) {
+  $account = $variables['account'];
+  $account = user_load($account->uid);
+  if(!isset($account->field_school_field_slug) || $account->field_school_field_slug == FALSE){
+    $variables['account']->field_school_field_slug = ehl_site_get_school_slug($account);
+  }
+}
 /**
  * hook_node_view
  */
