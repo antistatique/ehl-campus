@@ -40,6 +40,11 @@ function ehl_preprocess_page(&$vars,$hook) {
   }
   
   if(isset($page_user)) {
+    // role name
+    $vars['user_role_name'] = 'Student';
+    if(in_array('professor',$page_user->roles)) {
+      $vars['user_role_name'] = 'Professor';
+    }
     // User name
     if(!empty($page_user->name)){
       $vars['user_name'] = $page_user->name;
