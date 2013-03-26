@@ -113,6 +113,15 @@
       </p>
       <div class="triangle"></div>
     </div>
+      <div id="ehl_interior_design-marker" class="marker ehl_interior_design" data-school="ehl_interior_design" data-coords="655, 390">
+          <a href="#" class="marker-tooltip">
+              <h4></h4>
+          </a>
+          <p class="marker-container">
+              No recent activities from <a href="/projects?univeristy=92">EHL - Interior Design</a>.
+          </p>
+          <div class="triangle"></div>
+      </div>
   </div>
   <div class="controls" id="global-map-controls">
     <a rel="usa-marker" href="#">USA</a>
@@ -124,6 +133,7 @@
     <a rel="switzerland-marker" href="#">Switzerland</a>
     <a rel="chile-marker" href="#">Chile</a>
     <a rel="argentina-marker" href="#">Argentina</a>
+    <a rel="ehl_interior_design-marker" href="#">EHL - Interior Design</a>
   </div>
 </div>
 
