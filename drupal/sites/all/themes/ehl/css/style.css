@@ -5877,6 +5877,9 @@ body > .navbar {
 .switzerland-marker h4 {
   background: #61256f;
 }
+.ehl_interior_design-marker h4 {
+  background: #52adb5;
+}
 .chile-marker h4 {
   background: #c2cd15;
 }
@@ -5909,6 +5912,9 @@ body > .navbar {
 }
 .argentina-marker .marker-container a {
   color: #e44e20;
+}
+.ehl_interior_design-marker .marker-container a {
+  background: #52adb5;
 }
 .views-exposed-form .views-exposed-widget .form-submit {
   margin-top: 0;
@@ -6221,6 +6227,15 @@ article.node-project .sidebar table {
 }
 .argentina.colorborder {
   border-color: #e44e20;
+}
+.ehl_interior_design {
+  background-color: #52adb5;
+}
+.ehl_interior_design.colorhover:hover {
+  background-color: #76bec4;
+}
+.ehl_interior_design.colorborder {
+  border-color: #52adb5;
 }
 /*=============================================================================
 ** USER
