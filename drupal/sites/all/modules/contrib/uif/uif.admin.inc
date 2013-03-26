@@ -317,7 +317,7 @@ function uif_uif_validate_header($header) {
   $errors = array();
 
   if (!in_array('mail', $header)) {
-    $errors[] = t('There is no email column in the import file.');
+    $errors[] = t('There is no mail column in the import file.');
   }
   
   $labels = array();
@@ -339,6 +339,12 @@ function uif_uif_validate_user($user_data, $uid, $header = NULL) {
   
   if (!valid_email_address($user_data['mail'])) {
     $errors[] = t('Missing or invalid email address: %mail', array('%mail' => $user_data['mail']));
+  }
+  if (isset($user_data['name']) && empty($user_data['name'])) {
+    $errors[] = t('Username is empty. Leave this column out to create a unique username based on email address.', array());    
+  }
+  if (isset($user_data['pass']) && empty($user_data['pass'])) {
+    $errors[] = t('Password is empty. Leave this column out to have an automatically generated password.', array());    
   }
   if (isset($user_data['roles'])) {
     uif_parse_roles($user_data['roles'], $roles_errors);
@@ -510,7 +516,7 @@ function uif_create_user($user_data, $notify, $form_state) {
   $account['name'] = uif_unique_username($username);
   
   // Use the provided password if any, otherwise a random one
-  $pass = !empty($user_data['pass']) ? $user_data['pass'] : user_password();
+  $pass = empty($user_data['pass']) ? user_password() : $user_data['pass'];
   $account['pass'] = $pass;
   
   // Add roles if present
@@ -826,11 +832,14 @@ function uif_get_field_info($header) {
       }
     }
     else {
-      $supported = FALSE;
-      $field_info[$label] = array(
-        'type' => 'unknown',
-        'supported' => $supported,
-      );
+      // Contrib module handling?
+      $supported = isset($supported_fields[$label]);
+      if (!$supported) {
+        $field_info[$label] = array(
+          'type' => 'unknown',
+          'supported' => FALSE,
+        );
+      }
     }
     
     if (!$supported) {
@@ -851,7 +860,7 @@ function uif_lookup_field_type($field_name) {
 }
 
 /**
- * Return TRUE if this module supports import of the passed field type.
+ * Return TRUE if a module supports import of the passed field type.
  */
 function uif_is_supported_field($field_type) {
   $supported_fields = uif_get_supported_fields();
@@ -927,6 +936,10 @@ function uif_uif_supported_fields() {
     'language' => array(
       'type' => 'core',
       'description' => t('the language to use for this user. You should <a href="@mods_url">enable the locale module</a> if you import this.', $subs),
+    ),
+    'uid' => array(
+      'type' => 'core',
+      'description' => t('the uid of the user (experts only; use mail as unique key, not uid)'),
     ),
     'list_boolean' => array(
       'type' => 'entity',

@@ -34,8 +34,14 @@ Several hooks are provided so that you can execute code at various stages of the
 hook_uif_help()
 This hook allows you to insert help text on the import page. The text appears beneath the basic help provided by the module.
 
+hook_uif_header_alter($header_row)
+Allows modules to alter header values.  Called before header validation is done.
+
 hook_uif_validate_header($header, $form_state)
 Your module can implement this hook to validate the array of header values. You may require certain fields for a profile. This is the place to check if the column exists in the import file. Return an array of error strings, all of which will be displayed, and the user will not be allowed to do the import. An empty array (or NULL) is success.
+
+hook_uif_row_alter($row, $header_row)
+Allows modules to alter a row's values.  Called before row (user) validation is done.
 
 hook_uif_validate_user($user_data, $uid, $form_state)
 This hook is called for every row of user data in the file. Like hook_uif_validate_header(), you can return any number of error strings, which are displayed to the user and which cause the import to fail. $user_data is an array of key => value pairs, where the key is the header column and the value is the data from the user row. All values are trimmed. $uid is either 0 for a new user or a positive integer for an existing user.
@@ -57,6 +63,9 @@ Same idea as hook_uif_post_create(), but used for existing (updated) users. In t
 
 hook_uif_supported_fields()
 Return an array of fields that your module supports for import. Alternative to using hook_uif_pre_create() and hook_uif_pre_update().
+
+hook_uif_supported_fields_alter($supported_fields)
+Called after hook_uif_supported_fields().  Alter the supported_fields array.  Not commonly used but here for completeness.
 
 Of course, since user_save() is called, core's hook_user() is available to you as well.
 
