@@ -10,79 +10,39 @@
 function ehl_site_default_fe_block_settings() {
   $export = array();
 
-  $export['version'] = '1.0';
+  $export['version'] = '2.0';
 
-  // Theme independent visibility settings.
-  $export['visibility'] = array(
-    'views-school_list-block' => array(
-      'delta' => 'school_list-block',
-      'module' => 'views',
+  $export['views-school_list-block'] = array(
+    'cache' => -1,
+    'custom' => '0',
+    'delta' => 'school_list-block',
+    'module' => 'views',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'bartik' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'bartik',
+        'weight' => '0',
+      ),
+      'ehl' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'ehl',
+        'weight' => '0',
+      ),
+      'seven' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'seven',
+        'weight' => '0',
+      ),
     ),
-  );
-
-  // bartik
-  $theme = array();
-
-  $theme['views-school_list-block'] = array(
-    'module' => 'views',
-    'delta' => 'school_list-block',
-    'theme' => 'bartik',
-    'status' => 0,
-    'weight' => '0',
-    'region' => '',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
     'title' => '',
-    'cache' => -1,
-  );
-
-  $export['theme']['bartik'] = $theme;
-
-  // ehl
-  $theme = array();
-
-  $theme['views-school_list-block'] = array(
-    'module' => 'views',
-    'delta' => 'school_list-block',
-    'theme' => 'ehl',
-    'status' => 0,
-    'weight' => '0',
-    'region' => '',
-    'custom' => '0',
     'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
   );
 
-  $export['theme']['ehl'] = $theme;
-
-  // seven
-  $theme = array();
-
-  $theme['views-school_list-block'] = array(
-    'module' => 'views',
-    'delta' => 'school_list-block',
-    'theme' => 'seven',
-    'status' => 0,
-    'weight' => '0',
-    'region' => '',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-  );
-
-  $export['theme']['seven'] = $theme;
-
-  $theme_default = variable_get('theme_default', 'garland');
-  $themes = list_themes();
-  foreach ($export as $theme_key => $settings) {
-    if ($theme_key != $theme_default && empty($themes[$theme_key]->status)) {
-      unset($export['theme'][$theme_key]);
-    }
-  }
   return $export;
 }
