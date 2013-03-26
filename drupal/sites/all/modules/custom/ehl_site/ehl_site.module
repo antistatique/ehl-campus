@@ -127,7 +127,7 @@ function ehl_site_views_pre_render(&$view){
     if($user->uid == $view->args[0]){
       $view->empty['area']->options['content'] = "<h3>:( You didn't create a project. " . l('Create one', 'node/add/project') . " now.</h3>";
     }
-  } 
+  }
 }
 
 
@@ -145,8 +145,8 @@ function ehl_site_form_views_exposed_form_alter(&$form, $form_state, $form_id) {
     '#required'       => false,
     '#options'        => $nid_options,
     '#default_value'  => '',
-  ); 
-  
+  );
+
   $form['#attributes'] = array('class' => array('pull-right'));
   unset($form['#info']['filter-nid']['label']);
 
