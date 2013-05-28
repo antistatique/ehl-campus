@@ -15,9 +15,10 @@ function ehl_social_user_default_permissions() {
     'name' => 'create post content',
     'roles' => array(
       0 => 'authenticated user',
-      1 => 'moderator',
-      2 => 'professor',
-      3 => 'student',
+      1 => 'consultor',
+      2 => 'moderator',
+      3 => 'professor',
+      4 => 'student',
     ),
     'module' => 'node',
   );

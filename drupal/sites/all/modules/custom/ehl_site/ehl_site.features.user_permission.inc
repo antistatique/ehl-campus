@@ -140,9 +140,10 @@ function ehl_site_user_default_permissions() {
     'name' => 'access user profiles',
     'roles' => array(
       0 => 'administrator',
-      1 => 'moderator',
-      2 => 'professor',
-      3 => 'student',
+      1 => 'consultor',
+      2 => 'moderator',
+      3 => 'professor',
+      4 => 'student',
     ),
     'module' => 'user',
   );
@@ -413,9 +414,10 @@ function ehl_site_user_default_permissions() {
     'name' => 'change own username',
     'roles' => array(
       0 => 'administrator',
-      1 => 'moderator',
-      2 => 'professor',
-      3 => 'student',
+      1 => 'consultor',
+      2 => 'moderator',
+      3 => 'professor',
+      4 => 'student',
     ),
     'module' => 'user',
   );
